@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AttackDamage : MonoBehaviour
 {
-    public int damage = 1;
+    int damage = 1;
 
     // Update is called once per frame
-    void onCollisionEnter() {
-        
+    void onCollisionEnter(Collision collision) {
+        collision.gameObject.GetComponent<Stats>().hp -= damage;
     }
 }

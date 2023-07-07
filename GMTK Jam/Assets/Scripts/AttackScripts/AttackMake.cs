@@ -28,6 +28,9 @@ public class AttackMake : MonoBehaviour
         
         if (Time.time - time < delay || attackPrefab == null || !Input.GetButtonDown("Fire1")) return;
         time = Time.time;
+        
         GameObject attack = Instantiate(attackPrefab, tf);
+        
+        
     }
 }
