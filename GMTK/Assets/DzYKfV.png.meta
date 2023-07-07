@@ -260,7 +260,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DzYKfV_0: -9073358783524961707
+      DzYKfV_1: 1763601913451784946
+      DzYKfV_2: 3025019188279262307
+      DzYKfV_3: 3965271354869854576
+      DzYKfV_4: 8153046114735562934
+      DzYKfV_5: 7770934735897055952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
