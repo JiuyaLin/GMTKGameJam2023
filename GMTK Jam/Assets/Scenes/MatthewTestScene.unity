@@ -164,7 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e38def4762f9a9498380b66af70ff74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 0
+  angle: 180
+  delay: 1
   attackPrefab: {fileID: 3564473647296134600, guid: 6a030977e089df44ea7d8ce424074a03, type: 3}
 --- !u!1 &471671016
 GameObject:
@@ -225,7 +226,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -250,13 +251,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471671016}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 10, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 42.5, z: -40}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 475732332}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &475732327
 GameObject:
@@ -361,7 +362,6 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 471671019}
   - {fileID: 1187463463}
   - {fileID: 80625710}
   m_Father: {fileID: 0}
