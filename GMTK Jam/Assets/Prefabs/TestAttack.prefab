@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7010279599114161171}
   - component: {fileID: 6042863577518240477}
+  - component: {fileID: 298209384809959167}
   m_Layer: 0
   m_Name: TestAttack
   m_TagString: Untagged
@@ -46,6 +47,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 2
+--- !u!114 &298209384809959167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564473647296134600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533d0c759bf1ec24f89c562f0481e71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7302626889222934275
 GameObject:
   m_ObjectHideFlags: 0

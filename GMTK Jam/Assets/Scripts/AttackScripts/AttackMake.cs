@@ -7,6 +7,7 @@ public class AttackMake : MonoBehaviour
     public float angle = 0;
     public float delay = 1f;
     public GameObject attackPrefab; 
+    public ItemList itemList; 
 
     private Transform tf;
     private float time;
@@ -30,7 +31,6 @@ public class AttackMake : MonoBehaviour
         time = Time.time;
         
         GameObject attack = Instantiate(attackPrefab, tf);
-        
         
     }
 }

@@ -9,5 +9,6 @@ public class AttackDamage : MonoBehaviour
     // Update is called once per frame
     void onCollisionEnter(Collision collision) {
         collision.gameObject.GetComponent<Stats>().hp -= damage;
+        
     }
 }
