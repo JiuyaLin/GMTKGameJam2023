@@ -10,9 +10,15 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f; 
     public bool onEdge;
     
+    float oldhoriz;
+    float oldvert;
+    
     void Start() {
         controller = gameObject.GetComponent<CharacterController>();
         edgeChk = transform.GetChild(1).gameObject;
+
+        oldhoriz = 3;
+        oldvert = 3;
     }
 
     // Update is called once per frame
@@ -22,19 +28,24 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        // whenever input changes, do this 
-        // get key down/up ?
-       
-            
-
         // move player
         if (!onEdge && direction.magnitude >= 0.1f) {
             controller.Move(direction * speed * Time.deltaTime);
-            // rotate edgechk
+        }
+
+
+        // whenever input changes, do this 
+        // rotate edgechk
+        if (oldhoriz != horizontal || oldvert != vertical) {
             float angle = -1 * Mathf.Rad2Deg * Mathf.Atan2(vertical, horizontal);
-            Debug.Log(angle);
+            // Debug.Log(angle);
             edgeChk.transform.eulerAngles = new Vector3(0f, angle, 0f);
         }
+        
+        oldhoriz = horizontal;
+        oldvert = vertical;
+
+        
 
     }
 
