@@ -6,7 +6,8 @@ public class GroundedPaperSprite : PaperSprite
 {
     public float footHeight = 0.5f;
     public float wallCheckDistance = 0.5f;
-    public float stairHeight = 0.4f;
+    protected float stairHeight = 0.4f;
+    protected float stayAwayFromEdge = 0.2f;
     public LayerMask groundLayer;
     public bool onGround = false;
     public Transform trackedGround;
@@ -63,24 +64,30 @@ public class GroundedPaperSprite : PaperSprite
         {
             facingDirection = requestedMovement.normalized;
         }
+        if (trackedGround != null)
+        {
+            groundOffset = Quaternion.Inverse(trackedGround.transform.rotation) * (transform.position - trackedGround.transform.position);
+        }
     }
 
     Vector3 CheckMovement(Vector3 movement)
     {
-        if (Physics.CapsuleCast(transform.position + Vector3.up * footHeight / 2, transform.position - Vector3.up * (footHeight / 2 - stairHeight),
-            wallCheckDistance, movement.normalized, out RaycastHit wallHit, movement.magnitude - Vector3.Dot(movingPlatformCompensation, movement.normalized), groundLayer))
+        if (Physics.CapsuleCast(transform.position + movingPlatformCompensation + Vector3.up * footHeight / 2,
+            transform.position + movingPlatformCompensation - Vector3.up * (footHeight / 2 - stairHeight),
+            wallCheckDistance, movement.normalized, out RaycastHit wallHit, movement.magnitude, groundLayer))
         {
             return wallHit.normal;
         }
         else
         {
-            if (Physics.Raycast(transform.position + movement.normalized * (movement.magnitude - Vector3.Dot(movingPlatformCompensation, movement.normalized)), Vector3.down, out RaycastHit _, footHeight + stairHeight, groundLayer))
+            if (Physics.Raycast(transform.position + movingPlatformCompensation + movement.normalized * (movement.magnitude + stayAwayFromEdge),
+                Vector3.down, out RaycastHit _, footHeight + stairHeight, groundLayer))
             {
                 return Vector3.zero;
             }
             else
             {
-                if (Physics.Raycast(transform.position + movement + Vector3.down * (footHeight + stairHeight), -movement.normalized, out RaycastHit groundHit, movement.magnitude + stairHeight - Vector3.Dot(movingPlatformCompensation, movement.normalized), groundLayer))
+                if (Physics.Raycast(transform.position + movingPlatformCompensation + movement.normalized * (movement.magnitude + stayAwayFromEdge) + Vector3.down * (footHeight + stairHeight), -movement.normalized, out RaycastHit groundHit, movement.magnitude + stairHeight - Vector3.Dot(movingPlatformCompensation, movement.normalized), groundLayer))
                 {
                     return -groundHit.normal;
                 }
@@ -89,14 +96,6 @@ public class GroundedPaperSprite : PaperSprite
                     return -movement.normalized;
                 }
             }
-        }
-    }
-
-    private void LateUpdate()
-    {
-        if (trackedGround != null)
-        {
-            groundOffset = Quaternion.Inverse(trackedGround.transform.rotation) * (transform.position - trackedGround.transform.position);
         }
     }
 }
