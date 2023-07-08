@@ -120,11 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &36422029 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3130359753546481673, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
-  m_PrefabInstance: {fileID: 1511989253}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &104965583
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,13 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48cb2b2ffbbcbbb4299778805c5ff8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    rid: -2
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
 --- !u!65 &104965586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -583,11 +571,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1280778466 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3320143153754925546, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
-  m_PrefabInstance: {fileID: 1511989253}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1511989253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -598,7 +581,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4377050065594808, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2500889610266784827, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
       propertyPath: m_RootOrder
@@ -662,13 +645,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2500889610266784827, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1943018471}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5839788857761798120, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1686001032}
-    - targetCorrespondingSourceObject: {fileID: 5839788857761798120, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1686001031}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
 --- !u!1 &1686001026 stripped
 GameObject:
@@ -680,56 +657,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2500889610266784827, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
   m_PrefabInstance: {fileID: 1511989253}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1686001031
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686001026}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1686001032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686001026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d867f1247a274c63ae5af32b4e49b1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackedCamera: {fileID: 1280778466}
-  animator: {fileID: 1686001031}
-  footHeight: 0.5
-  wallCheckDistance: 0.5
-  stairHeight: 0.4
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  onGround: 0
-  trackedGround: {fileID: 36422029}
-  groundOffset: {x: 0, y: 0, z: 0}
-  requestedMovement: {x: 0, y: 0, z: 0}
-  movingPlatformCompensation: {x: 0, y: 0, z: 0}
-  facingDirection: {x: 1, y: 0, z: 0}
-  movementSpeed: 4
-  animationName: 
 --- !u!1 &1943018470
 GameObject:
   m_ObjectHideFlags: 0
