@@ -366,7 +366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4162655748453075191, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4162655748453075191, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6144644794359032996, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_Name
-      value: Stationery Range Enemy
+      value: C-Stationery Range Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1079,11 +1079,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3731714565251272971, guid: 1ddbd22f51588fd4a93b096723d28ee0, type: 3}
       propertyPath: m_Name
-      value: Mobile Melee Low Damage
+      value: A-Mobile Melee Low Damage
       objectReference: {fileID: 0}
     - target: {fileID: 6866623956116682072, guid: 1ddbd22f51588fd4a93b096723d28ee0, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6866623956116682072, guid: 1ddbd22f51588fd4a93b096723d28ee0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1211,11 +1211,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 192618999907587772, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_Name
-      value: Mobile Range Enemy
+      value: D-Mobile Range Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3954403426771652758, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
+      propertyPath: followPlayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7939495738080899823, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7939495738080899823, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2114,7 +2118,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 747784528294391860, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 747784528294391860, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2164,9 +2168,13 @@ PrefabInstance:
       propertyPath: attackRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7065392733264092668, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: meleeRange
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7413552439765537895, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_Name
-      value: Mobile Melee High Damage
+      value: B-Mobile Melee High Damage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
