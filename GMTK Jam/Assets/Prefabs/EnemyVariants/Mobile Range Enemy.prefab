@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4162655748453075191, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162655748453075191, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.755
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 4162655748453075191, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -58,6 +58,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6992582657109224078, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: followPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392809025600332669, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.36320752
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392809025600332669, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.36320752
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392809025600332669, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
+      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

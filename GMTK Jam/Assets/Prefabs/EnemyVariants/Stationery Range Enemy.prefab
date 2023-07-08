@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3120984327584977935, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3120984327584977935, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3120984327584977935, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.15
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 3120984327584977935, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,7 +54,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5173903759737237596, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_Name
-      value: Range Enemy 1
+      value: Stationery Range Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418115487194857349, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: m_Color.b
+      value: 0.16589518
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418115487194857349, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5283019
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418115487194857349, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8323192023935252086, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: attack
