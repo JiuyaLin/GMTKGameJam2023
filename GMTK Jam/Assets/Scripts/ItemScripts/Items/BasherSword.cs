@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasherSword : Item, GameObject
+public class BasherSword : Item
 {
     public BasherSword() {
 
