@@ -403,8 +403,8 @@ GameObject:
   - component: {fileID: 748180207}
   - component: {fileID: 748180208}
   m_Layer: 0
-  m_Name: GameHandlerTest
-  m_TagString: Untagged
+  m_Name: PauseMenuHandler
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,7 +438,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseKey: 27
   pauseMenuUI: {fileID: 534150236}
-  mixer: {fileID: 0}
+  creditsMenuUI: {fileID: 948104623}
+  mixer: {fileID: 24100000, guid: ff6ec33efaabe76489859b6b352e9d8b, type: 2}
+--- !u!1 &948104623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 957244441559186395, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+  m_PrefabInstance: {fileID: 5442657841180785220}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1173758274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8123303597482063488, guid: d41a4fbc39e2b4347863331dab190d0f, type: 3}
@@ -536,6 +542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1513751065464897242, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 748180208}
     - target: {fileID: 3725888100980989306, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -620,6 +630,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3985595458922793525, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 748180208}
+    - target: {fileID: 5461216247140861086, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785096659570682764, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178373848539854996, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 748180208}
+    - target: {fileID: 8144968940132597848, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 748180208}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
