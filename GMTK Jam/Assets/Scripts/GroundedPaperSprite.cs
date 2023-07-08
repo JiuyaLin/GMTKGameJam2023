@@ -14,6 +14,7 @@ public class GroundedPaperSprite : PaperSprite
     public Vector3 groundOffset;
     public Vector3 requestedMovement;
     public Vector3 movingPlatformCompensation = Vector3.zero;
+    public Vector3 facingDirection = Vector3.right;
 
     // Update is called once per frame
     public override void Update()
@@ -51,6 +52,10 @@ public class GroundedPaperSprite : PaperSprite
             {
                 transform.position += redoneMovement * 0.5f; // this is dumb but it works so * shrug *
             }
+        }
+        if (requestedMovement.sqrMagnitude != 0)
+        {
+            facingDirection = requestedMovement.normalized;
         }
     }
 
