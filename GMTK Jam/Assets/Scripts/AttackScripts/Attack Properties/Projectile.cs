@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public float lifetime = 1;
     public float speed = 10;
-    public int bounces = 0;
+    public bool canBounce = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +23,14 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        lifetime *= 2;
-        GetComponent<Rigidbody>().velocity *= 1.5f;
-        bounces++;
+        if (canBounce)
+        {
+            lifetime *= 2;
+            GetComponent<Rigidbody>().velocity *= 1.5f;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

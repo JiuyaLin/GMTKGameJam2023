@@ -3711,6 +3711,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1690321284533887805, guid: e09710b4dd2dc4b8383ebc65c7444224, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5481159061481665271}
+    - target: {fileID: 1690321284533887805, guid: e09710b4dd2dc4b8383ebc65c7444224, type: 3}
       propertyPath: meleeRange
       value: 1
       objectReference: {fileID: 0}
@@ -3727,3 +3731,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09710b4dd2dc4b8383ebc65c7444224, type: 3}
+--- !u!1 &5481159061481665271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2010128601199047728, guid: e09710b4dd2dc4b8383ebc65c7444224, type: 3}
+  m_PrefabInstance: {fileID: 5481159061481665270}
+  m_PrefabAsset: {fileID: 0}
