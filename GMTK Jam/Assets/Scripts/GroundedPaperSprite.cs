@@ -99,4 +99,8 @@ public class GroundedPaperSprite : PaperSprite
             groundOffset = Quaternion.Inverse(trackedGround.transform.rotation) * (transform.position - trackedGround.transform.position);
         }
     }
+
+    public float getAngle() {
+        return Vector3.SignedAngle(Vector3.right, facingDirection, Vector3.up);
+    }
 }

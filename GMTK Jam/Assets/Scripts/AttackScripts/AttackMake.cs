@@ -11,23 +11,30 @@ public class AttackMake : MonoBehaviour
     public GameObject rangePrefab;
     public ItemList itemList; 
     public GameObject player; 
+    
 
     private Transform tf;
     private float meleeTime;
     private float rangeTime;
+    private ThirdPersonMovement2 direction;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         tf = gameObject.transform;
         meleeTime = -meleeDelay;
-        rangeTime = -rangeTime;
+        rangeTime = -rangeDelay;
+        direction = player.GetComponent<ThirdPersonMovement2>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {   
         // Set the correct attack angle
+        angle = direction.getAngle();
+
         tf.eulerAngles = new Vector3(0, angle, 0);
 
         // Create the attack instance
