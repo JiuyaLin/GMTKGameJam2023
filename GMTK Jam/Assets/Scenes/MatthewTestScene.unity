@@ -167,9 +167,9 @@ MonoBehaviour:
   angle: 180
   meleeDelay: 1
   rangeDelay: 1
-  meleePrefab: {fileID: 0}
+  meleePrefab: {fileID: 3564473647296134600, guid: 6a030977e089df44ea7d8ce424074a03, type: 3}
   rangePrefab: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 475732327}
 --- !u!1 &471671016
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 475732333}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
