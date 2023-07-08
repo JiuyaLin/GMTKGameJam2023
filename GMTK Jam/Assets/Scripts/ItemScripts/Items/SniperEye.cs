@@ -21,14 +21,16 @@ public class SniperEye : Item
     }
 
     public void onGain(GameObject player) {
-
+        PlayerStats.rangeDamage += 5;
+        PlayerStats.meleeDamage -= 5;
     }
 
     public void onDrop(GameObject player) {
-
+        PlayerStats.rangeDamage -= 5;
+        PlayerStats.meleeDamage += 5;
     }
 
-    public void onHit(GameObject player) {
+    public void onHurt(GameObject player) {
 
     }
 }

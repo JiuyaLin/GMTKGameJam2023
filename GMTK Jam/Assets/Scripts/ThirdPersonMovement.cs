@@ -55,8 +55,8 @@ public class ThirdPersonMovement : MonoBehaviour
     // on collision exit 2d, set on edge to true 
     // on collision enter, set to false 
 
-    float getCheckAngle() {
-        return edgeChk.transform.rotation.y;
+    public float getCheckAngle() {
+        return edgeChk.transform.eulerAngles.y;
     }
 
 }

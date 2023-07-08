@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277680743757198462}
   - component: {fileID: 7418115487194857349}
+  - component: {fileID: 7551130899128462112}
   m_Layer: 0
   m_Name: paper
   m_TagString: Untagged
@@ -84,6 +85,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7551130899128462112
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203265410389925498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a1bab4df08569c4db18b54e375d113f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4649317515038980052
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +229,7 @@ Transform:
   - {fileID: 1277680743757198462}
   - {fileID: 1741646363962099294}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &3987273138647617209
 CharacterController:
@@ -314,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   maxHp: 3
-  speed: 1
+  speed: 5
 --- !u!114 &8323192023935252086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,9 +353,7 @@ MonoBehaviour:
   trackedCamera: {fileID: 0}
   animator: {fileID: 0}
   footHeight: 0.5
-  feather: 0.4
   wallCheckDistance: 0.5
-  stairHeight: 0.4
   groundLayer:
     serializedVersion: 2
     m_Bits: 8

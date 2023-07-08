@@ -104,4 +104,8 @@ public class GroundedPaperSprite : PaperSprite
             }
         }
     }
+
+    public float getAngle() {
+        return Vector3.SignedAngle(Vector3.right, facingDirection, Vector3.up);
+    }
 }
