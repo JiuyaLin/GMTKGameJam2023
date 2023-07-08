@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -415,6 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -461,6 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -601,6 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -665,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -853,6 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -970,6 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -1371,6 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -1606,6 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -1689,7 +1698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1521073906}
-  - component: {fileID: 1521073905}
+  - component: {fileID: 1521073907}
   m_Layer: 0
   m_Name: Blocks
   m_TagString: Untagged
@@ -1697,21 +1706,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1521073905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521073904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7317891850242eeb12c57cfffdfb81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  signalToActivate: {fileID: 1521073906}
-  activateOnStart: 1
-  timeTracker: 0
 --- !u!4 &1521073906
 Transform:
   m_ObjectHideFlags: 0
@@ -1740,6 +1734,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1521073907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521073904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb46762d751124971b9b78608fe96de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateOnStart: 1
+  timeTracker: 0
+  toActivate: []
+  toDeactivate: []
 --- !u!1 &1629816044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1435801478702100543, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
@@ -1783,6 +1793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -1900,6 +1911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -1946,6 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1
@@ -1992,6 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba9b2393b57f4440873f6e7a5bf45d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualPosition: {x: 0, y: 0, z: 0}
   appearingTracker: 0
   active: 0
   doneWithAnimation: 1

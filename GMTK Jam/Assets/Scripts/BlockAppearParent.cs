@@ -2,20 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SignalActivator : MonoBehaviour
+public class BlockAppearParent : MonoBehaviour, SignalActivatable, SignalDeactivatable
 {
-    public Transform signalToActivate;
     public bool activateOnStart;
     public float timeTracker = 0f;
-    public List<SignalActivatable> toActivate = new List<SignalActivatable>();
-    public List<SignalDeactivatable> toDeactivate = new List<SignalDeactivatable>();
+    public List<BlockAppear> toActivate = new List<BlockAppear>();
+    public List<BlockAppear> toDeactivate = new List<BlockAppear>();
     protected float delay = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
         if (activateOnStart)
         {
-            ActivateSignal();
+            OnSignalActivate();
         }
     }
 
@@ -43,13 +42,13 @@ public class SignalActivator : MonoBehaviour
         }
     }
 
-    void ActivateSignal()
+    public void OnSignalActivate()
     {
-        toActivate = new List<SignalActivatable>(signalToActivate.GetComponentsInChildren<SignalActivatable>());
+        toActivate = new List<BlockAppear>(transform.GetComponentsInChildren<BlockAppear>());
     }
 
-    void DeactivateSignal()
+    public void OnSignalDeactivate()
     {
-        toDeactivate = new List<SignalDeactivatable>(signalToActivate.GetComponentsInChildren<SignalDeactivatable>());
+        toDeactivate = new List<BlockAppear>(transform.GetComponentsInChildren<BlockAppear>());
     }
 }

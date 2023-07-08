@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockAppear : MonoBehaviour, SignalActivatable, SignalDeactivatable
+public class BlockAppear : MonoBehaviour
 {
     public Vector3 actualPosition;
     protected float appearTime = 0.3f;

@@ -7,12 +7,12 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
     protected float rollTime = 0.5f;
     protected float rollSpeed = 6f;
     protected float rollCooldown = 1.0f;
+    protected float interactableRange = 1.5f;
     public float movementSpeed = 1.5f;
     public float rollTimeTracker = 0f;
     public float rollColldownTracker = 0f;
     public Vector3 rollDirection;
     public string animationName;
-    
 
     public override void Start()
     {
@@ -69,6 +69,16 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
         else
         {
             animator.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        if (Input.GetButtonDown("Interact"))
+        {
+            List<Object> objects = new List<Object>(FindObjectsByType(typeof(Interactable), FindObjectsInactive.Exclude, FindObjectsSortMode.None));
+            objects.Sort(Comparer<Object>.Create((o1, o2) => ((o1 as Interactable).transform.position - transform.position).sqrMagnitude
+                .CompareTo(((o2 as Interactable).transform.position - transform.position).sqrMagnitude)));
+            if (objects.Count != 0 && ((objects[0] as Interactable).transform.position - transform.position).sqrMagnitude < (interactableRange * interactableRange))
+            {
+                (objects[0] as Interactable).OnInteract();
+            }
         }
     }
 
