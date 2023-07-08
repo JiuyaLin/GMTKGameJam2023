@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &105766762565035201
 MonoBehaviour:
@@ -44,9 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e38def4762f9a9498380b66af70ff74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 90
   meleeDelay: 5
   rangeDelay: 1
   meleePrefab: {fileID: 3564473647296134600, guid: 6a030977e089df44ea7d8ce424074a03, type: 3}
-  rangePrefab: {fileID: 9074573285958696647, guid: 1dc3ee6adcb9b4c43ab1f8316f85de26, type: 3}
+  rangePrefab: {fileID: 8816711437541448863, guid: 04f4e8b752a5f9c41abf45d8b3da1ffa, type: 3}
   player: {fileID: 0}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackMake : MonoBehaviour
 {   
-    public float angle = 0;
+    
     public float meleeDelay = 1f;
     public float rangeDelay = 1f;
     public GameObject meleePrefab; 
@@ -28,14 +28,9 @@ public class AttackMake : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {   
-        // Set the correct attack angle
-        // angle = direction.getAngle();
 
+    public void updateAngle(float angle) {
         tf.eulerAngles = new Vector3(0, angle, 0);
-        
     }
 
     public bool meleeAttack() {
