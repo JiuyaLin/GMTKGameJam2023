@@ -27,5 +27,5 @@ public abstract class Item
 
     public abstract void OnHurt(ThirdPersonMovement2 player);
 
-    public string getName();
+    public abstract string getName();
 }

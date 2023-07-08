@@ -36,7 +36,7 @@ public class BasherSword : Item
 
     }
 
-    public string getName() {
+    public override string getName() {
         return "BasherSword";
     }
 }

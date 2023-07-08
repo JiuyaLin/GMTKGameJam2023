@@ -54,11 +54,11 @@ public class ChestUI : MonoBehaviour
         Debug.Log(gameHandler);
 
 
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
+        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
+        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
+        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
+        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
+        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
 
         unhighlight();
         updateItems();
