@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     
     public Animator anim;
     public Rigidbody rb3D;
-    public bool 
+    public bool followPlayer = true;
     public float speed = 1f;
     private Transform target;
     public int damage = 10;
@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     public float attackRange = 5;
     public bool isAttacking = false;
     private float scaleX;
+
 
     void Start()
     {
