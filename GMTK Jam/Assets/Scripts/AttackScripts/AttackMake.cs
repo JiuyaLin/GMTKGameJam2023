@@ -35,6 +35,7 @@ public class AttackMake : MonoBehaviour
         if (Time.time - meleeTime > meleeDelay && meleePrefab != null && Input.GetButtonDown("Fire1")) {
             meleeTime = Time.time;
             GameObject meleeAttack = Instantiate(meleePrefab, tf);
+            
             foreach (Item item in ItemList.itemList)
                 item.onMeleeUse(player, meleeAttack);
         }
