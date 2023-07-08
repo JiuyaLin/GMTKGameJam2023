@@ -9,7 +9,10 @@ public class GameHandler_PauseMenu : MonoBehaviour
 
     public KeyCode pauseKey = KeyCode.Escape;
     public static bool GameisPaused = false;
+    public static bool CreditisOpen = false;
+
     public GameObject pauseMenuUI;
+    public GameObject creditsMenuUI;
     public AudioMixer mixer;
     public static float volumeLevel = 1.0f;
     private Slider sliderVolumeCtrl;
@@ -29,6 +32,7 @@ public class GameHandler_PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenuUI.SetActive(false);
+        creditsMenuUI.SetActive(false);
         GameisPaused = false;
     }
 
@@ -50,20 +54,37 @@ public class GameHandler_PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        creditsMenuUI.SetActive(false);
         Time.timeScale = 0f;
         GameisPaused = true;
     }
 
     public void Resume()
     {
+        if (CreditisOpen)
+        {
+            CloseCredits();
+        }
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
     }
 
+    public void OpenCredits()
+    {
+        creditsMenuUI.SetActive(true);
+        CreditisOpen = true;
+    }
+
+    public void CloseCredits()
+    {
+        creditsMenuUI.SetActive(false);
+        CreditisOpen = false;
+    }
+
     public void SetLevel(float sliderValue)
     {
-        mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+        mixer.SetFloat("Master", Mathf.Log10(sliderValue) * 20);
         volumeLevel = sliderValue;
     }
 }

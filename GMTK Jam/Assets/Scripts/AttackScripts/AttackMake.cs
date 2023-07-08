@@ -35,25 +35,28 @@ public class AttackMake : MonoBehaviour
         // angle = direction.getAngle();
 
         tf.eulerAngles = new Vector3(0, angle, 0);
-
-        // Create the attack instance
         
-        if (Time.time - meleeTime > meleeDelay && meleePrefab != null && Input.GetButtonDown("Fire1")) {
-            meleeTime = Time.time;
-            GameObject meleeAttack = Instantiate(meleePrefab, tf);
-            
-            foreach (Item item in ItemList.itemList)
-                item.onMeleeUse(player, meleeAttack);
-        }
+    }
 
-        if (Time.time - rangeTime > rangeDelay && rangePrefab != null && Input.GetButtonDown("Fire2")) {
-            rangeTime = Time.time;
-            GameObject rangeAttack = Instantiate(rangePrefab, tf);
-            foreach (Item item in ItemList.itemList)
-                item.onRangeUse(player, rangeAttack);
-        }
+    public bool meleeAttack() {
+        if (Time.time - meleeTime < meleeDelay || meleePrefab == null) return false;
 
+        meleeTime = Time.time;
+        GameObject meleeAttack = Instantiate(meleePrefab, tf);
         
+        foreach (Item item in ItemList.itemList)
+            item.onMeleeUse(player, meleeAttack);
+        return true;
+    }
+
+    public bool rangedAttack() {
+        if (Time.time - rangeTime < rangeDelay || rangePrefab == null) return false;
+
+        rangeTime = Time.time;
+        GameObject rangeAttack = Instantiate(rangePrefab, tf);
+        foreach (Item item in ItemList.itemList)
+            item.onRangeUse(player, rangeAttack);
+        return true;
         
     }
 }
