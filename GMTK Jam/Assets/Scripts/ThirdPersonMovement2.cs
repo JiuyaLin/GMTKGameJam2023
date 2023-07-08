@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ThirdPersonMovement2 : GroundedPaperSprite
 {
-    protected float rollTime = 0.5f;
-    protected float rollSpeed = 6f;
-    protected float rollCooldown = 1.0f;
-    protected float interactableRange = 1.5f;
-    public float movementSpeed = 1.5f;
+    public float rollTime = 0.5f;
+    public float rollSpeed = 6f;
+    public float rollCooldown = 1.0f;
+    public float interactableRange = 1.5f;
+    public float movementSpeed = 3f;
     public float rollTimeTracker = 0f;
     public float rollColldownTracker = 0f;
     public Vector3 rollDirection;
-    public string animationName;
 
     public override void Start()
     {
@@ -80,14 +79,13 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
                 (objects[0] as Interactable).OnInteract();
             }
         }
-    }
-
-    void ActivateAnimation(string name)
-    {
-        if (animationName != name)
+        if (Input.GetButtonDown("Melee"))
         {
-            animationName = name;
-            animator.Play(name);
+            GetComponent<AttackMake>().meleeAttack();
+        }
+        if (Input.GetButtonDown("Ranged"))
+        {
+            GetComponent<AttackMake>().rangedAttack();
         }
     }
 }

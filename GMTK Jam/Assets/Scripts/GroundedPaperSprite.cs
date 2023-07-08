@@ -16,6 +16,7 @@ public class GroundedPaperSprite : PaperSprite
     public Vector3 movingPlatformCompensation = Vector3.zero;
     public Vector3 facingDirection = Vector3.right;
     protected bool automaticallyUpdateFacingDirection = true;
+    public string animationName;
 
     public override void Start()
     {
@@ -107,5 +108,14 @@ public class GroundedPaperSprite : PaperSprite
 
     public float getAngle() {
         return Vector3.SignedAngle(Vector3.right, facingDirection, Vector3.up);
+    }
+
+    public void ActivateAnimation(string name)
+    {
+        if (animationName != name)
+        {
+            animationName = name;
+            animator.Play(name);
+        }
     }
 }

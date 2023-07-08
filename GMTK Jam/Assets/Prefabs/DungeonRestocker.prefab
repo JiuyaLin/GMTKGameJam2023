@@ -166,8 +166,12 @@ MonoBehaviour:
   requestedMovement: {x: 0, y: 0, z: 0}
   movingPlatformCompensation: {x: 0, y: 0, z: 0}
   facingDirection: {x: 1, y: 0, z: 0}
-  movementSpeed: 4
+  animationName: 
+  rollTime: 0.5
+  rollSpeed: 10
+  rollCooldown: 1
+  interactableRange: 1.5
+  movementSpeed: 5
   rollTimeTracker: 0
   rollColldownTracker: 0
   rollDirection: {x: 0, y: 0, z: 0}
-  animationName: 
