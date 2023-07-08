@@ -327,21 +327,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d867f1247a274c63ae5af32b4e49b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: 
   footHeight: 0.5
   feather: 0.4
-  movementSpeed: 4
   wallCheckDistance: 0.4
   stairHeight: 0.4
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  trackedCamera: {fileID: 0}
   onGround: 0
   trackedGround: {fileID: 0}
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
   movingPlatformCompensation: {x: 0, y: 0, z: 0}
+  movementSpeed: 4
+  animationName: 
 --- !u!1 &512375166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1435801478702100543, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
@@ -1709,7 +1708,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6b68188bf1b0c4a7bb2d8fd0f62719ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72c11fca25d334a61956b225c839f2da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
