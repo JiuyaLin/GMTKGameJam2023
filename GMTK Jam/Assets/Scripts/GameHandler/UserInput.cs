@@ -10,15 +10,15 @@ public class UserInput : MonoBehaviour
     private AttackMake playerAttackMake;
 
     void Start() {
-        playerAttackMake = player.GetComponentInChildren<AttackMake>()[0];
+        playerAttackMake = player.GetComponentInChildren<AttackMake>();
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Melee")) {
             playerAttackMake.meleeAttack();
         }
-        if (Input.GetButtonDown("Fire2")) {
+        if (Input.GetButtonDown("Ranged")) {
             playerAttackMake.rangedAttack();
         }
     }
