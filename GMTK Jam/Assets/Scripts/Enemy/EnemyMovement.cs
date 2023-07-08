@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemyMovement : GroundedPaperSprite
 {
-    public Rigidbody rb3D;
+    public Stats stats;
+    public AttackMake attack;
+    public bool isMelee = true;
+
+    Rigidbody rb3D;
     public bool followPlayer = true;
     //public float speed = 1f;
     private Transform target;
@@ -17,18 +21,23 @@ public class EnemyMovement : GroundedPaperSprite
     public bool isAttacking = false;
     private float scaleX;
 
-    public Stats stats;
+    
 
 
     public override void Start()
     {
+        attack = this.GetComponentInChildren<AttackMake>();
         base.Start();
         rb3D = GetComponent<Rigidbody>();
         scaleX = gameObject.transform.localScale.x;
 
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if ((GameObject.FindGameObjectWithTag("Player") != null) && (followPlayer == true))
         {
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            
+        } else
+        {
+            target = transform;
         }
 
         stats = this.GetComponent<Stats>();
@@ -45,10 +54,16 @@ public class EnemyMovement : GroundedPaperSprite
 
         if ((target != null) && (DistToPlayer <= attackRange))
         {
-            //Ethan see here
             requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
 
             animator.SetBool("IsWalking", true);
+            if (isMelee)
+            {
+                attack.meleeAttack();
+            } else
+            {
+                attack.rangedAttack();
+            }
             //flip enemy to face player direction. Wrong direction? Swap the * -1.
             //if (target.position.x > gameObject.transform.position.x)
             //{
