@@ -20,6 +20,7 @@ public class GroundedPaperSprite : PaperSprite
     public override void Update()
     {
         base.Update();
+        requestedMovement -= Vector3.up * requestedMovement.y;
         if (trackedGround != null)
         {
             movingPlatformCompensation = trackedGround.transform.position + trackedGround.transform.rotation * groundOffset - transform.position;

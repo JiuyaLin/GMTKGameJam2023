@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyMovement : GroundedPaperSprite
 {
-    
-    public Animator anim;
     public Rigidbody rb3D;
     public bool followPlayer = true;
     //public float speed = 1f;
@@ -22,9 +20,10 @@ public class EnemyMovement : GroundedPaperSprite
     public Stats stats;
 
 
-    void Start()
+    public override void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        base.Start();
+        animator = GetComponentInChildren<Animator>();
         rb3D = GetComponent<Rigidbody>();
         scaleX = gameObject.transform.localScale.x;
 
@@ -41,14 +40,14 @@ public class EnemyMovement : GroundedPaperSprite
         //}
     }
 
-    void Update()
+    public override void Update()
     {
         float DistToPlayer = Vector3.Distance(transform.position, target.position);
 
         if ((target != null) && (DistToPlayer <= attackRange))
         {
             //Ethan see here
-            requestedMovement = Vector3.MoveTowards(transform.position, target.position, stats.speed * Time.deltaTime);
+            requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
 
             //anim.SetBool("Walk", true);
             //flip enemy to face player direction. Wrong direction? Swap the * -1.
@@ -60,6 +59,10 @@ public class EnemyMovement : GroundedPaperSprite
             //{
             //    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
             //}
+        }
+        else
+        {
+            requestedMovement = Vector3.zero;
         }
         base.Update();
         //else { anim.SetBool("Walk", false);}

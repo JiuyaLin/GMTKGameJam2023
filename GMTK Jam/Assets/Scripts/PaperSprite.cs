@@ -5,11 +5,11 @@ using UnityEngine;
 public class PaperSprite : MonoBehaviour
 {
 
-    protected Camera trackedCamera;
+    public Camera trackedCamera;
 
-    protected Animator animator;
+    public Animator animator;
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         animator = GetComponentInChildren<Animator>();
         trackedCamera = FindAnyObjectByType<Camera>();
