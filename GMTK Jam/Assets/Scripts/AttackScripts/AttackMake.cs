@@ -38,7 +38,7 @@ public class AttackMake : MonoBehaviour
         
     }
 
-    public bool rangedAttack() {
+    public bool meleeAttack() {
         if (Time.time - meleeTime < meleeDelay || meleePrefab == null) return false;
 
         meleeTime = Time.time;
@@ -49,7 +49,7 @@ public class AttackMake : MonoBehaviour
         return true;
     }
 
-    public bool meleeAttack() {
+    public bool rangedAttack() {
         if (Time.time - rangeTime < rangeDelay || rangePrefab == null) return false;
 
         rangeTime = Time.time;
