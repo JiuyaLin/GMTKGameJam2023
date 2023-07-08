@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SniperEye : Item
+public class WingedShoes : Item
 {
-    public string itemName = "Sniper Eye";
+    public string itemName = "Winged Shoes";
     public Sprite sprite = null;
+    // Start is called before the first frame update
     public override void OnMeleeHit(GameObject enemy) {
-         
+
     }
 
     public override void OnRangeHit(GameObject enemy) {
-
+        
     }
 
     public override void OnMeleeUse(GameObject attack) {
@@ -24,18 +25,16 @@ public class SniperEye : Item
 
     public override void OnGain() {
         base.OnGain();
-        PlayerStats.rangeDamage += 5;
-        PlayerStats.meleeDamage -= 5;
+        HasItems.droppedWingedShoes = false;
     }
 
     public override void OnDrop() {
         base.OnDrop();
-        PlayerStats.rangeDamage -= 5;
-        PlayerStats.meleeDamage += 5;
+        HasItems.droppedWingedShoes = true;
     }
 
     public override void OnHurt() {
-
+        PlayerStats.hp -= 1;
     }
 
     public override string GetName() {

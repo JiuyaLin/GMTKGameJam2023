@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SniperEye : Item
+public class Lockpick : Item
 {
-    public string itemName = "Sniper Eye";
+    public string itemName = "Lockpick";
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
-         
+
     }
 
     public override void OnRangeHit(GameObject enemy) {
@@ -24,14 +24,12 @@ public class SniperEye : Item
 
     public override void OnGain() {
         base.OnGain();
-        PlayerStats.rangeDamage += 5;
-        PlayerStats.meleeDamage -= 5;
+        HasItems.droppedLockpick = false;
     }
 
     public override void OnDrop() {
         base.OnDrop();
-        PlayerStats.rangeDamage -= 5;
-        PlayerStats.meleeDamage += 5;
+        HasItems.droppedLockpick = true;
     }
 
     public override void OnHurt() {

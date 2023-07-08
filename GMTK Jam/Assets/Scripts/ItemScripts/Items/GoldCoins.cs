@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SniperEye : Item
+public class GoldCoins : Item
 {
-    public string itemName = "Sniper Eye";
+    public string itemName = "Gold Coins";
     public Sprite sprite = null;
+
+
+    public float waitTime = 100;
+    float timer = 0;
+    bool dropped = false; 
+
     public override void OnMeleeHit(GameObject enemy) {
-         
+
     }
 
     public override void OnRangeHit(GameObject enemy) {
@@ -15,25 +21,26 @@ public class SniperEye : Item
     }
 
     public override void OnMeleeUse(GameObject attack) {
-        
+
     }
 
     public override void OnRangeUse(GameObject attack) {
 
     }
 
-    public override void OnGain() {
+    public override void OnGain()
+    {
         base.OnGain();
-        PlayerStats.rangeDamage += 5;
-        PlayerStats.meleeDamage -= 5;
+        dropped = false;
     }
 
-    public override void OnDrop() {
+    public override void OnDrop()
+    {
         base.OnDrop();
-        PlayerStats.rangeDamage -= 5;
-        PlayerStats.meleeDamage += 5;
+        timer = Time.time;
+        dropped = true;
+        
     }
-
     public override void OnHurt() {
 
     }
@@ -44,4 +51,15 @@ public class SniperEye : Item
     public override Sprite GetSprite() {
         return sprite;
     }
+
+    void Update() {
+        if (!dropped) return;
+        if (Time.time - timer > waitTime) {
+            PlayerStats.hp = 0;
+            dropped = false;
+        }
+    }
+    
+    
+    
 }
