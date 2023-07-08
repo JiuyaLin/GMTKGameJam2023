@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SniperEye : Item
+public class BasherSword : Item, GameObject
 {
+    public BasherSword() {
+
+    }
+
    public void onMeleeHit(GameObject enemy) {
 
    }
@@ -21,13 +25,13 @@ public class SniperEye : Item
     }
 
     public void onGain(GameObject player) {
-        PlayerStats.rangeDamage += 5;
-        PlayerStats.meleeDamage -= 5;
+        PlayerStats.rangeDamage -= 5;
+        PlayerStats.meleeDamage += 5;
     }
 
     public void onDrop(GameObject player) {
-        PlayerStats.rangeDamage -= 5;
-        PlayerStats.meleeDamage += 5;
+        PlayerStats.rangeDamage += 5;
+        PlayerStats.meleeDamage -= 5;
     }
 
     public void onHurt(GameObject player) {

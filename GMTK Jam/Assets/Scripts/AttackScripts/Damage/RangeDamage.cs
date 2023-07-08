@@ -17,6 +17,7 @@ public class RangeDamage : MonoBehaviour
         if (isPlayer){
             if (collision.tag != "Enemy") return;
             int totalDamage = PlayerStats.rangeDamage + damage;
+            totalDamage = totalDamage > 0 ? totalDamage : 0;
             collision.gameObject.GetComponent<Stats>().hp -= totalDamage;
         } else {
             if (collision.tag != "Player") return;

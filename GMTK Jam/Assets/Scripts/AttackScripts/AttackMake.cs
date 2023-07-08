@@ -9,7 +9,6 @@ public class AttackMake : MonoBehaviour
     public float rangeDelay = 1f;
     public GameObject meleePrefab; 
     public GameObject rangePrefab;
-    public ItemList itemList; 
     public GameObject player; 
 
     private Transform tf;

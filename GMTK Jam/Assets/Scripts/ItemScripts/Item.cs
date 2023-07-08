@@ -16,5 +16,5 @@ public interface Item
 
     public void onDrop(GameObject player);
 
-    public void onHit(GameObject player);
+    public void onHurt(GameObject player);
 }
