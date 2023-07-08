@@ -336,7 +336,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  trackedCamera: {fileID: 1410971739}
+  trackedCamera: {fileID: 0}
   onGround: 0
   trackedGround: {fileID: 0}
   groundOffset: {x: 0, y: 0, z: 0}
