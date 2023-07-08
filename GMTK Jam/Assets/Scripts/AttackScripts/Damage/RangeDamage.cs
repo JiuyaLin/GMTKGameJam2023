@@ -8,7 +8,7 @@ public class RangeDamage : MonoBehaviour
     public bool isPlayer = false;
 
     // Update is called once per frame
-    void OnTriggerEnter(Collider collision) {
+    private void OnTriggerEnter(Collider collision) {
         
         foreach (Item item in ItemList.itemList) {
             item.onRangeHit(collision.gameObject);

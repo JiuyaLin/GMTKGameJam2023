@@ -10,16 +10,13 @@ public class AttackDecay : MonoBehaviour
     void Start()
     {
         time = Time.time;
-        Debug.Log(duration);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(Time.time - time);
-        // Debug.Log(Time.time - time < duration);
         if (Time.time - time < duration) return;
-        Debug.Log("Destroyed");
         Destroy(gameObject);
     }
 }
