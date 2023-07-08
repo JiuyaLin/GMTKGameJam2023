@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasherSword : Item
 {
+    public string itemName = "Basher Sword";
+    public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
 
     }
@@ -12,31 +14,34 @@ public class BasherSword : Item
 
     }
 
-    public override void OnMeleeUse(ThirdPersonMovement2 player, GameObject attack) {
+    public override void OnMeleeUse(GameObject attack) {
         
     }
 
-    public override void OnRangeUse(ThirdPersonMovement2 player, GameObject attack) {
+    public override void OnRangeUse(GameObject attack) {
 
     }
 
-    public override void OnGain(ThirdPersonMovement2 player) {
-        base.OnGain(player);
+    public override void OnGain() {
+        base.OnGain();
         PlayerStats.rangeDamage -= 5;
         PlayerStats.meleeDamage += 5;
     }
 
-    public override void OnDrop(ThirdPersonMovement2 player) {
-        base.OnDrop(player);
+    public override void OnDrop() {
+        base.OnDrop();
         PlayerStats.rangeDamage += 5;
         PlayerStats.meleeDamage -= 5;
     }
 
-    public override void OnHurt(ThirdPersonMovement2 player) {
+    public override void OnHurt() {
 
     }
 
-    public override string getName() {
-        return "BasherSword";
+    public override string GetName() {
+        return itemName;
+    }
+    public override Sprite GetSprite() {
+        return sprite;
     }
 }

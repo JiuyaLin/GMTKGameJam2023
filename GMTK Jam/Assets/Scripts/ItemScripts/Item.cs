@@ -2,30 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Item
+public abstract class Item : MonoBehaviour
 {
     public virtual float Weight => 0f;
+
     public abstract void OnMeleeHit(GameObject enemy);
 
     public abstract void OnRangeHit(GameObject enemy);
 
-    public abstract void OnMeleeUse(ThirdPersonMovement2 player, GameObject attack);
+    public abstract void OnMeleeUse(GameObject attack);
 
-    public abstract void OnRangeUse(ThirdPersonMovement2 player, GameObject attack);
+    public abstract void OnRangeUse(GameObject attack);
 
-    public virtual void OnGain(ThirdPersonMovement2 player)
+    public virtual void OnGain()
     {
-        player.movementSpeed -= Weight / 2;
-        player.rollSpeed -= Weight;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().movementSpeed -= Weight / 2;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().rollSpeed -= Weight;
     }
 
-    public virtual void OnDrop(ThirdPersonMovement2 player)
+    public virtual void OnDrop()
     {
-        player.movementSpeed += Weight / 2;
-        player.rollSpeed += Weight;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().movementSpeed += Weight / 2;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().rollSpeed += Weight;
     }
 
-    public abstract void OnHurt(ThirdPersonMovement2 player);
+    public abstract void OnHurt();
 
-    public abstract string getName();
+    public abstract string GetName();
+
+    public abstract Sprite GetSprite();
 }
