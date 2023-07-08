@@ -111,8 +111,29 @@ public class ChestUI : MonoBehaviour
         // update item placement 
         for (int i = 0; i < ItemList.itemList.Count; i++) {
             string itemname = ItemList.itemList[i].getName();
-            if (itemname == "") {
-                itemObjList[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("");
+            if (itemname == "BasherSword") { 
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/BusterSword");
+            } 
+            else if (itemname == "SniperEye") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/Items_SniperEye");
+            }
+            else if (itemname == "") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
+            }
+            else if (itemname == "") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
+            }
+            else if (itemname == "") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
+            }
+            else if (itemname == "") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
+            }
+            else if (itemname == "") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
+            }
+            else if (itemname == "") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
             }
         }
 
