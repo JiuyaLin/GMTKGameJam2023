@@ -1,5 +1,85 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1569194027579020917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6040337306325852774}
+  - component: {fileID: 363352359165257293}
+  - component: {fileID: 9198384242291778944}
+  m_Layer: 0
+  m_Name: WeaponAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6040337306325852774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569194027579020917}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6970189, y: 0.5717435, z: 0.6023369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2500889610266784827}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &363352359165257293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569194027579020917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332520bb83b7e448c96c7998a76cfbed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedCamera: {fileID: 0}
+  animator: {fileID: 0}
+  savedOffset: {x: 0, y: 0, z: 0}
+  footHeight: 0.5
+  wallCheckDistance: 0.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  onGround: 0
+  trackedGround: {fileID: 0}
+  groundOffset: {x: 0, y: 0, z: 0}
+  requestedMovement: {x: 0, y: 0, z: 0}
+  movingPlatformCompensation: {x: 0, y: 0, z: 0}
+  facingDirection: {x: 1, y: 0, z: 0}
+  animationName: 
+--- !u!114 &9198384242291778944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569194027579020917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e38def4762f9a9498380b66af70ff74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 0
+  meleeDelay: 0.25
+  rangeDelay: 0.5
+  meleeRange: 1
+  rangedOffset: 0.5
+  meleePrefab: {fileID: 404512131280209835, guid: baccf5369ef0f8447954cf94661b5d6f, type: 3}
+  rangePrefab: {fileID: 8816711437541448863, guid: 04f4e8b752a5f9c41abf45d8b3da1ffa, type: 3}
+  player: {fileID: 0}
 --- !u!1 &3477282109167365931
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +238,7 @@ Transform:
   - {fileID: 2108037355047316664}
   - {fileID: 7889585842097073845}
   - {fileID: 3132934580399827319}
+  - {fileID: 6040337306325852774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -325,7 +406,6 @@ GameObject:
   - component: {fileID: 3130359753546481673}
   - component: {fileID: 8740685230020028467}
   - component: {fileID: 41294134948399397}
-  - component: {fileID: 4264505399053779473}
   m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
@@ -379,17 +459,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2f4a22b648505848bff5e0d5a2980a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4264505399053779473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123303597482063488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d47778de426cc9649b37067798d2e928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

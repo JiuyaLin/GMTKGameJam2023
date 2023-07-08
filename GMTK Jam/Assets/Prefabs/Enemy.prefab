@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 3647623808866222586}
   - component: {fileID: 8323192023935252086}
   - component: {fileID: 4837444227385506247}
+  - component: {fileID: 5767819989592231403}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -211,3 +212,26 @@ MonoBehaviour:
   meleePrefab: {fileID: 5101371494351837819, guid: 588f9663c8aac40debd48da975d9dd25, type: 3}
   rangePrefab: {fileID: 8816711437541448863, guid: 04f4e8b752a5f9c41abf45d8b3da1ffa, type: 3}
   player: {fileID: 0}
+--- !u!136 &5767819989592231403
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173903759737237596}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
