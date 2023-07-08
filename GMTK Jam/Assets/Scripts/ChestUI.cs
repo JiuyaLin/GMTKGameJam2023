@@ -53,6 +53,13 @@ public class ChestUI : MonoBehaviour
         gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
         Debug.Log(gameHandler);
 
+
+        ItemList.addItem(player, new BasherSword());
+        ItemList.addItem(player, new BasherSword());
+        ItemList.addItem(player, new BasherSword());
+        ItemList.addItem(player, new BasherSword());
+        ItemList.addItem(player, new BasherSword());
+
         unhighlight();
         updateItems();
         //edit selectUI from there (what is highlighted) 
@@ -109,12 +116,9 @@ public class ChestUI : MonoBehaviour
             }
         }
 
-        // Debug.Log(ItemList.itemList.Count);
-
-        // for (int i = 4; i > ItemList.itemList.Count; i--) {
-            
-        //     itemObjList[i].SetActive(false);
-        // }
+        for (int i = 4; i > ItemList.itemList.Count - 1; i--) {
+            itemObjList[i].SetActive(false);
+        }
         
     }
 
@@ -128,6 +132,7 @@ public class ChestUI : MonoBehaviour
         //gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
 
         ItemList.removeItem(player, i);
+        
         // adds to gamehandler counter
         gameHandler.GetComponent<ChestTracker>().ChestFilled();
 

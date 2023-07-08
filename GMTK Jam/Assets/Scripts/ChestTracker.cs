@@ -12,13 +12,6 @@ public class ChestTracker : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
-        ItemList.addItem(player, new BasherSword());
-
-        Debug.Log(ItemList.itemList[3]);
     }
 
     // Update is called once per frame
