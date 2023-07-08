@@ -8,7 +8,11 @@ public class GiveItems : MonoBehaviour
     public int maxInventory = 5;
     
     void Start() {
-        
+        foreach (GameObject itemObject in levelItems) {
+            if (ItemList.itemList.Count >= maxInventory) break;
+            ItemList.AddItem(itemObject.GetComponent<Item>());
+        }
+            
     }
 
     
