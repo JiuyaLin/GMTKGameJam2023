@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PaperSprite : MonoBehaviour
 {
-
     public Camera trackedCamera;
-
     public Animator animator;
-    public Vector3 savedOffset;
+    private Vector3 savedOffset;
+
     // Start is called before the first frame update
     public virtual void Start()
     {

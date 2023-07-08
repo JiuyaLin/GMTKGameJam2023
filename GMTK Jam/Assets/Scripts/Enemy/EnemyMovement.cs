@@ -4,25 +4,18 @@ using UnityEngine;
 
 public class EnemyMovement : GroundedPaperSprite
 {
-    public Stats stats;
-    public AttackMake attack;
-    public bool isMelee = true;
-
-    Rigidbody rb3D;
-    public bool followPlayer = true;
-    //public float speed = 1f;
-    private Transform target;
     public int damage = 10;
-
-    //public int EnemyLives = 3;
-    //private GameHandler gameHandler;
-
     public float attackRange = 5;
     public bool isAttacking = false;
-    private float scaleX;
-
     public bool isDead = false;
-
+    public bool isMelee = true;
+    public bool followPlayer = true;
+    
+    private Stats stats;
+    private AttackMake attack;
+    private Transform target;
+    private Rigidbody rb3D;
+    private float scaleX;
 
     public override void Start()
     {
@@ -31,12 +24,10 @@ public class EnemyMovement : GroundedPaperSprite
         rb3D = GetComponent<Rigidbody>();
         scaleX = gameObject.transform.localScale.x;
 
-        if ((GameObject.FindGameObjectWithTag("Player") != null) && (followPlayer == true))
-        {
+        if ((GameObject.FindGameObjectWithTag("Player") != null) && (followPlayer == true)) {
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             
-        } else
-        {
+        } else {
             target = transform;
         }
 
@@ -51,21 +42,16 @@ public class EnemyMovement : GroundedPaperSprite
     public override void Update()
     {
         checkIfDead();
-        if (!isDead)
-        {
+        if (!isDead) {
             float DistToPlayer = Vector3.Distance(transform.position, target.position);
 
-            if ((target != null) && (DistToPlayer <= attackRange))
-            {
+            if ((target != null) && (DistToPlayer <= attackRange)) {
                 requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
 
                 animator.SetBool("IsWalking", true);
-                if (isMelee)
-                {
+                if (isMelee) {
                     attack.MeleeAttack();
-                }
-                else
-                {
+                } else {
                     attack.RangedAttack();
                 }
                 //flip enemy to face player direction. Wrong direction? Swap the * -1.
@@ -77,9 +63,7 @@ public class EnemyMovement : GroundedPaperSprite
                 //{
                 //    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
                 //}
-            }
-            else
-            {
+            } else {
                 requestedMovement = Vector3.zero;
                 animator.SetBool("IsWalking", false);
             }
@@ -87,15 +71,12 @@ public class EnemyMovement : GroundedPaperSprite
 
         base.Update();
         //else { anim.SetBool("Walk", false);}
-
-
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
+        if (other.gameObject.tag == "Player") {
             isAttacking = true;
             Debug.Log("Player enter enemy attack range");
             //anim.SetBool("Attack", true);
@@ -106,8 +87,7 @@ public class EnemyMovement : GroundedPaperSprite
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
+        if (other.gameObject.tag == "Player") {
             isAttacking = false;
             Debug.Log("Player leave enemy attack range");
             //anim.SetBool("Attack", false);
@@ -117,10 +97,8 @@ public class EnemyMovement : GroundedPaperSprite
 
     public void checkIfDead()
     {
-        if (stats.hp <= 0)
-        {
-            if (!isDead)
-            {
+        if (stats.hp <= 0) {
+            if (!isDead) {
                 animator.SetTrigger("IsDead");
                 isDead = true;
             }
