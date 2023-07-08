@@ -8,12 +8,12 @@ public class RangeDamage : MonoBehaviour
     public bool isPlayer = false;
 
     // Update is called once per frame
-    void onCollisionEnter(Collision collision) {
+    void onTriggerEnter(Collider collision) {
         
         foreach (Item item in ItemList.itemList) {
             item.onRangeHit(collision.gameObject);
         }
-
+        
         if (isPlayer){
             int totalDamage = PlayerStats.rangeDamage + damage;
             collision.gameObject.GetComponent<Stats>().hp -= totalDamage;
