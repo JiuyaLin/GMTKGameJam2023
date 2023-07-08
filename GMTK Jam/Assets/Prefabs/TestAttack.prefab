@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7010279599114161171}
   - component: {fileID: 6042863577518240477}
   - component: {fileID: 298209384809959167}
+  - component: {fileID: 8540347775545788993}
   m_Layer: 0
   m_Name: TestAttack
   m_TagString: Untagged
@@ -54,13 +55,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3564473647296134600}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6147b306113b9ab45bc3bbd0917a715b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
   isPlayer: 1
+--- !u!65 &8540347775545788993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564473647296134600}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4533271674369236055
 GameObject:
   m_ObjectHideFlags: 0
