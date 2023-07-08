@@ -6,7 +6,7 @@ public class SniperPickup : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
         if (other.tag != "Player") return;
-        ItemList.AddItem(other.GetComponent<ThirdPersonMovement2>(), new SniperEye());
+        ItemList.AddItem(new SniperEye());
         Destroy(gameObject);
     }
 }

@@ -54,11 +54,11 @@ public class ChestUI : MonoBehaviour
         Debug.Log(gameHandler);
 
 
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
 
         unhighlight();
         updateItems();
@@ -150,7 +150,7 @@ public class ChestUI : MonoBehaviour
     public void selectItem(int i)
     {
         Debug.Log(i + "!");
-        ItemList.RemoveItem(player.GetComponent<ThirdPersonMovement2>(), i);
+        ItemList.RemoveItem(i);
         //gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
         
         // adds to gamehandler counter
