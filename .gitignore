@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Added by Alex
 GMTK Jam/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+
+# Mac OS X nonsense
+*/.DS_Store
