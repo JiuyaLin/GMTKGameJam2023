@@ -29,5 +29,6 @@ public class ChestTracker : MonoBehaviour
 
     public void ChestFilled() {
         numChestsFilled++;
+        Debug.Log("woo!");
     }
 }

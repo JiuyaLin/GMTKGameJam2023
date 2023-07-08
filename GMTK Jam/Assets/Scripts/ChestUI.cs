@@ -51,6 +51,7 @@ public class ChestUI : MonoBehaviour
         itemObjList = new List<GameObject> {item1, item2, item3, item4, item5};
         
         gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
+        Debug.Log(gameHandler);
 
         unhighlight();
         updateItems();
@@ -108,23 +109,34 @@ public class ChestUI : MonoBehaviour
             }
         }
 
+        // Debug.Log(ItemList.itemList.Count);
+
         // for (int i = 4; i > ItemList.itemList.Count; i--) {
+            
         //     itemObjList[i].SetActive(false);
         // }
         
     }
 
-
+    public void setChestRef(ChestObj refc) {
+        chestref = refc;
+    }
 
     public void selectItem(int i)
     {
         Debug.Log(i + "!");
+        //gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
+
         ItemList.removeItem(player, i);
         // adds to gamehandler counter
         gameHandler.GetComponent<ChestTracker>().ChestFilled();
 
+        Debug.Log(chestref);
+
         chestref.chestFilled = true;
         chestref.closeChest();
     }
+
+    
 
 }

@@ -21,7 +21,7 @@ public class ChestObj : Interactable
         if (!chestFilled) {
             openChest();
             chestOpened = true;
-            UIscript.chestref = this;
+            UIscript.setChestRef(this);
         } else {
             Debug.Log("Chest Full!");
             // display msg saying its full 
@@ -41,6 +41,8 @@ public class ChestObj : Interactable
     }
 
     public void closeChest() {
+        Debug.Log("closed!");
+        
         UI.SetActive(false);
         chestOpened = false;
         UIscript.updateItems();
