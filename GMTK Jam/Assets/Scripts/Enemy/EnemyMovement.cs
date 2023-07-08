@@ -8,7 +8,7 @@ public class EnemyMovement : GroundedPaperSprite
     public AttackMake attack;
     public bool isMelee = true;
 
-    public Rigidbody rb3D;
+    Rigidbody rb3D;
     public bool followPlayer = true;
     //public float speed = 1f;
     private Transform target;
@@ -31,9 +31,13 @@ public class EnemyMovement : GroundedPaperSprite
         rb3D = GetComponent<Rigidbody>();
         scaleX = gameObject.transform.localScale.x;
 
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if ((GameObject.FindGameObjectWithTag("Player") != null) && (followPlayer == true))
         {
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            
+        } else
+        {
+            target = transform;
         }
 
         stats = this.GetComponent<Stats>();
@@ -50,7 +54,6 @@ public class EnemyMovement : GroundedPaperSprite
 
         if ((target != null) && (DistToPlayer <= attackRange))
         {
-            //Ethan see here
             requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
 
             animator.SetBool("IsWalking", true);
