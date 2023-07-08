@@ -47,7 +47,6 @@ public class EnemyMovement : GroundedPaperSprite
 
         if ((target != null) && (DistToPlayer <= attackRange))
         {
-            //Ethan see here
             requestedMovement = Vector3.MoveTowards(transform.position, target.position, stats.speed * Time.deltaTime);
 
             //anim.SetBool("Walk", true);
