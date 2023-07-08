@@ -33,4 +33,8 @@ public class SniperEye : Item
     public override void OnHurt(ThirdPersonMovement2 player) {
 
     }
+
+    public string getName() {
+        return "SniperEye";
+    }
 }
