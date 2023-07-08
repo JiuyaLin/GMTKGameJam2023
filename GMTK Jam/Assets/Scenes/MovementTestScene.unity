@@ -341,6 +341,7 @@ MonoBehaviour:
   trackedGround: {fileID: 0}
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
+  movingPlatformCompensation: {x: 0, y: 0, z: 0}
 --- !u!1 &512375166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1435801478702100543, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
@@ -1266,14 +1267,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410971737}
-  m_LocalRotation: {x: 0.19996412, y: 0.3736123, z: -0.08282786, w: 0.90198}
-  m_LocalPosition: {x: -3.1, y: 3.98, z: -4.44}
+  m_LocalRotation: {x: 0.32861406, y: 0.26051173, z: -0.094818495, w: 0.9028599}
+  m_LocalPosition: {x: -1.6, y: 3.98, z: -4.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 25, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 32.19, z: 0}
 --- !u!1 &1452595917 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1435801478702100543, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
