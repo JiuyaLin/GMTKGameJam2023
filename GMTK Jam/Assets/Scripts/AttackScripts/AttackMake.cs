@@ -5,18 +5,23 @@ using UnityEngine;
 public class AttackMake : MonoBehaviour
 {   
     public float angle = 0;
-    public float delay = 1f;
-    public GameObject attackPrefab; 
+    public float meleeDelay = 1f;
+    public float rangeDelay = 1f;
+    public GameObject meleePrefab; 
+    public GameObject rangePrefab;
     public ItemList itemList; 
+    public GameObject player; 
 
     private Transform tf;
-    private float time;
+    private float meleeTime;
+    private float rangeTime;
 
     // Start is called before the first frame update
     void Start()
     {
         tf = gameObject.transform;
-        time = Time.time;
+        meleeTime = Time.time;
+        rangeTime = Time.time;
     }
 
     // Update is called once per frame
@@ -27,10 +32,21 @@ public class AttackMake : MonoBehaviour
 
         // Create the attack instance
         
-        if (Time.time - time < delay || attackPrefab == null || !Input.GetButtonDown("Fire1")) return;
-        time = Time.time;
+        if (Time.time - meleeTime > meleeDelay && meleePrefab != null && Input.GetButtonDown("Fire1")) {
+            meleeTime = Time.time;
+            GameObject meleeAttack = Instantiate(meleePrefab, tf);
+            foreach (Item item in ItemList.itemList)
+                item.onMeleeUse(player, meleeAttack);
+        }
+
+        if (Time.time - rangeTime > rangeDelay && rangePrefab != null && Input.GetButtonDown("Fire2")) {
+            rangeTime = Time.time;
+            GameObject rangeAttack = Instantiate(rangePrefab, tf);
+            foreach (Item item in ItemList.itemList)
+                item.onRangeUse(player, rangeAttack);
+        }
+
         
-        GameObject attack = Instantiate(attackPrefab, tf);
         
     }
 }
