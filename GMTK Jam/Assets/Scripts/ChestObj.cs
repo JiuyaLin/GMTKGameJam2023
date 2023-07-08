@@ -4,28 +4,46 @@ using UnityEngine;
 
 public class ChestObj : Interactable
 {
+    ChestUI UIscript;
     GameObject UI;
 
-    Start() {
-        UI = GameObject.FindGameObjectWithTag("ChestUI");
+    bool chestOpened;
+    public bool chestFilled;
+
+    void Start() {
+        UIscript = GameObject.FindGameObjectWithTag("HUD").GetComponent<ChestUI>();
+        Debug.Log(UIscript);
+        UI = GameObject.FindGameObjectWithTag("HUD").transform.GetChild(1).gameObject;
     }
 
-    OnInteract() {
-        openChest();
-        UI.chestref = gameObject;
+    public override void OnInteract() {
+        Debug.Log("hi");
+        if (!chestFilled) {
+            openChest();
+            chestOpened = true;
+            UIscript.chestref = this;
+        } else {
+            Debug.Log("Chest Full!");
+            // display msg saying its full 
+        }
+    }
+
+    void Update() {
+        if (chestOpened && Input.GetMouseButtonDown(1)) {
+            closeChest();
+        }
     }
 
     public void openChest() {
         UI.SetActive(true);
-        UI.GetComponent<ChestUI>().highlightItems();
+        UIscript.highlightItems();
         Time.timeScale = 0f;
     }
 
     public void closeChest() {
         UI.SetActive(false);
-        UI.GetComponent<ChestUI>().updateItems();
+        chestOpened = false;
+        UIscript.updateItems();
         Time.timeScale = 1f;
     }
-
-    // separate function 
 }

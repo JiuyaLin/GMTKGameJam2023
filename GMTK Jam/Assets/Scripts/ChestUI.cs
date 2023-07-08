@@ -25,6 +25,8 @@ public class ChestUI : MonoBehaviour
     List<GameObject> itemObjList;
 
     GameObject gameHandler;
+
+    public ChestObj chestref;
     
     // Start is called before the first frame update
     void Start()
@@ -50,6 +52,7 @@ public class ChestUI : MonoBehaviour
         
         gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
 
+        unhighlight();
         updateItems();
         //edit selectUI from there (what is highlighted) 
     }
@@ -63,24 +66,38 @@ public class ChestUI : MonoBehaviour
     public void highlightItems() 
     {   
         // highlight the right number items
+        selectUI.SetActive(true);
+
         if (ItemList.itemList.Count >= 1)  {
             itemselect1.SetActive(true);
         } 
-        else if (ItemList.itemList.Count >= 2) {
+        if (ItemList.itemList.Count >= 2) {
             itemselect2.SetActive(true);
         }
-        else if (ItemList.itemList.Count >= 3) {
+        if (ItemList.itemList.Count >= 3) {
             itemselect3.SetActive(true);
         }
-        else if (ItemList.itemList.Count >= 4) {
+        if (ItemList.itemList.Count >= 4) {
             itemselect4.SetActive(true);
         }
-        else if (ItemList.itemList.Count >= 5) {
+        if (ItemList.itemList.Count >= 5) {
             itemselect5.SetActive(true);
         }
 
     }
 
+    public void unhighlight() 
+    {  
+        selectUI.SetActive(false);
+        
+        itemselect1.SetActive(false);
+        itemselect2.SetActive(false);
+        itemselect3.SetActive(false);
+        itemselect4.SetActive(false);
+        itemselect5.SetActive(false);
+    }
+
+    // TODO: put in items 
     public void updateItems() 
     {
         // update item placement 
@@ -91,9 +108,9 @@ public class ChestUI : MonoBehaviour
             }
         }
 
-        for (int i = 4; i > ItemList.itemList.Count; i--) {
-            itemObjList[i].SetActive(false);
-        }
+        // for (int i = 4; i > ItemList.itemList.Count; i--) {
+        //     itemObjList[i].SetActive(false);
+        // }
         
     }
 
@@ -105,10 +122,9 @@ public class ChestUI : MonoBehaviour
         ItemList.removeItem(player, i);
         // adds to gamehandler counter
         gameHandler.GetComponent<ChestTracker>().ChestFilled();
-        updateItems();
 
-        // close chest and let it know its been filled 
-        // player has a ref to interactable ?
+        chestref.chestFilled = true;
+        chestref.closeChest();
     }
 
 }

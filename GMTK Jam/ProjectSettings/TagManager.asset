@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Ground
   - Chest
-  - ChestUI
+  - Enemy
+  - GameHandler
+  - HUD
   layers:
   - Default
   - TransparentFX
