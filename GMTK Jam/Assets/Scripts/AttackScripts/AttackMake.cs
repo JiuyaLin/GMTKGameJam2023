@@ -20,8 +20,8 @@ public class AttackMake : MonoBehaviour
     void Start()
     {
         tf = gameObject.transform;
-        meleeTime = Time.time;
-        rangeTime = Time.time;
+        meleeTime = -meleeDelay;
+        rangeTime = -rangeTime;
     }
 
     // Update is called once per frame
