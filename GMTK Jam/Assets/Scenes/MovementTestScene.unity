@@ -327,18 +327,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d867f1247a274c63ae5af32b4e49b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackedCamera: {fileID: 0}
+  animator: {fileID: 0}
   footHeight: 0.5
-  feather: 0.4
   wallCheckDistance: 0.4
   stairHeight: 0.4
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   onGround: 0
   trackedGround: {fileID: 0}
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
   movingPlatformCompensation: {x: 0, y: 0, z: 0}
+  facingDirection: {x: 1, y: 0, z: 0}
   movementSpeed: 4
   animationName: 
 --- !u!1 &512375166 stripped
@@ -1716,7 +1718,7 @@ SpriteRenderer:
   m_Size: {x: 0.62941176, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2103792709
