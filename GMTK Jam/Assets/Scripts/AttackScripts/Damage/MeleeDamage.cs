@@ -15,9 +15,11 @@ public class MeleeDamage : MonoBehaviour
         }
         
         if (isPlayer){
+            if (collision.tag != "Enemy") return;
             int totalDamage = PlayerStats.meleeDamage + damage;
             collision.gameObject.GetComponent<Stats>().hp -= totalDamage;
         } else {
+            if (collision.tag != "Player") return;
             PlayerStats.hp -= damage;
         }
     }

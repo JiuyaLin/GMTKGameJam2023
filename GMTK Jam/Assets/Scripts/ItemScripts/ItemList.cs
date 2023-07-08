@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemList
 {
-    public static List<Item> itemList;
+    public static List<Item> itemList = new List<Item>();
 
     public static void addItem(GameObject player, Item item) {
         item.onGain(player);
