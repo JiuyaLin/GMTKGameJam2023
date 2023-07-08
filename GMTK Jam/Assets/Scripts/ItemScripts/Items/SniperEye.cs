@@ -33,4 +33,8 @@ public class SniperEye : Item
     public void onHurt(GameObject player) {
 
     }
+
+    public string getName() {
+        return "SniperEye";
+    }
 }

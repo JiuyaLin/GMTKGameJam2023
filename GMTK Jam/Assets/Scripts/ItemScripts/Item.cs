@@ -17,4 +17,6 @@ public interface Item
     public void onDrop(GameObject player);
 
     public void onHurt(GameObject player);
+
+    public string getName();
 }

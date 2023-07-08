@@ -33,4 +33,8 @@ public class BasherSword : Item
     public void onHurt(GameObject player) {
 
     }
+
+    public string getName() {
+        return "BasherSword";
+    }
 }
