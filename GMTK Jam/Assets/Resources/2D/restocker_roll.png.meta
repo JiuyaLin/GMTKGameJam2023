@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b68188bf1b0c4a7bb2d8fd0f62719ca
+guid: fad04dd82dcaa4ea2b35c2a3b54775b8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,18 +105,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: restocker_roll_0
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 100
+        width: 795
+        height: 792
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d807bcfc4c66043ecad03f1619d218e4
+      internalID: -571954576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: restocker_roll_1
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 37
+        width: 845
+        height: 602
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef04016ba9e0498daca160f0c3a4d94
+      internalID: 912910215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: restocker_roll_2
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 102
+        width: 737
+        height: 715
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f0949803d044c2e92a0d6bfe27b126
+      internalID: 834038520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: restocker_roll_3
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 67
+        width: 927
+        height: 730
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a4aecebd6574560b4be0dcbb004338
+      internalID: 1214219100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 660b48136c6bc4b6696a64f4217a24d6
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      restocker_roll_0: -571954576
+      restocker_roll_1: 912910215
+      restocker_roll_2: 834038520
+      restocker_roll_3: 1214219100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
