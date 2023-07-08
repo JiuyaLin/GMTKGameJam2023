@@ -6,7 +6,7 @@ public class GroundedPaperSprite : PaperSprite
 {
     public float footHeight = 0.5f;
     public float wallCheckDistance = 0.5f;
-    protected float stairHeight = 0.4f;
+    protected float stairHeight = 0.6f;
     protected float stayAwayFromEdge = 0.2f;
     public LayerMask groundLayer;
     public bool onGround = false;
@@ -15,6 +15,7 @@ public class GroundedPaperSprite : PaperSprite
     public Vector3 requestedMovement;
     public Vector3 movingPlatformCompensation = Vector3.zero;
     public Vector3 facingDirection = Vector3.right;
+    protected bool automaticallyUpdateFacingDirection = true;
 
     public override void Start()
     {
@@ -43,11 +44,16 @@ public class GroundedPaperSprite : PaperSprite
             onGround = false;
             trackedGround = null;
         }
-        if (Vector3.Dot(requestedMovement, Quaternion.Euler(0, trackedCamera.transform.rotation.eulerAngles.y, 0) * transform.right) < 0)
+        if (automaticallyUpdateFacingDirection && requestedMovement.sqrMagnitude != 0)
+        {
+            facingDirection = requestedMovement.normalized;
+        }
+        double horiz = (Quaternion.Euler(0, -trackedCamera.transform.eulerAngles.y, 0) * facingDirection).x;
+        if (horiz < 0)
         {
             animator.transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if (Vector3.Dot(requestedMovement, Quaternion.Euler(0, trackedCamera.transform.rotation.eulerAngles.y, 0) * transform.right) > 0)
+        else if (horiz > 0)
         {
             animator.transform.localScale = new Vector3(1, 1, 1);
         }

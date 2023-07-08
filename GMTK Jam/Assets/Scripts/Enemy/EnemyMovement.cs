@@ -23,7 +23,6 @@ public class EnemyMovement : GroundedPaperSprite
     public override void Start()
     {
         base.Start();
-        animator = GetComponentInChildren<Animator>();
         rb3D = GetComponent<Rigidbody>();
         scaleX = gameObject.transform.localScale.x;
 

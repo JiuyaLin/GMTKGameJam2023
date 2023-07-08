@@ -329,9 +329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackedCamera: {fileID: 0}
   animator: {fileID: 0}
+  savedOffset: {x: 0, y: 0, z: 0}
   footHeight: 0.5
   wallCheckDistance: 0.4
-  stairHeight: 0.4
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -342,6 +342,9 @@ MonoBehaviour:
   movingPlatformCompensation: {x: 0, y: 0, z: 0}
   facingDirection: {x: 1, y: 0, z: 0}
   movementSpeed: 4
+  rollTimeTracker: 0
+  rollColldownTracker: 0
+  rollDirection: {x: 0, y: 0, z: 0}
   animationName: 
 --- !u!1 &512375166 stripped
 GameObject:
@@ -1662,7 +1665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103792706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1710,15 +1713,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72c11fca25d334a61956b225c839f2da, type: 3}
+  m_Sprite: {fileID: 2140502951, guid: f42be047fdd5148dc98d9b2384f3f5b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.62941176, y: 1}
+  m_Size: {x: 0.9235294, y: 1.0681009}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2103792709
