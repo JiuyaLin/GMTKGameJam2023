@@ -2,34 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovementOld : MonoBehaviour
 {
     
     public Animator anim;
     public Rigidbody rb3D;
     public bool followPlayer = true;
-    public float speed = 1f;
     private Transform target;
     public int damage = 10;
 
-    public int EnemyLives = 3;
+    //public int EnemyLives = 3;
     //private GameHandler gameHandler;
 
     public float attackRange = 5;
     public bool isAttacking = false;
-    private float scaleX;
+    //private float scaleX;
 
+    public Stats stats;
 
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         rb3D = GetComponent<Rigidbody>();
-        scaleX = gameObject.transform.localScale.x;
+        //scaleX = gameObject.transform.localScale.x;
 
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         }
+
+        stats = this.GetComponent<Stats>();
 
         //if (GameObject.FindWithTag("GameHandler") != null)
         //{
@@ -44,7 +46,7 @@ public class EnemyMovement : MonoBehaviour
         if ((target != null) && (DistToPlayer <= attackRange))
         {
             //Ethan see here
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, stats.speed * Time.deltaTime);
 
             //anim.SetBool("Walk", true);
             //flip enemy to face player direction. Wrong direction? Swap the * -1.
@@ -60,7 +62,7 @@ public class EnemyMovement : MonoBehaviour
         //else { anim.SetBool("Walk", false);}
     }
 
-    public void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -72,7 +74,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -80,6 +82,11 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log("Player leave enemy attack range");
             //anim.SetBool("Attack", false);
         }
+    }
+
+    public bool isEnemyDead()
+    {
+        return (stats.hp <= 0);
     }
 
     //DISPLAY the range of enemy's attack when selected in the Editor
