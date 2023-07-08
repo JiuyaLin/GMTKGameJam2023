@@ -110,7 +110,7 @@ public class ChestUI : MonoBehaviour
     {
         // update item placement 
         for (int i = 0; i < ItemList.itemList.Count; i++) {
-            string itemname = ItemList.itemList[i].getName();
+            string itemname = ItemList.itemList[i].GetName();
             if (itemname == "BasherSword") { 
                 itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/BusterSword");
             } 
