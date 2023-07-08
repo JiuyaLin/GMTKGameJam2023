@@ -15,4 +15,6 @@ public interface Item
     public void onGain(GameObject player);
 
     public void onDrop(GameObject player);
+
+    public void onHit(GameObject player);
 }
