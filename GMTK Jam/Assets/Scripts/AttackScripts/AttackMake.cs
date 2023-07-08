@@ -15,7 +15,7 @@ public class AttackMake : MonoBehaviour
     private Transform tf;
     private float meleeTime;
     private float rangeTime;
-    private ThirdPersonMovement2 direction;
+    // private ThirdPersonMovement2 direction;
     
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class AttackMake : MonoBehaviour
         tf = gameObject.transform;
         meleeTime = -meleeDelay;
         rangeTime = -rangeDelay;
-        direction = player.GetComponent<ThirdPersonMovement2>();
+        // direction = player.GetComponent<ThirdPersonMovement2>();
         
     }
 
@@ -32,7 +32,7 @@ public class AttackMake : MonoBehaviour
     void Update()
     {   
         // Set the correct attack angle
-        angle = direction.getAngle();
+        // angle = direction.getAngle();
 
         tf.eulerAngles = new Vector3(0, angle, 0);
 

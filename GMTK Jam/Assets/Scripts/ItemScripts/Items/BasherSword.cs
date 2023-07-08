@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class BasherSword : Item
 {
-    public BasherSword() {
-
-    }
-
    public void onMeleeHit(GameObject enemy) {
 
    }
