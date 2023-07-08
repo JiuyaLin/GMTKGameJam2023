@@ -49,7 +49,7 @@ public class EnemyMovement : GroundedPaperSprite
             //Ethan see here
             requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
 
-            animator.SetBool("isWalking", true);
+            animator.SetBool("IsWalking", true);
             //flip enemy to face player direction. Wrong direction? Swap the * -1.
             //if (target.position.x > gameObject.transform.position.x)
             //{
@@ -63,7 +63,7 @@ public class EnemyMovement : GroundedPaperSprite
         else
         {
             requestedMovement = Vector3.zero;
-            animator.SetBool("isWalking", false);
+            animator.SetBool("IsWalking", false);
         }
         base.Update();
         //else { anim.SetBool("Walk", false);}
