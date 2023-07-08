@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
     
     public Animator anim;
     public Rigidbody rb3D;
+    public bool 
     public float speed = 1f;
     private Transform target;
     public int damage = 10;
@@ -14,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
     public int EnemyLives = 3;
     //private GameHandler gameHandler;
 
-    public float attackRange = 10;
+    public float attackRange = 5;
     public bool isAttacking = false;
     private float scaleX;
 
@@ -41,8 +42,8 @@ public class EnemyMovement : MonoBehaviour
 
         if ((target != null) && (DistToPlayer <= attackRange))
         {
+            //Ethan see here
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            
 
             //anim.SetBool("Walk", true);
             //flip enemy to face player direction. Wrong direction? Swap the * -1.
