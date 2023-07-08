@@ -34,7 +34,7 @@ public class SniperEye : Item
 
     }
 
-    public string getName() {
+    public override string getName() {
         return "SniperEye";
     }
 }
