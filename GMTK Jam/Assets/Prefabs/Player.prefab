@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 7079826295178361131}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ Transform:
   - {fileID: 7889585842097073845}
   - {fileID: 3132934580399827319}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &589497207608810509
 CharacterController:
@@ -324,6 +324,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3130359753546481673}
   - component: {fileID: 8740685230020028467}
+  - component: {fileID: 41294134948399397}
+  - component: {fileID: 4264505399053779473}
   m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
@@ -367,3 +369,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &41294134948399397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123303597482063488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f4a22b648505848bff5e0d5a2980a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4264505399053779473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123303597482063488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47778de426cc9649b37067798d2e928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,20 +11,19 @@ public class EdgeCheck : MonoBehaviour
     }
     
     void OnTriggerEnter(Collider col) {
-        Debug.Log("on ground");
-        movescript.onEdge = false;
+        
         if (col.gameObject.tag == "Ground") {
-            
+            Debug.Log("on ground");
+            movescript.onEdge = false;
             
         }
     }
 
     void OnTriggerExit(Collider col) {
-        Debug.Log("on edge");
-        movescript.onEdge = true;
+        
         if (col.gameObject.tag == "Ground") {
-            
-            
+            Debug.Log("on edge");
+            movescript.onEdge = true;
         }
     }
 }
