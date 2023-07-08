@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 1
   speed: 10
-  velocity: {x: 0, y: 0, z: 0}
+  canBounce: 0
 --- !u!96 &6983802353898050378
 TrailRenderer:
   serializedVersion: 3
