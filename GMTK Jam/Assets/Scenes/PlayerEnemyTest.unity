@@ -1200,6 +1200,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 737580240}
   m_SourcePrefab: {fileID: 100100000, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
+--- !u!114 &1278655826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4837444227385506247, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+  m_PrefabInstance: {fileID: 2116510735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e38def4762f9a9498380b66af70ff74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1321692029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1953,6 +1964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8323192023935252086, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: attack
+      value: 
+      objectReference: {fileID: 1278655826}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
