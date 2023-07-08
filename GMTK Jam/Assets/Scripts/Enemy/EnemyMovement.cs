@@ -21,7 +21,7 @@ public class EnemyMovement : GroundedPaperSprite
     public bool isAttacking = false;
     private float scaleX;
 
-    
+    public bool isDead = false;
 
 
     public override void Start()
@@ -50,37 +50,45 @@ public class EnemyMovement : GroundedPaperSprite
 
     public override void Update()
     {
-        float DistToPlayer = Vector3.Distance(transform.position, target.position);
-
-        if ((target != null) && (DistToPlayer <= attackRange))
+        checkIfDead();
+        if (!isDead)
         {
-            requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
+            float DistToPlayer = Vector3.Distance(transform.position, target.position);
 
-            animator.SetBool("IsWalking", true);
-            if (isMelee)
+            if ((target != null) && (DistToPlayer <= attackRange))
             {
-                attack.MeleeAttack();
-            } else
-            {
-                attack.RangedAttack();
+                requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
+
+                animator.SetBool("IsWalking", true);
+                if (isMelee)
+                {
+                    attack.MeleeAttack();
+                }
+                else
+                {
+                    attack.RangedAttack();
+                }
+                //flip enemy to face player direction. Wrong direction? Swap the * -1.
+                //if (target.position.x > gameObject.transform.position.x)
+                //{
+                //    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
+                //}
+                //else
+                //{
+                //    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
+                //}
             }
-            //flip enemy to face player direction. Wrong direction? Swap the * -1.
-            //if (target.position.x > gameObject.transform.position.x)
-            //{
-            //    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
-            //}
-            //else
-            //{
-            //    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
-            //}
-        }
-        else
-        {
-            requestedMovement = Vector3.zero;
-            animator.SetBool("IsWalking", false);
-        }
+            else
+            {
+                requestedMovement = Vector3.zero;
+                animator.SetBool("IsWalking", false);
+            }
+        } 
+
         base.Update();
         //else { anim.SetBool("Walk", false);}
+
+
     }
 
 
@@ -107,11 +115,19 @@ public class EnemyMovement : GroundedPaperSprite
     }
 
 
-    public bool isEnemyDead()
+    public void checkIfDead()
     {
-        return (stats.hp <= 0);
+        if (stats.hp <= 0)
+        {
+            if (!isDead)
+            {
+                animator.SetTrigger("IsDead");
+                isDead = true;
+            }
+        }
     }
 
+    
     //DISPLAY the range of enemy's attack when selected in the Editor
     void OnDrawGizmosSelected()
     {
