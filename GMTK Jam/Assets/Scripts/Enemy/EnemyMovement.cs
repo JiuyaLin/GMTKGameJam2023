@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : GroundedPaperSprite
 {
     
     public Animator anim;
     public Rigidbody rb3D;
     public bool followPlayer = true;
+    //public float speed = 1f;
     private Transform target;
     public int damage = 10;
 
@@ -16,15 +17,16 @@ public class EnemyMovement : MonoBehaviour
 
     public float attackRange = 5;
     public bool isAttacking = false;
-    //private float scaleX;
+    private float scaleX;
 
     public Stats stats;
+
 
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         rb3D = GetComponent<Rigidbody>();
-        //scaleX = gameObject.transform.localScale.x;
+        scaleX = gameObject.transform.localScale.x;
 
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
@@ -46,7 +48,7 @@ public class EnemyMovement : MonoBehaviour
         if ((target != null) && (DistToPlayer <= attackRange))
         {
             //Ethan see here
-            transform.position = Vector3.MoveTowards(transform.position, target.position, stats.speed * Time.deltaTime);
+            requestedMovement = Vector3.MoveTowards(transform.position, target.position, stats.speed * Time.deltaTime);
 
             //anim.SetBool("Walk", true);
             //flip enemy to face player direction. Wrong direction? Swap the * -1.
@@ -59,8 +61,10 @@ public class EnemyMovement : MonoBehaviour
             //    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
             //}
         }
+        base.Update();
         //else { anim.SetBool("Walk", false);}
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -83,6 +87,7 @@ public class EnemyMovement : MonoBehaviour
             //anim.SetBool("Attack", false);
         }
     }
+
 
     public bool isEnemyDead()
     {

@@ -180,10 +180,10 @@ GameObject:
   - component: {fileID: 3120984327584977935}
   - component: {fileID: 3987273138647617209}
   - component: {fileID: 9203260524902399481}
-  - component: {fileID: 9006844949759721979}
   - component: {fileID: 5175428896185183183}
   - component: {fileID: 6858768935544470724}
   - component: {fileID: 3647623808866222586}
+  - component: {fileID: 8323192023935252086}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -261,25 +261,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9006844949759721979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5173903759737237596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34428be3a299d3b47b6e7c5dff7939f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  rb3D: {fileID: 0}
-  followPlayer: 1
-  damage: 10
-  attackRange: 2
-  isAttacking: 0
-  stats: {fileID: 0}
 --- !u!114 &5175428896185183183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,3 +315,34 @@ MonoBehaviour:
   hp: 3
   maxHp: 3
   speed: 1
+--- !u!114 &8323192023935252086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173903759737237596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c132dd51aabec384d8e3190314cb3e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footHeight: 0.5
+  feather: 0.4
+  wallCheckDistance: 0.5
+  stairHeight: 0.4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  onGround: 0
+  trackedGround: {fileID: 0}
+  groundOffset: {x: 0, y: 0, z: 0}
+  requestedMovement: {x: 0, y: 0, z: 0}
+  movingPlatformCompensation: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
+  rb3D: {fileID: 0}
+  followPlayer: 1
+  damage: 10
+  attackRange: 2
+  isAttacking: 0
+  stats: {fileID: 0}
