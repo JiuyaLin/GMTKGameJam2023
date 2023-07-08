@@ -67,10 +67,6 @@ public class GroundedPaperSprite : PaperSprite
                 transform.position += redoneMovement * 0.5f; // this is dumb but it works so * shrug *
             }
         }
-        if (requestedMovement.sqrMagnitude != 0)
-        {
-            facingDirection = requestedMovement.normalized;
-        }
         if (trackedGround != null)
         {
             groundOffset = Quaternion.Inverse(trackedGround.transform.rotation) * (transform.position - trackedGround.transform.position);

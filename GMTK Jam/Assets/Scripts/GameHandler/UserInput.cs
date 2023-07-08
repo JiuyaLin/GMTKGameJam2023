@@ -16,10 +16,10 @@ public class UserInput : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Melee")) {
-            playerAttackMake.meleeAttack();
+            playerAttackMake.MeleeAttack();
         }
         if (Input.GetButtonDown("Ranged")) {
-            playerAttackMake.rangedAttack();
+            playerAttackMake.RangedAttack();
         }
     }
 }

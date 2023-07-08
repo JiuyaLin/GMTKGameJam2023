@@ -12,12 +12,12 @@ public static class ItemList
     }
 
     public static void AddItem(ThirdPersonMovement2 player, Item item) {
-        item.onGain(player);
+        item.OnGain(player);
         itemList.Add(item);
     }
     
     public static void RemoveItem(ThirdPersonMovement2 player, int index) {
-        itemList[index].onDrop(player);
+        itemList[index].OnDrop(player);
         itemList.RemoveAt(index);
     }
 

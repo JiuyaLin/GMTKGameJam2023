@@ -29,7 +29,7 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
         else
         {
             facingDirection = Quaternion.Euler(0, trackedCamera.transform.eulerAngles.y, 0) * new Vector3(Input.mousePosition.x - trackedCamera.WorldToScreenPoint(transform.position).x, 0,
-                    Input.mousePosition.y - trackedCamera.WorldToScreenPoint(transform.position).y);
+                    Input.mousePosition.y - trackedCamera.WorldToScreenPoint(transform.position).y).normalized;
         }
         requestedMovement = Quaternion.Euler(0, trackedCamera.transform.eulerAngles.y, 0) * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized * movementSpeed * Time.deltaTime;
         if (Input.GetButtonDown("Roll") && rollColldownTracker <= 0)
@@ -79,13 +79,13 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
                 (objects[0] as Interactable).OnInteract();
             }
         }
-        if (Input.GetButtonDown("Melee"))
+        if (Input.GetButtonDown("Melee") && rollTimeTracker <= 0)
         {
-            GetComponent<AttackMake>().meleeAttack();
+            GetComponent<AttackMake>().MeleeAttack();
         }
-        if (Input.GetButtonDown("Ranged"))
+        if (Input.GetButtonDown("Ranged") && rollTimeTracker <= 0)
         {
-            GetComponent<AttackMake>().rangedAttack();
+            GetComponent<AttackMake>().RangedAttack();
         }
     }
 }

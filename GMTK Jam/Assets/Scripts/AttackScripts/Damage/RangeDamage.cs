@@ -13,7 +13,7 @@ public class RangeDamage : MonoBehaviour
         foreach (Item item in ItemList.itemList) {
             item.OnRangeHit(collision.gameObject);
         }
-        
+
         if (isPlayer){
             if (collision.tag != "Enemy") return;
             int totalDamage = PlayerStats.rangeDamage + damage;

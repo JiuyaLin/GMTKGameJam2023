@@ -6,7 +6,7 @@ public class BasherPickup : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
         if (other.tag != "Player") return;
-        ItemList.addItem(other.gameObject, new BasherSword());
+        ItemList.AddItem(other.GetComponent<ThirdPersonMovement2>(), new BasherSword());
         Destroy(gameObject);
     }
 }

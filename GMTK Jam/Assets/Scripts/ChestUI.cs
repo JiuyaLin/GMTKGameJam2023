@@ -46,7 +46,7 @@ public class ChestUI : MonoBehaviour
     public void selectItem(int i)
     {
         Debug.Log(i + "!");
-        ItemList.RemoveItem(player, i);
+        ItemList.RemoveItem(player.GetComponent<ThirdPersonMovement2>(), i);
         closeChest();
     }
 
