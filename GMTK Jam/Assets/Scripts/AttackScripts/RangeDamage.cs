@@ -8,8 +8,10 @@ public class RangeDamage : MonoBehaviour
 
     // Update is called once per frame
     void onCollisionEnter(Collision collision) {
-        collision.gameObject.GetComponent<Stats>().hp -= damage;
+        
         foreach (Item item in ItemList.itemList) 
             item.onRangeHit(collision.gameObject);
+
+        collision.gameObject.GetComponent<Stats>().hp -= damage;
     }
 }

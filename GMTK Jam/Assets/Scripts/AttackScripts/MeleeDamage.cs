@@ -8,8 +8,10 @@ public class MeleeDamage : MonoBehaviour
 
     // Update is called once per frame
     void onCollisionEnter(Collision collision) {
-        collision.gameObject.GetComponent<Stats>().hp -= damage;
+        
         foreach (Item item in ItemList.itemList) 
             item.onMeleeHit(collision.gameObject);
+
+        collision.gameObject.GetComponent<Stats>().hp -= damage;
     }
 }

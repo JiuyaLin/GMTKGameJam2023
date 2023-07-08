@@ -13,24 +13,18 @@ public class SniperEye : Item
     }
 
     public void onMeleeUse(GameObject player, GameObject attack) {
-
+        attack.GetComponent<MeleeDamage>().dmg /= 2;
     }
 
     public void onRangeUse(GameObject player, GameObject attack) {
-        
+        attack.GetComponent<RangeDamage>().dmg *= 2;
     }
 
     public void onGain(GameObject player) {
-        Stats playerStats = player.GetComponent<Stats>()
-        playerStats.hp *= 3;
 
     }
 
     public void onDrop(GameObject player) {
-
-    }
-
-    public void onHit(GameObject player) {
 
     }
 }
