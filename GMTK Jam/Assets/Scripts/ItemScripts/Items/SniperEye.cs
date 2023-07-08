@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SniperEye : Item
 {
-   public void onMeleeHit(GameObject enemy) {
-
-   }
+    public void onMeleeHit(GameObject enemy) {
+         
+    }
 
     public void onRangeHit(GameObject enemy) {
 

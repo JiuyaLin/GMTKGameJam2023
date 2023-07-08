@@ -5,14 +5,20 @@ using UnityEngine;
 public class UserInput : MonoBehaviour
 {
     
-    public AttackMake playerAttackMake;
+    public GameObject player;
     // Update is called once per frame
+    private AttackMake playerAttackMake;
+
+    void Start() {
+        playerAttackMake = player.GetComponentInChildren<AttackMake>();
+    }
+
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Melee")) {
             playerAttackMake.meleeAttack();
         }
-        if (Input.GetButtonDown("Fire2")) {
+        if (Input.GetButtonDown("Ranged")) {
             playerAttackMake.rangedAttack();
         }
     }
