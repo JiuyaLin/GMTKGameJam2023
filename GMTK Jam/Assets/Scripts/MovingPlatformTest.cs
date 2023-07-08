@@ -13,7 +13,7 @@ public class MovingPlatformTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalPosition = transform.position;
+        originalPosition = GetComponent<BlockAppear>()?.actualPosition ?? transform.position;
     }
 
     // Update is called once per frame

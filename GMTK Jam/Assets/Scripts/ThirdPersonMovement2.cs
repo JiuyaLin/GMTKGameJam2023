@@ -50,20 +50,17 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
         }
 
         base.Update();
-        if (rollTimeTracker > 0 && animationName != "Roll")
+        if (rollTimeTracker > 0)
         {
-            animationName = "Roll";
-            animator.Play(animationName);
+            ActivateAnimation("Roll");
         }
-        else if (requestedMovement.sqrMagnitude != 0 && animationName != "Walk")
+        else if (requestedMovement.sqrMagnitude != 0)
         {
-            animationName = "Walk";
-            animator.Play(animationName);
+            ActivateAnimation("Walk");
         }
-        else if (requestedMovement.sqrMagnitude == 0 && animationName != "Idle")
+        else if (requestedMovement.sqrMagnitude == 0)
         {
-            animationName = "Idle";
-            animator.Play(animationName);
+            ActivateAnimation("Idle");
         }
         if (rollTimeTracker <= 0 && rollColldownTracker > 0)
         {
@@ -72,6 +69,15 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
         else
         {
             animator.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+    }
+
+    void ActivateAnimation(string name)
+    {
+        if (animationName != name)
+        {
+            animationName = name;
+            animator.Play(name);
         }
     }
 }
