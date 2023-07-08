@@ -54,11 +54,11 @@ public class ChestUI : MonoBehaviour
         Debug.Log(gameHandler);
 
 
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
-        ItemList.AddItem(player.GetComponent<ThirdPersonMovement2>(), new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
+        ItemList.AddItem(new BasherSword());
 
         unhighlight();
         updateItems();
@@ -111,28 +111,28 @@ public class ChestUI : MonoBehaviour
         // update item placement 
         for (int i = 0; i < ItemList.itemList.Count; i++) {
             string itemname = ItemList.itemList[i].GetName();
-            if (itemname == "BasherSword") { 
+            if (itemname == "Basher Sword") { 
                 itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/BusterSword");
             } 
-            else if (itemname == "SniperEye") {
+            else if (itemname == "Sniper Eye") {
                 itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/Items_SniperEye");
             }
-            else if (itemname == "") {
+            else if (itemname == "Gold Coins") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/GoldPile");
+            }
+            else if (itemname == "Lockpick") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/Lockpick");
+            }
+            else if (itemname == "Reactor Core") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/ReactorCore");
+            }
+            else if (itemname == "Shield of Heroes") {
+                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/ShieldOfHeroes");
+            }
+            else if (itemname == "Staff of Villainy") {
                 itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
             }
-            else if (itemname == "") {
-                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
-            }
-            else if (itemname == "") {
-                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
-            }
-            else if (itemname == "") {
-                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
-            }
-            else if (itemname == "") {
-                itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
-            }
-            else if (itemname == "") {
+            else if (itemname == "Winged Shoes") {
                 itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/");
             }
         }
@@ -150,7 +150,7 @@ public class ChestUI : MonoBehaviour
     public void selectItem(int i)
     {
         Debug.Log(i + "!");
-        ItemList.RemoveItem(player.GetComponent<ThirdPersonMovement2>(), i);
+        ItemList.RemoveItem(i);
         //gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
         
         // adds to gamehandler counter
