@@ -46,7 +46,7 @@ public class AttackMake : MonoBehaviour
         if (player != null)
         {
             foreach (Item item in ItemList.itemList)
-                item.OnMeleeUse(player.GetComponent<ThirdPersonMovement2>(), meleeAttack);
+                item.OnMeleeUse(player, meleeAttack);
         }
         return true;
     }
@@ -61,7 +61,7 @@ public class AttackMake : MonoBehaviour
         if (player != null)
         {
             foreach (Item item in ItemList.itemList)
-                item.OnRangeUse(player.GetComponent<ThirdPersonMovement2>(), rangeAttack);
+                item.OnRangeUse(player, rangeAttack);
         }
         return true;
     }
