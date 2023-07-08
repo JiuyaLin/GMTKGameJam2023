@@ -11,7 +11,6 @@ public class AttackMake : MonoBehaviour
     public float rangedOffset = 0f;
     public GameObject meleePrefab; 
     public GameObject rangePrefab;
-    public ThirdPersonMovement2 player;
     
     private float meleeTime;
     private float rangeTime;
@@ -23,7 +22,6 @@ public class AttackMake : MonoBehaviour
     {
         meleeTime = -meleeDelay;
         rangeTime = -rangeDelay;
-        // direction = player.GetComponent<ThirdPersonMovement2>();
         
     }
 
@@ -43,11 +41,10 @@ public class AttackMake : MonoBehaviour
         GameObject meleeAttack = Instantiate(meleePrefab,
             transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * meleeRange,
             Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
-        if (player != null)
-        {
-            foreach (Item item in ItemList.itemList)
-                item.OnMeleeUse(player, meleeAttack);
-        }
+
+        foreach (Item item in ItemList.itemList)
+            item.OnMeleeUse(meleeAttack);
+        
         return true;
     }
 
@@ -58,11 +55,10 @@ public class AttackMake : MonoBehaviour
         GameObject rangeAttack = Instantiate(rangePrefab,
             transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * rangedOffset,
             Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
-        if (player != null)
-        {
-            foreach (Item item in ItemList.itemList)
-                item.OnRangeUse(player, rangeAttack);
-        }
+
+        foreach (Item item in ItemList.itemList)
+            item.OnRangeUse(rangeAttack);
+        
         return true;
     }
 }

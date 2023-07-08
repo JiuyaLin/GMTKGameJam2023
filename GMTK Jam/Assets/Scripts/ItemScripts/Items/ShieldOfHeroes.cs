@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldOfHeros : MonoBehaviour
+public class ShieldOfHeroes : Item
 {
 
-    public string itemName = "Shield of Heros";
+    public string itemName = "Shield of Heroes";
     public Sprite sprite = null;
     // Start is called before the first frame update
     public override void OnMeleeHit(GameObject enemy) {
         PlayerStats.hp += 1;
-        enemy.hp += 1;
+        enemy.GetComponent<Stats>().hp += 1;
     }
 
     public override void OnRangeHit(GameObject enemy) {

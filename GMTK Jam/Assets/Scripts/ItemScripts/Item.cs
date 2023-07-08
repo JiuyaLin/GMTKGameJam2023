@@ -16,14 +16,14 @@ public abstract class Item : MonoBehaviour
 
     public virtual void OnGain()
     {
-        GameObject.FindObjectWithTag("Player").movementSpeed -= Weight / 2;
-        GameObject.FindObjectWithTag("Player").rollSpeed -= Weight;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().movementSpeed -= Weight / 2;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().rollSpeed -= Weight;
     }
 
     public virtual void OnDrop()
     {
-        GameObject.FindObjectWithTag("Player").movementSpeed += Weight / 2;
-        GameObject.FindObjectWithTag("Player").rollSpeed += Weight;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().movementSpeed += Weight / 2;
+        GameObject.FindWithTag("Player").GetComponent<ThirdPersonMovement2>().rollSpeed += Weight;
     }
 
     public abstract void OnHurt();
