@@ -2226,6 +2226,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 846694928322668699, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: meleeDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 846694928322668699, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: rangeDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1277680743757198462, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.285
