@@ -5,7 +5,6 @@ using UnityEngine;
 public class GroundedPaperSprite : PaperSprite
 {
     public float footHeight = 0.5f;
-    public float feather = 0.4f;
     public float wallCheckDistance = 0.5f;
     public float stairHeight = 0.4f;
     public LayerMask groundLayer;
@@ -16,16 +15,23 @@ public class GroundedPaperSprite : PaperSprite
     public Vector3 movingPlatformCompensation = Vector3.zero;
     public Vector3 facingDirection = Vector3.right;
 
+    public override void Start()
+    {
+        base.Start();
+        groundLayer = LayerMask.GetMask(new string[] { "Ground" });
+    }
+
     // Update is called once per frame
     public override void Update()
     {
         base.Update();
+        requestedMovement -= Vector3.up * requestedMovement.y;
         if (trackedGround != null)
         {
             movingPlatformCompensation = trackedGround.transform.position + trackedGround.transform.rotation * groundOffset - transform.position;
             transform.position = trackedGround.transform.position + trackedGround.transform.rotation * groundOffset;
         }
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, footHeight + feather, groundLayer))
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, footHeight + stairHeight, groundLayer))
         {
             transform.position = hit.point + Vector3.up * footHeight;
             onGround = true;
@@ -68,13 +74,13 @@ public class GroundedPaperSprite : PaperSprite
         }
         else
         {
-            if (Physics.Raycast(transform.position + movement.normalized * (movement.magnitude - Vector3.Dot(movingPlatformCompensation, movement.normalized)), Vector3.down, out RaycastHit _, footHeight + feather, groundLayer))
+            if (Physics.Raycast(transform.position + movement.normalized * (movement.magnitude - Vector3.Dot(movingPlatformCompensation, movement.normalized)), Vector3.down, out RaycastHit _, footHeight + stairHeight, groundLayer))
             {
                 return Vector3.zero;
             }
             else
             {
-                if (Physics.Raycast(transform.position + movement + Vector3.down * (footHeight + feather), -movement.normalized, out RaycastHit groundHit, movement.magnitude + feather - Vector3.Dot(movingPlatformCompensation, movement.normalized), groundLayer))
+                if (Physics.Raycast(transform.position + movement + Vector3.down * (footHeight + stairHeight), -movement.normalized, out RaycastHit groundHit, movement.magnitude + stairHeight - Vector3.Dot(movingPlatformCompensation, movement.normalized), groundLayer))
                 {
                     return -groundHit.normal;
                 }

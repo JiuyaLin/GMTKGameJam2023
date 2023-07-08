@@ -206,7 +206,7 @@ Transform:
   - {fileID: 1277680743757198462}
   - {fileID: 1741646363962099294}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &3987273138647617209
 CharacterController:
@@ -327,19 +327,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c132dd51aabec384d8e3190314cb3e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackedCamera: {fileID: 0}
+  animator: {fileID: 0}
   footHeight: 0.5
   feather: 0.4
   wallCheckDistance: 0.5
   stairHeight: 0.4
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   onGround: 0
   trackedGround: {fileID: 0}
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
   movingPlatformCompensation: {x: 0, y: 0, z: 0}
-  anim: {fileID: 0}
+  facingDirection: {x: 1, y: 0, z: 0}
   rb3D: {fileID: 0}
   followPlayer: 1
   damage: 10
