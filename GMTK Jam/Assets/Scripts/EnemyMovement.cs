@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : GroundedPaperSprite
 {
     
     public Animator anim;
@@ -44,7 +44,7 @@ public class EnemyMovement : MonoBehaviour
         if ((target != null) && (DistToPlayer <= attackRange))
         {
             //Ethan see here
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            requestedMovement = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
             //anim.SetBool("Walk", true);
             //flip enemy to face player direction. Wrong direction? Swap the * -1.
@@ -57,6 +57,7 @@ public class EnemyMovement : MonoBehaviour
             //    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
             //}
         }
+        base.Update();
         //else { anim.SetBool("Walk", false);}
     }
 
