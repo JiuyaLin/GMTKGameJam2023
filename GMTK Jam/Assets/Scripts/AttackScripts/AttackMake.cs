@@ -9,7 +9,8 @@ public class AttackMake : MonoBehaviour
     public float rangeDelay = 1f;
     public GameObject meleePrefab; 
     public GameObject rangePrefab;
-    public GameObject player; 
+    public GameObject playerTransform;
+    public ThirdPersonMovement2 player;
     
 
     private Transform tf;
@@ -24,36 +25,47 @@ public class AttackMake : MonoBehaviour
         tf = gameObject.transform;
         meleeTime = -meleeDelay;
         rangeTime = -rangeDelay;
+        player = playerTransform.GetComponent<ThirdPersonMovement2>();
         // direction = player.GetComponent<ThirdPersonMovement2>();
         
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         // Set the correct attack angle
         // angle = direction.getAngle();
 
         tf.eulerAngles = new Vector3(0, angle, 0);
 
         // Create the attack instance
-        
-        if (Time.time - meleeTime > meleeDelay && meleePrefab != null && Input.GetButtonDown("Fire1")) {
+
+        if (Time.time - meleeTime > meleeDelay && meleePrefab != null && Input.GetButtonDown("Melee")) {
             meleeTime = Time.time;
             GameObject meleeAttack = Instantiate(meleePrefab, tf);
-            
-            foreach (Item item in ItemList.itemList)
-                item.onMeleeUse(player, meleeAttack);
-        }
 
-        if (Time.time - rangeTime > rangeDelay && rangePrefab != null && Input.GetButtonDown("Fire2")) {
-            rangeTime = Time.time;
-            GameObject rangeAttack = Instantiate(rangePrefab, tf);
             foreach (Item item in ItemList.itemList)
-                item.onRangeUse(player, rangeAttack);
+                item.OnMeleeUse(player, meleeAttack);
         }
+    }
 
-        
-        
+    public bool MeleeAttack() {
+        if (Time.time - meleeTime < meleeDelay || meleePrefab == null) return false;
+
+        meleeTime = Time.time;
+        GameObject meleeAttack = Instantiate(meleePrefab, tf);
+        foreach (Item item in ItemList.itemList)
+            item.OnMeleeUse(player.GetComponent<ThirdPersonMovement2>(), meleeAttack);
+        return true;
+    }
+
+    public bool RangedAttack() {
+        if (Time.time - rangeTime < rangeDelay || rangePrefab == null) return false;
+
+        rangeTime = Time.time;
+        GameObject rangeAttack = Instantiate(rangePrefab, tf);
+        foreach (Item item in ItemList.itemList)
+            item.OnRangeUse(player.GetComponent<ThirdPersonMovement2>(), rangeAttack);
+        return true;
     }
 }

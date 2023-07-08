@@ -11,12 +11,12 @@ public static class ItemList
         itemList = new List<Item>();
     }
 
-    public static void addItem(GameObject player, Item item) {
+    public static void AddItem(ThirdPersonMovement2 player, Item item) {
         item.onGain(player);
         itemList.Add(item);
     }
     
-    public static void removeItem(GameObject player, int index) {
+    public static void RemoveItem(ThirdPersonMovement2 player, int index) {
         itemList[index].onDrop(player);
         itemList.RemoveAt(index);
     }

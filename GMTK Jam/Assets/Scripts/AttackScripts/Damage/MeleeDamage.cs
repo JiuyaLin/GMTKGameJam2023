@@ -11,7 +11,7 @@ public class MeleeDamage : MonoBehaviour
     private void OnTriggerEnter(Collider collision) {
         
         foreach (Item item in ItemList.itemList) {
-            item.onMeleeHit(collision.gameObject);
+            item.OnMeleeHit(collision.gameObject);
         }
         
         if (isPlayer){

@@ -11,7 +11,7 @@ public class RangeDamage : MonoBehaviour
     private void OnTriggerEnter(Collider collision) {
         
         foreach (Item item in ItemList.itemList) {
-            item.onRangeHit(collision.gameObject);
+            item.OnRangeHit(collision.gameObject);
         }
         
         if (isPlayer){

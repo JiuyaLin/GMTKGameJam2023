@@ -46,7 +46,7 @@ public class ChestUI : MonoBehaviour
     public void selectItem(int i)
     {
         Debug.Log(i + "!");
-        ItemList.removeItem(player, i);
+        ItemList.RemoveItem(player, i);
         closeChest();
     }
 

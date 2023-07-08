@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class SniperEye : Item
 {
-   public void onMeleeHit(GameObject enemy) {
+    public override void OnMeleeHit(GameObject enemy) {
+         
+    }
 
-   }
-
-    public void onRangeHit(GameObject enemy) {
+    public override void OnRangeHit(GameObject enemy) {
 
     }
 
-    public void onMeleeUse(GameObject player, GameObject attack) {
+    public override void OnMeleeUse(ThirdPersonMovement2 player, GameObject attack) {
         
     }
 
-    public void onRangeUse(GameObject player, GameObject attack) {
+    public override void OnRangeUse(ThirdPersonMovement2 player, GameObject attack) {
 
     }
 
-    public void onGain(GameObject player) {
+    public override void OnGain(ThirdPersonMovement2 player) {
         PlayerStats.rangeDamage += 5;
         PlayerStats.meleeDamage -= 5;
     }
 
-    public void onDrop(GameObject player) {
+    public override void OnDrop(ThirdPersonMovement2 player) {
         PlayerStats.rangeDamage -= 5;
         PlayerStats.meleeDamage += 5;
     }
 
-    public void onHurt(GameObject player) {
+    public override void OnHurt(ThirdPersonMovement2 player) {
 
     }
 }

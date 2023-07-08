@@ -2,19 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Item
+public abstract class Item
 {
-    public void onMeleeHit(GameObject enemy);
+    public virtual float Weight => 0f;
+    public abstract void OnMeleeHit(GameObject enemy);
 
-    public void onRangeHit(GameObject enemy);
+    public abstract void OnRangeHit(GameObject enemy);
 
-    public void onMeleeUse(GameObject player, GameObject attack);
+    public abstract void OnMeleeUse(ThirdPersonMovement2 player, GameObject attack);
 
-    public void onRangeUse(GameObject player, GameObject attack);
+    public abstract void OnRangeUse(ThirdPersonMovement2 player, GameObject attack);
 
-    public void onGain(GameObject player);
+    public virtual void OnGain(ThirdPersonMovement2 player)
+    {
+        player.movementSpeed -= Weight / 2;
+        player.rollSpeed -= Weight;
+    }
 
-    public void onDrop(GameObject player);
+    public virtual void OnDrop(ThirdPersonMovement2 player)
+    {
+        player.movementSpeed += Weight / 2;
+        player.rollSpeed += Weight;
+    }
 
-    public void onHurt(GameObject player);
+    public abstract void OnHurt(ThirdPersonMovement2 player);
 }
