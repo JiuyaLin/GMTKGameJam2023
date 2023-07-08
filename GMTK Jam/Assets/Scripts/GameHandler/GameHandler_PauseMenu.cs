@@ -7,11 +7,13 @@ using UnityEngine.Audio;
 public class GameHandler_PauseMenu : MonoBehaviour
 {
 
+    public KeyCode pauseKey = KeyCode.Escape;
     public static bool GameisPaused = false;
     public GameObject pauseMenuUI;
     public AudioMixer mixer;
     public static float volumeLevel = 1.0f;
     private Slider sliderVolumeCtrl;
+    
 
     void Awake()
     {
@@ -32,7 +34,7 @@ public class GameHandler_PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(pauseKey))
         {
             if (GameisPaused)
             {
