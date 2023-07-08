@@ -546,27 +546,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 748180208}
-    - target: {fileID: 1794604772609540566, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_text
-      value: 'Name | Role
-
-        Name | Role
-
-        Name | Role
-
-        Name
-        | Role
-
-        Name | Role
-
-        Name | Role
-
-        Name | Role'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2277304192623130981, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 48.8
-      objectReference: {fileID: 0}
     - target: {fileID: 3725888100980989306, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -655,14 +634,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 748180208}
-    - target: {fileID: 4796912568694859109, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -140.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221012196494351249, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -99.9
-      objectReference: {fileID: 0}
     - target: {fileID: 5461216247140861086, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -679,22 +650,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 748180208}
-    - target: {fileID: 8890193265979891933, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -26.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9063666097145938488, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9063666097145938488, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9063666097145938488, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
