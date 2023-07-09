@@ -11,7 +11,7 @@ public class ChestObj : Interactable
     public List<Transform> activates = new List<Transform>();
     private Animator anim;
 
-    bool chestOpened;
+    public bool chestOpened;
     public bool chestFilled;
 
     void Start() {
@@ -40,7 +40,6 @@ public class ChestObj : Interactable
     }
 
     public void openChest() {
-        UI.SetActive(true);
         UIscript.highlightItems();
         Time.timeScale = 0f;
     }
@@ -49,7 +48,7 @@ public class ChestObj : Interactable
         // Debug.Log("closed!");
         anim.SetFloat("Speed", 1.0f);
         transform.GetChild(1).GetComponent<Animator>().Play("Chest");
-        UI.SetActive(false);
+        UIscript.unhighlight();
         chestOpened = false;
         UIscript.updateItems();
         Time.timeScale = 1f;
