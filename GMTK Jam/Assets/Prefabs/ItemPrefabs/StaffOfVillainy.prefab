@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Staff of Villainy
-  description: Does it make you a villain? Use ranged attacks to absorb energy from
-    your enemies! Melee attacks inflict damage to you but have higher damage. (+5
-    Healing on Range, +5 Melee but -3 Healing)
+  description: Use ranged attacks to absorb energy from your enemies! Melee attacks
+    inflict damage to you but have higher damage. (+5 Healing on Range, +5 Melee
+    but -3 Healing)
   sprite: {fileID: 21300000, guid: e3a7507e444496445bb0f6ff788fc41d, type: 3}
