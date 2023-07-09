@@ -9,14 +9,14 @@ public class StaffOfVillainy : Item
     public string description = "";
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
-        PlayerStats.hp -= 1;
+        PlayerStats.hp -= 5;
     }
 
     public override void OnRangeHit(GameObject enemy) {
-        PlayerStats.hp += 1;
+        PlayerStats.hp += 5;
         Stats enemyStats = enemy.GetComponent<Stats>();
         if (enemyStats != null)
-            enemyStats.hp += 1;
+            enemyStats.hp += 5;
         
     }
 

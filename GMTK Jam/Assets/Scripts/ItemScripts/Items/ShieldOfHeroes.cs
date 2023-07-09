@@ -11,10 +11,10 @@ public class ShieldOfHeroes : Item
     public Sprite sprite = null;
     // Start is called before the first frame update
     public override void OnMeleeHit(GameObject enemy) {
-        PlayerStats.hp += 1;
+        PlayerStats.hp += 5;
         Stats enemyStats = enemy.GetComponent<Stats>();
         if (enemyStats != null)
-            enemyStats.hp += 1;
+            enemyStats.hp += 5;
     }
 
     public override void OnRangeHit(GameObject enemy) {
@@ -26,7 +26,7 @@ public class ShieldOfHeroes : Item
     }
 
     public override void OnRangeUse(GameObject attack) {
-        PlayerStats.hp -= 1;
+        PlayerStats.hp -= 5;
     }
 
     public override void OnGain() {
