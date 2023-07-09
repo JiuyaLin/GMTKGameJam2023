@@ -7,6 +7,7 @@ public class HealthBarUI : MonoBehaviour
 {
     public Image healthFill;
     private float prevHP;
+    public float amount;
 
     void Update()
     {
@@ -18,7 +19,8 @@ public class HealthBarUI : MonoBehaviour
     }
 
     private void updateUI() {
-        float amount = (PlayerStats.hp/PlayerStats.maxHp);
+        amount = ((float)PlayerStats.hp/(float)PlayerStats.maxHp);
         healthFill.fillAmount = amount;
+
     }
 }
