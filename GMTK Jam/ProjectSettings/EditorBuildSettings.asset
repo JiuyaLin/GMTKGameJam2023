@@ -21,13 +21,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: ae58f804988b14b4289ba07ff0fc303c
   - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 1f4ca247a93416a498d644d865877a14
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 9ab999a2567e75e478a19ee9e055379b
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: d1e08553ecbe9aa41b3d09ce1b0ae1cd
-  - enabled: 1
-    path: Assets/Scenes/WinScreen.unity
-    guid: 1f4ca247a93416a498d644d865877a14
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

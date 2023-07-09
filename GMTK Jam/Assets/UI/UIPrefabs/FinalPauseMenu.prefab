@@ -1525,20 +1525,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Name | Role
+  m_text: 'Jiuya(Eva) Lin | Artist
 
-    Name | Role
+    Stephanie Wilson | Programmer
 
-    Name | Role
+    Ethan
+    Saff | Programmer
 
-    Name | Role
+    Alexander Koppel | Programmer
 
-    Name
-    | Role
+    Matthew Wong | Programmer
 
-    Name | Role
+    Wing
+    Ting (Jo) Chung | Programmer
 
-    Name | Role'
+    Noah Bell | Idea Maker'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11911f0bb4a08b1469b898af9f9dd0e3, type: 2}
   m_sharedMaterial: {fileID: 8512239362702348008, guid: 11911f0bb4a08b1469b898af9f9dd0e3, type: 2}
