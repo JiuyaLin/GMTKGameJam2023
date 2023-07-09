@@ -15,8 +15,8 @@ public class EnemyScriptUI : MonoBehaviour
 
     void Update()
     {
-        curColor = (int)(4*((float)enemyStats.hp/(float)enemyStats.maxHp));
-        transform.GetChild(0).GetComponent<SpriteRenderer>().color = healthColors[curColor];
+        // curColor = (int)(4*((float)enemyStats.hp/(float)enemyStats.maxHp));
+        // transform.GetChild(0).GetComponent<SpriteRenderer>().color = healthColors[curColor];
         if(prevHP != enemyStats.hp)
         {
             prevHP = enemyStats.hp;

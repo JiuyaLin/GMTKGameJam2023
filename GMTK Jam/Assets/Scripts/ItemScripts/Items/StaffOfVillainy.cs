@@ -15,9 +15,10 @@ public class StaffOfVillainy : Item
     public override void OnRangeHit(GameObject enemy) {
         PlayerStats.hp += 5;
         Stats enemyStats = enemy.GetComponent<Stats>();
-        if (enemyStats != null)
+        if (enemyStats != null) {
             enemyStats.hp += 5;
-        
+            if (enemyStats.hp > enemyStats.maxHp) enemyStats.hp = enemyStats.maxHp;
+        }
     }
 
     public override void OnMeleeUse(GameObject attack) {
