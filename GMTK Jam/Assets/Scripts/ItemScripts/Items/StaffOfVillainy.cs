@@ -6,7 +6,7 @@ public class StaffOfVillainy : Item
 {
     public string itemName = "Staff of Villainy";
     [TextArea(15,20)]
-    public string description = "Does it make you a villain? Use ranged attacks to absorb energy from your enemies! Melee attacks inflict damage to you but have higher damage. (+5 Healing on Range, +5 Melee but -5 Healing)";
+    public string description;
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
         PlayerStats.hp -= 5;

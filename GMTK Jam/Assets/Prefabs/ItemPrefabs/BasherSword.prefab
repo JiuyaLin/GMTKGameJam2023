@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Basher Sword
+  description: Your melee attacks do much more damage! Your ranged attacks, however,
+    do less. (+5 Melee, -5 Range)
   sprite: {fileID: 21300000, guid: 5d74ab25432a68d40945b95ef56be667, type: 3}

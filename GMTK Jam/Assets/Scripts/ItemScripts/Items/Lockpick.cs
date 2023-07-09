@@ -5,9 +5,10 @@ using UnityEngine;
 public class Lockpick : Item
 {
     public string itemName = "Lockpick";
-    [TextArea(15,20)]
-    public string description = "This item does nothing. Uh-huh";
     public Sprite sprite = null;
+    [TextArea(15,20)]
+    public string description;
+
     public override void OnMeleeHit(GameObject enemy) {
 
     }

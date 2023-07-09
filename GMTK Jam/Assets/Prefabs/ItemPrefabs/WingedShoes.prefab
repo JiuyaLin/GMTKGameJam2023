@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Winged Shoes
+  description: Taunt the critters by dodging attacks with your superior speed. Beware
+    - it hurts more if you hesitate! (Dodge 1s, 2s Cooldown)
   sprite: {fileID: 21300000, guid: 8b9b682a7bc2fc248ad891e871a00648, type: 3}

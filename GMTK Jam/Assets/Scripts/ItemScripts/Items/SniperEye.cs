@@ -6,8 +6,9 @@ public class SniperEye : Item
 {
     public string itemName = "Sniper Eye";
     [TextArea(15,20)]
-    public string description = "Your range attacks do much more damage! Your melee attacks, however, do less. (+5 Range, -5 Melee)";
+    public string description;
     public Sprite sprite = null;
+
     public override void OnMeleeHit(GameObject enemy) {
          
     }
