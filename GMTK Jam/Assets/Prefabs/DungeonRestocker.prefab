@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackedCamera: {fileID: 0}
   animator: {fileID: 0}
-  footHeight: 1.2
+  footHeight: 0.5
   wallCheckDistance: 0.4
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
