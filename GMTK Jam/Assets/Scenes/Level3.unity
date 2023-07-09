@@ -12764,6 +12764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openChest: {fileID: 8300000, guid: c60168a655b624ce084b7961886d234a, type: 3}
+  enemyMelee: {fileID: 0}
   enemyRanged: {fileID: 8300000, guid: b02b122b16b9440d38108cade3a88308, type: 3}
   playerMelee: {fileID: 8300000, guid: 5d6716cffdd344f108229bd570942704, type: 3}
   playerRanged: {fileID: 8300000, guid: 67885143feff1457096e7887578b1572, type: 3}
@@ -36436,7 +36437,7 @@ PrefabInstance:
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 7771794023846440116, guid: 03c55e6db677d2c418d9a42739eb0800, type: 3}
+      objectReference: {fileID: 8192382065132923484, guid: 93c3acd3507d8844389a42cc40e8d9e6, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[1]'
       value: 
@@ -36444,7 +36445,7 @@ PrefabInstance:
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 4762110783929888331, guid: 349c365df899e2941bad0b0b3362a51e, type: 3}
+      objectReference: {fileID: 5210063841858594623, guid: c0fa20756e2635d44b6e165fb76bfbfb, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[3]'
       value: 
@@ -36452,7 +36453,7 @@ PrefabInstance:
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 5210063841858594623, guid: c0fa20756e2635d44b6e165fb76bfbfb, type: 3}
+      objectReference: {fileID: 4762110783929888331, guid: 349c365df899e2941bad0b0b3362a51e, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[5]'
       value: 
