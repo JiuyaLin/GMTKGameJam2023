@@ -9,7 +9,6 @@ public class TutorialMsg : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("what");
         if(other.gameObject.tag == "Player")
         {
             Message.SetActive(true);
