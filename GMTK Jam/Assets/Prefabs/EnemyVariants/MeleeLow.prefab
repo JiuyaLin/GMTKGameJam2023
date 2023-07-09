@@ -17,8 +17,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 451268289085710119, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
-      propertyPath: meleeRange
-      value: 1.2
+      propertyPath: meleePrefab
+      value: 
+      objectReference: {fileID: 5101371494351837819, guid: 813253c0a7fa7714da48a7f0fa805de9, type: 3}
+    - target: {fileID: 451268289085710119, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
+      propertyPath: rangePrefab
+      value: 
+      objectReference: {fileID: 8816711437541448863, guid: e02277054ea1d564495ad3391b6b65b0, type: 3}
+    - target: {fileID: 451268289085710119, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
+      propertyPath: rangedOffset
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2563470956233955685, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_Sprite
@@ -46,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7939495738080899823, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7939495738080899823, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_LocalPosition.x
