@@ -45,11 +45,15 @@ public class ChestObj : Interactable
 
     public void closeChest() {
         Debug.Log("closed!");
-        
         UI.SetActive(false);
         chestOpened = false;
         UIscript.updateItems();
         Time.timeScale = 1f;
+        if (chestFilled)
+        {
+            GetComponent<AudioSource>().clip = (FindAnyObjectByType(typeof(SoundHolder)) as SoundHolder).openChest;
+            GetComponent<AudioSource>().Play();
+        }
         foreach (Transform transformToActivate in activates)
         {
             if (chestFilled)
