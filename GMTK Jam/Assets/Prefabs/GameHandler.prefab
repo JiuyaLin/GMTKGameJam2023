@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3686706296843666195}
   - component: {fileID: 7447414242173546629}
   - component: {fileID: 3028295120210616049}
+  - component: {fileID: 609201471810766171}
+  - component: {fileID: 1669152784941369479}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -34,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7430736201055529486
 MonoBehaviour:
@@ -68,7 +70,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalNumberOfChests: 4
-  nextScene: Credits
 --- !u!114 &3686706296843666195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,3 +194,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &609201471810766171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7550709309877641596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69077802e2a457748b1e91219d7fcb68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScene: GameOver
+--- !u!114 &1669152784941369479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7550709309877641596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45952658d54c7864ab2cea6a182547a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
