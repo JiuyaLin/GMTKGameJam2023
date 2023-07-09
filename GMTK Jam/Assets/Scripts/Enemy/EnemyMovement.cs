@@ -97,15 +97,20 @@ public class EnemyMovement : GroundedPaperSprite
 
     public void checkIfDead()
     {
-        if (stats.hp <= 0) {
-            if (!isDead) {
+        if (stats.hp <= 0)
+        {
+            if (!isDead)
+            {
+                Debug.Log("Enemy dead");
+
                 animator.SetTrigger("IsDead");
                 isDead = true;
+                Destroy(gameObject);
             }
         }
     }
 
-    
+
     //DISPLAY the range of enemy's attack when selected in the Editor
     void OnDrawGizmosSelected()
     {
