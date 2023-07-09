@@ -41,6 +41,7 @@ public class HasItems : MonoBehaviour
     }
     // For the continuous effects ie the gold
     void Update() {
+        //Debug.Log("Hi");
         // Debug.Log("Hi");
         if (droppedGold) {
             if (Time.time - timer > duration) 

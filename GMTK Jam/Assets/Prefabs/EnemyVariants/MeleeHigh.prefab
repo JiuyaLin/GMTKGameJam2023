@@ -62,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: speed
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: damage
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5178343659540847550, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_Color.b

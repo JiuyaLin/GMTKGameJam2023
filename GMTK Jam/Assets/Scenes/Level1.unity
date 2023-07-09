@@ -19009,12 +19009,12 @@ Transform:
   - {fileID: 2048366383}
   - {fileID: 737580239}
   - {fileID: 96854157}
+  - {fileID: 1858305350}
   - {fileID: 1361644719}
   - {fileID: 993055260}
   - {fileID: 371821457}
   - {fileID: 774293577}
   - {fileID: 1018417064}
-  - {fileID: 1858305350}
   - {fileID: 1162036123}
   - {fileID: 1841367270}
   - {fileID: 1460804266}
@@ -39764,7 +39764,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 203888572640616119, guid: 15af7ab404e6a6e438079514563c63b6, type: 3}
       propertyPath: facingDirection.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3934130193827174557, guid: 15af7ab404e6a6e438079514563c63b6, type: 3}
       propertyPath: m_Name
