@@ -22,6 +22,8 @@ public class ChestUI : MonoBehaviour
     GameObject item4;
     GameObject item5;
 
+    GameObject instructions;
+
     List<GameObject> itemObjList;
 
     GameObject gameHandler;
@@ -35,10 +37,10 @@ public class ChestUI : MonoBehaviour
         selectUI = transform.GetChild(2).gameObject;
 
         itemselect1 = selectUI.transform.GetChild(0).gameObject;
-        itemselect2 = selectUI.transform.GetChild(1).gameObject;
-        itemselect3 = selectUI.transform.GetChild(2).gameObject;
-        itemselect4 = selectUI.transform.GetChild(3).gameObject;
-        itemselect5 = selectUI.transform.GetChild(4).gameObject;
+        itemselect2 = selectUI.transform.GetChild(2).gameObject;
+        itemselect3 = selectUI.transform.GetChild(4).gameObject;
+        itemselect4 = selectUI.transform.GetChild(6).gameObject;
+        itemselect5 = selectUI.transform.GetChild(8).gameObject;
 
         invUI = transform.GetChild(1).gameObject;
 
@@ -47,6 +49,8 @@ public class ChestUI : MonoBehaviour
         item3 = invUI.transform.GetChild(2).gameObject;
         item4 = invUI.transform.GetChild(3).gameObject;
         item5 = invUI.transform.GetChild(4).gameObject;
+
+        instructions = selectUI.transform.GetChild(10).gameObject;
         
         itemObjList = new List<GameObject> {item1, item2, item3, item4, item5};
         
@@ -74,7 +78,7 @@ public class ChestUI : MonoBehaviour
     public void highlightItems() 
     {   
         // highlight the right number items
-        selectUI.SetActive(true);
+        instructions.SetActive(true);
 
         if (ItemList.itemList.Count >= 1)  {
             itemselect1.SetActive(true);
@@ -96,7 +100,7 @@ public class ChestUI : MonoBehaviour
 
     public void unhighlight() 
     {  
-        selectUI.SetActive(false);
+        instructions.SetActive(false);
         
         itemselect1.SetActive(false);
         itemselect2.SetActive(false);
@@ -152,17 +156,20 @@ public class ChestUI : MonoBehaviour
 
     public void selectItem(int i)
     {
-        // Debug.Log(i + "!");
-        ItemList.RemoveItem(i);
-        //gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
+        if (chestref != null && chestref.chestOpened) {
+            // Debug.Log(i + "!");
+            ItemList.RemoveItem(i);
+            //gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
+            
+            // adds to gamehandler counter
+            gameHandler.GetComponent<ChestTracker>().ChestFilled();
+
+            // Debug.Log(chestref);
+
+            chestref.chestFilled = true;
+            chestref.closeChest();
+        }
         
-        // adds to gamehandler counter
-        gameHandler.GetComponent<ChestTracker>().ChestFilled();
-
-        // Debug.Log(chestref);
-
-        chestref.chestFilled = true;
-        chestref.closeChest();
     }
 
     
