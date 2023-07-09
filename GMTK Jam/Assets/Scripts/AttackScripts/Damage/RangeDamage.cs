@@ -25,14 +25,16 @@ public class RangeDamage : MonoBehaviour
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider collision) {
-        
-        foreach (Item item in ItemList.itemList) {
-            item.OnRangeHit(collision.gameObject);
+        if (collision.tag == "Ground") {
+            Destroy(gameObject);
         }
 
         int totalDamage = damage;
         if (isPlayer) {
             if (collision.tag != "Enemy") return;
+            foreach (Item item in ItemList.itemList) {
+                item.OnRangeHit(collision.gameObject);
+            }
             totalDamage += PlayerStats.rangeDamage;
             totalDamage = totalDamage > 0 ? totalDamage : 0;
             collision.gameObject.GetComponent<Stats>().hp -= totalDamage;
