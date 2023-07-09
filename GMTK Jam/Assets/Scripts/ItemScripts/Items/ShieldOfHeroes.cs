@@ -6,6 +6,8 @@ public class ShieldOfHeroes : Item
 {
 
     public string itemName = "Shield of Heroes";
+    [TextArea(15,20)]
+    public string description = "";
     public Sprite sprite = null;
     // Start is called before the first frame update
     public override void OnMeleeHit(GameObject enemy) {
@@ -42,5 +44,8 @@ public class ShieldOfHeroes : Item
     }
     public override Sprite GetSprite() {
         return sprite;
+    }
+    public override string GetDescription() {
+        return description;
     }
 }
