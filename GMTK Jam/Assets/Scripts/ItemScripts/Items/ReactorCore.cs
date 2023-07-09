@@ -5,6 +5,8 @@ using UnityEngine;
 public class ReactorCore : Item
 {
     public string itemName = "Reactor Core";
+    [TextArea(15,20)]
+    public string description = "";
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
         
@@ -44,5 +46,8 @@ public class ReactorCore : Item
     }
     public override Sprite GetSprite() {
         return sprite;
+    }
+    public override string GetDescription() {
+        return description;
     }
 }
