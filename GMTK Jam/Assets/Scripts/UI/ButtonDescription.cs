@@ -21,7 +21,7 @@ public class ButtonDescription : MonoBehaviour
         
         tf.anchoredPosition = mousePosition;
         text.text = ItemList.itemList[itemIndex].GetDescription();
-        Debug.Log("This is good");
+        // Debug.Log("This is good");
         Debug.Log(ItemList.itemList[itemIndex].GetName());
     }
 
