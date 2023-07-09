@@ -11834,7 +11834,7 @@ PrefabInstance:
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[3]'
       value: 
-      objectReference: {fileID: 5210063841858594623, guid: c0fa20756e2635d44b6e165fb76bfbfb, type: 3}
+      objectReference: {fileID: 8192382065132923484, guid: 93c3acd3507d8844389a42cc40e8d9e6, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[4]'
       value: 
