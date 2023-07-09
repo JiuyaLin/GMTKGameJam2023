@@ -13,10 +13,6 @@ public class ShieldOfHeroes : Item
     public override void OnMeleeHit(GameObject enemy) {
         PlayerStats.hp += 5;
         Stats enemyStats = enemy.GetComponent<Stats>();
-        // if (enemyStats != null) {
-        //     enemyStats.hp += 5;
-        //     if (enemyStats.hp > enemyStats.maxHp) enemyStats.hp = enemyStats.maxHp;
-        // }
     }
 
     public override void OnRangeHit(GameObject enemy) {
@@ -34,10 +30,13 @@ public class ShieldOfHeroes : Item
     public override void OnGain() {
         base.OnGain();
         PlayerStats.rangeDamage += 5;
+        PlayerStats.meleeDamage -= 5;
     }
 
     public override void OnDrop() {
         base.OnDrop();
+        PlayerStats.rangeDamage -= 5;
+        PlayerStats.meleeDamage += 5;
     }
 
     public override void OnHurt() {
