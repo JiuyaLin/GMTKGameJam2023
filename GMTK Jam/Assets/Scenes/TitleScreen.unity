@@ -847,6 +847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 318842120431488865, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1000912838439375590, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       propertyPath: m_text
       value: Back to pause menu
@@ -935,13 +939,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7080810106892352933, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7269993834599574880, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9180268024043160178, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -974,6 +982,10 @@ PrefabInstance:
     - target: {fileID: 1467543695150595062, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
       propertyPath: m_Name
       value: Canvas-JoWorkInProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467543695150595062, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1487168701819133938, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1085,7 +1097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3725888100980989306, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 453.40598
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 3725888100980989306, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
