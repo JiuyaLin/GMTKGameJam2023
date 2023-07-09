@@ -17587,7 +17587,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 29990085817783155, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: nextScene
-      value: StephScene
+      value: StephLevel
       objectReference: {fileID: 0}
     - target: {fileID: 29990085817783155, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: totalNumberOfChests
