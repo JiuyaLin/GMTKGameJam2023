@@ -981,6 +981,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
       objectReference: {fileID: 0}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1911948060}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 6160485435758362809, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

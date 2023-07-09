@@ -687,11 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9ce50845ca80148a77020512b44a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &601706549 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2478887848713916965, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
-  m_PrefabInstance: {fileID: 2138612177}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &601706550 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8105988978171247094, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
@@ -1195,6 +1190,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1602232929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 957244441559186395, guid: 8939ee7003d837c4fbae59d505767d2e, type: 3}
+  m_PrefabInstance: {fileID: 2140335929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651088874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1272,7 @@ PrefabInstance:
     - target: {fileID: 1274701123832280422, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       propertyPath: creditsMenuUI
       value: 
-      objectReference: {fileID: 601706549}
+      objectReference: {fileID: 1602232929}
     - target: {fileID: 2478887848713916965, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       propertyPath: m_IsActive
       value: 1
