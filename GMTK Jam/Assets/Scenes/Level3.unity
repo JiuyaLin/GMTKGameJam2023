@@ -17652,15 +17652,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 596214891881307829, guid: 8ae6118bbeda95d409a7a06caf6ce899, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 596214891881307829, guid: 8ae6118bbeda95d409a7a06caf6ce899, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.98
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 596214891881307829, guid: 8ae6118bbeda95d409a7a06caf6ce899, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.2
+      value: -24.74
       objectReference: {fileID: 0}
     - target: {fileID: 596214891881307829, guid: 8ae6118bbeda95d409a7a06caf6ce899, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44597,6 +44597,14 @@ PrefabInstance:
     - target: {fileID: 6162057938363335164, guid: 7470ac3253995b44f935e15833d5c535, type: 3}
       propertyPath: m_Name
       value: StationaryShooter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763995689097411675, guid: 7470ac3253995b44f935e15833d5c535, type: 3}
+      propertyPath: Priority
+      value: 173
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763995689097411675, guid: 7470ac3253995b44f935e15833d5c535, type: 3}
+      propertyPath: m_Volume
+      value: 0.56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
