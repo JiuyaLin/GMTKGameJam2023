@@ -43,7 +43,7 @@ public class EnemyMovement : GroundedPaperSprite
 
             if (DistToPlayer <= attackRange) {
                 if (isMelee) {
-                    attack.MeleeAttackEnemy(stats.damage);
+                    if (DistToPlayer <= 2.5) attack.MeleeAttackEnemy(stats.damage);
                 } else {
                     attack.RangedAttackEnemey(stats.damage);
                 }

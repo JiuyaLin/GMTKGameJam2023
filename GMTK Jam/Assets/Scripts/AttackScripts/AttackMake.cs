@@ -81,6 +81,8 @@ public class AttackMake : MonoBehaviour
     public bool MeleeAttackEnemy(int damage) {
         if (Time.time - meleeTime < meleeDelay || meleePrefab == null || PlayerStats.isImmune) return false;
 
+        (FindAnyObjectByType(typeof(AudioSource)) as AudioSource).clip = (FindAnyObjectByType(typeof(SoundHolder)) as SoundHolder).enemyMelee;
+        (FindAnyObjectByType(typeof(AudioSource)) as AudioSource).Play();
         meleeTime = Time.time;
         GameObject meleeAttack = Instantiate(meleePrefab,
             transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * meleeRange,
