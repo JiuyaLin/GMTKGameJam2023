@@ -2516,6 +2516,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5482308519866330786, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288209117104010672, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18910,6 +18918,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3696593097410045900, guid: 00aa1552fd8736c48882a2e2171b301f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044547821266913311, guid: 00aa1552fd8736c48882a2e2171b301f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5952184237882503170, guid: 00aa1552fd8736c48882a2e2171b301f, type: 3}
       propertyPath: m_Name
       value: FullUI
@@ -19857,13 +19873,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7727246812223678301, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7898347902477186968, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511372762889361546, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
