@@ -139,6 +139,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4464328682871376713}
+  - {fileID: 7989539587556502686}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
@@ -156,27 +157,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackedCamera: {fileID: 0}
   animator: {fileID: 0}
-  savedOffset: {x: 0, y: 0, z: 0}
   footHeight: 0.5
   wallCheckDistance: 0.4
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  onGround: 0
-  trackedGround: {fileID: 0}
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
-  movingPlatformCompensation: {x: 0, y: 0, z: 0}
   facingDirection: {x: 1, y: 0, z: 0}
-  animationName: 
   rollTime: 0.5
   rollSpeed: 10
   rollCooldown: 1
   interactableRange: 1.5
   movementSpeed: 5
-  rollTimeTracker: 0
-  rollColldownTracker: 0
-  rollDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &1690321284533887805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,12 +181,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 0
   meleeDelay: 0.25
-  rangeDelay: 0.5
+  rangeDelay: 0.25
   meleeRange: 1
   rangedOffset: 0.5
   meleePrefab: {fileID: 5101371494351837819, guid: 588f9663c8aac40debd48da975d9dd25, type: 3}
   rangePrefab: {fileID: 8816711437541448863, guid: 04f4e8b752a5f9c41abf45d8b3da1ffa, type: 3}
-  player: {fileID: 4733925102784919572}
 --- !u!136 &8523789428578583599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -220,3 +209,95 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5573889292684256058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7989539587556502686}
+  - component: {fileID: 3822293193552491328}
+  - component: {fileID: 1676369191897856911}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7989539587556502686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573889292684256058}
+  m_LocalRotation: {x: 0.3420201, y: -0.000000029802319, z: 0.0000000074505797, w: 0.9396926}
+  m_LocalPosition: {x: 0.5939698, y: 4.93, z: -4.270925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 127225041170113221}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 40, y: 45, z: 0}
+--- !u!20 &3822293193552491328
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573889292684256058}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: -10
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 3.5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &1676369191897856911
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573889292684256058}
+  m_Enabled: 1
