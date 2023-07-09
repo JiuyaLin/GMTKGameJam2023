@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyMovement : GroundedPaperSprite
 {
-    public int damage = 10;
     public float attackRange = 5;
     public bool isAttacking = false;
     public bool isDead = false;
@@ -32,11 +31,6 @@ public class EnemyMovement : GroundedPaperSprite
         }
 
         stats = this.GetComponent<Stats>();
-
-        //if (GameObject.FindWithTag("GameHandler") != null)
-        //{
-        //    gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-        //}
     }
 
     public override void Update()
@@ -50,19 +44,11 @@ public class EnemyMovement : GroundedPaperSprite
 
                 animator.SetBool("IsWalking", true);
                 if (isMelee) {
-                    attack.MeleeAttackEnemy();
+                    attack.MeleeAttackEnemy(stats.damage);
                 } else {
-                    attack.RangedAttackEnemey();
+                    attack.RangedAttackEnemey(stats.damage);
                 }
-                //flip enemy to face player direction. Wrong direction? Swap the * -1.
-                //if (target.position.x > gameObject.transform.position.x)
-                //{
-                //    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
-                //}
-                //else
-                //{
-                //    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
-                //}
+
             } else {
                 requestedMovement = Vector3.zero;
                 animator.SetBool("IsWalking", false);
@@ -70,7 +56,6 @@ public class EnemyMovement : GroundedPaperSprite
         } 
 
         base.Update();
-        //else { anim.SetBool("Walk", false);}
     }
 
 
@@ -78,10 +63,7 @@ public class EnemyMovement : GroundedPaperSprite
     {
         if (other.gameObject.tag == "Player") {
             isAttacking = true;
-            Debug.Log("Player enter enemy attack range");
-            //anim.SetBool("Attack", true);
-            //gameHandler.playerGetHit(damage);
-            //TODO attack
+            // Debug.Log("Player enter enemy attack range");
         }
     }
 
@@ -89,8 +71,7 @@ public class EnemyMovement : GroundedPaperSprite
     {
         if (other.gameObject.tag == "Player") {
             isAttacking = false;
-            Debug.Log("Player leave enemy attack range");
-            //anim.SetBool("Attack", false);
+            // Debug.Log("Player leave enemy attack range");
         }
     }
 
@@ -101,7 +82,7 @@ public class EnemyMovement : GroundedPaperSprite
         {
             if (!isDead)
             {
-                Debug.Log("Enemy dead");
+                // Debug.Log("Enemy dead");
 
                 animator.SetTrigger("IsDead");
                 isDead = true;

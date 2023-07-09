@@ -10,8 +10,8 @@ public static class PlayerStats
 
     static PlayerStats()
     {
-        baseHp = 3;
-        baseMaxHp = 3;
+        baseHp = 100;
+        baseMaxHp = 100;
         baseSpeed = 1;
         baseMeleeDamage = 1;
         baseRangeDamage = 1;
