@@ -17638,6 +17638,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
+      propertyPath: levelItemPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 1235359692699216508, guid: 4be0d8d259897724b9e63ef844e5850b, type: 3}
