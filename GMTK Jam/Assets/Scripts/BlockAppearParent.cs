@@ -8,7 +8,7 @@ public class BlockAppearParent : MonoBehaviour, SignalActivatable, SignalDeactiv
     public float timeTracker = 0f;
     public List<BlockAppear> toActivate = new List<BlockAppear>();
     public List<BlockAppear> toDeactivate = new List<BlockAppear>();
-    protected float delay = 0.1f;
+    protected float delay = 0.025f;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +45,12 @@ public class BlockAppearParent : MonoBehaviour, SignalActivatable, SignalDeactiv
     public void OnSignalActivate()
     {
         toActivate = new List<BlockAppear>(transform.GetComponentsInChildren<BlockAppear>());
+        delay = 2f / Mathf.Max(1, toActivate.Count);
     }
 
     public void OnSignalDeactivate()
     {
         toDeactivate = new List<BlockAppear>(transform.GetComponentsInChildren<BlockAppear>());
+        delay = 2f / Mathf.Max(1, toDeactivate.Count);
     }
 }
