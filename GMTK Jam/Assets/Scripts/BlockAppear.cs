@@ -17,6 +17,18 @@ public class BlockAppear : MonoBehaviour
         actualPosition = transform.position;
         transform.position = actualPosition - Vector3.up * appearFrom;
         appearingTracker = appearTime;
+        foreach (MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
+        {
+            mr.enabled = false;
+        }
+        foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = false;
+        }
+        foreach (GroundedPaperSprite gspr in GetComponentsInChildren<GroundedPaperSprite>())
+        {
+            gspr.enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -26,13 +38,38 @@ public class BlockAppear : MonoBehaviour
         {
             appearingTracker = Mathf.Max(appearingTracker - Time.deltaTime, 0);
             transform.position = actualPosition - Vector3.up * appearingTracker / appearTime * appearFrom;
+            foreach (MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
+            {
+                mr.enabled = true;
+            }
+            foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+            {
+                sr.enabled = true;
+            }
+            foreach (GroundedPaperSprite gspr in GetComponentsInChildren<GroundedPaperSprite>())
+            {
+                gspr.enabled = appearingTracker == 0;
+            }
         }
         else if (!active && appearingTracker < appearTime)
         {
             appearingTracker = Mathf.Min(appearingTracker + Time.deltaTime, appearTime);
             transform.position = actualPosition - Vector3.up * appearingTracker / appearTime * appearFrom;
+            foreach (MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
+            {
+                mr.enabled = appearingTracker < appearTime;
+            }
+            foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+            {
+                sr.enabled = appearingTracker < appearTime;
+            }
+            foreach (GroundedPaperSprite gspr in GetComponentsInChildren<GroundedPaperSprite>())
+            {
+                gspr.enabled = false;
+            }
         }
-        GetComponentInChildren<MeshRenderer>().enabled = appearingTracker < appearTime;
+
+        
     }
 
     public void OnSignalActivate()
