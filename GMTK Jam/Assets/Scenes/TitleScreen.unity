@@ -1263,7 +1263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274701123832280422, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       propertyPath: pauseKey
-      value: 0
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 1274701123832280422, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       propertyPath: pauseMenuUI
