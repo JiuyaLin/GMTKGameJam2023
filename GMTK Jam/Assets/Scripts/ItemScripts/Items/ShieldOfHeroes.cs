@@ -12,7 +12,9 @@ public class ShieldOfHeroes : Item
     // Start is called before the first frame update
     public override void OnMeleeHit(GameObject enemy) {
         PlayerStats.hp += 1;
-        enemy.GetComponent<Stats>().hp += 1;
+        Stats enemyStats = enemy.GetComponent<Stats>();
+        if (enemyStats != null)
+            stats.hp += 1;
     }
 
     public override void OnRangeHit(GameObject enemy) {
