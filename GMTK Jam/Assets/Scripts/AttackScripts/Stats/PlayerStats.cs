@@ -5,13 +5,24 @@ using UnityEngine;
 public static class PlayerStats
 {
     public static int hp, maxHp, speed, meleeDamage, rangeDamage;
-
+    public static int baseHp, baseMaxHp, baseSpeed, baseMeleeDamage, baseRangeDamage;
     static PlayerStats()
     {
-        hp = 3;
-        maxHp = 3;
-        speed = 1;
-        meleeDamage = 1;
-        rangeDamage = 1;
+        baseHp = 3;
+        baseMaxHp = 3;
+        baseSpeed = 1;
+        baseMeleeDamage = 1;
+        baseRangeDamage = 1;
+        
+        resetStats();
+        
+    }
+
+    public static void resetStats() {
+        hp = baseHp;
+        maxHp = baseMaxHp;
+        speed = baseSpeed;
+        meleeDamage = baseMeleeDamage;
+        rangeDamage = baseRangeDamage;
     }
 }
