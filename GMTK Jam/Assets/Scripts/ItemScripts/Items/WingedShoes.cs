@@ -6,7 +6,7 @@ public class WingedShoes : Item
 {
     public string itemName = "Winged Shoes";
     [TextArea(15,20)]
-    public string description = "";
+    public string description = "Taunt the critters by dodging attacks with your superior speed. Beware - it hurts more if you hesitate! (Dodge 1s, 2s Cooldown)";
     public Sprite sprite = null;
     // Start is called before the first frame update
     public override void OnMeleeHit(GameObject enemy) {

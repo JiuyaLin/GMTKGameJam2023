@@ -6,7 +6,7 @@ public class GoldCoins : Item
 {
     public string itemName = "Gold Coins";
     [TextArea(15,20)]
-    public string description = "";
+    public string description = "Players have caught wind of your restocking. You are now placed on a time limit to finish restocking the dungeon. (100 seconds to clear level or death!)";
     public Sprite sprite = null;
     
 
