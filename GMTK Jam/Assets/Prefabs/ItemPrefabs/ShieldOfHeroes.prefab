@@ -48,4 +48,4 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 8045023e14528ea44a698099b391aad1, type: 3}
   description: Heal all by using your heroic Melee Hits (even your enemies)! Ranged
     attacks inflict damage to you but have higher damage. (+5 Healing on Melee, +5
-    Range but -5 Healing)
+    Range but -3 Healing)
