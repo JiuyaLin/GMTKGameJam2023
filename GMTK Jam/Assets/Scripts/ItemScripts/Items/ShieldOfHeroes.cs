@@ -14,7 +14,7 @@ public class ShieldOfHeroes : Item
         PlayerStats.hp += 1;
         Stats enemyStats = enemy.GetComponent<Stats>();
         if (enemyStats != null)
-            stats.hp += 1;
+            enemyStats.hp += 1;
     }
 
     public override void OnRangeHit(GameObject enemy) {

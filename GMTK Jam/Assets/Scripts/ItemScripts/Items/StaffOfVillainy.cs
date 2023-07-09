@@ -16,7 +16,7 @@ public class StaffOfVillainy : Item
         PlayerStats.hp += 1;
         Stats enemyStats = enemy.GetComponent<Stats>();
         if (enemyStats != null)
-            stats.hp += 1;
+            enemyStats.hp += 1;
         
     }
 
