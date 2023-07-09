@@ -14990,6 +14990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openChest: {fileID: 8300000, guid: c60168a655b624ce084b7961886d234a, type: 3}
+  enemyMelee: {fileID: 0}
   enemyRanged: {fileID: 8300000, guid: b02b122b16b9440d38108cade3a88308, type: 3}
   playerMelee: {fileID: 8300000, guid: 5d6716cffdd344f108229bd570942704, type: 3}
   playerRanged: {fileID: 8300000, guid: 67885143feff1457096e7887578b1572, type: 3}
@@ -15002,7 +15003,7 @@ AudioSource:
   m_GameObject: {fileID: 519518848}
   m_Enabled: 0
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 423813d55e0ad7a4789667bed07db7f4, type: 2}
   m_audioClip: {fileID: 8300000, guid: eb3d26d55afef4c97b26b7eb79f66535, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -18811,8 +18812,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1629816051}
+  - {fileID: 2048366383}
   - {fileID: 1321692034}
   - {fileID: 1654619804}
+  - {fileID: 196769352}
+  - {fileID: 908120051}
+  - {fileID: 1543464300}
   - {fileID: 179206980}
   - {fileID: 312757352}
   - {fileID: 1438606185}
@@ -19002,19 +19008,14 @@ Transform:
   - {fileID: 918586596}
   - {fileID: 1615807828}
   - {fileID: 1571665833}
-  - {fileID: 196769352}
-  - {fileID: 908120051}
-  - {fileID: 1543464300}
-  - {fileID: 1629816051}
-  - {fileID: 2048366383}
   - {fileID: 737580239}
   - {fileID: 96854157}
-  - {fileID: 1858305350}
   - {fileID: 1361644719}
   - {fileID: 993055260}
   - {fileID: 371821457}
   - {fileID: 774293577}
   - {fileID: 1018417064}
+  - {fileID: 1858305350}
   - {fileID: 1162036123}
   - {fileID: 1841367270}
   - {fileID: 1460804266}
@@ -28651,6 +28652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openChest: {fileID: 8300000, guid: c60168a655b624ce084b7961886d234a, type: 3}
+  enemyMelee: {fileID: 0}
   enemyRanged: {fileID: 8300000, guid: b02b122b16b9440d38108cade3a88308, type: 3}
   playerMelee: {fileID: 8300000, guid: 5d6716cffdd344f108229bd570942704, type: 3}
   playerRanged: {fileID: 8300000, guid: 67885143feff1457096e7887578b1572, type: 3}
@@ -39764,7 +39766,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 203888572640616119, guid: 15af7ab404e6a6e438079514563c63b6, type: 3}
       propertyPath: facingDirection.x
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3934130193827174557, guid: 15af7ab404e6a6e438079514563c63b6, type: 3}
       propertyPath: m_Name
@@ -41145,6 +41147,7 @@ Transform:
   - {fileID: 723639301}
   - {fileID: 1635054684}
   - {fileID: 1700616072}
+  - {fileID: 1123659356}
   - {fileID: 390542246}
   - {fileID: 1094810587}
   - {fileID: 1375386342}
@@ -41152,7 +41155,6 @@ Transform:
   - {fileID: 1133688920}
   - {fileID: 1462300785}
   - {fileID: 512375173}
-  - {fileID: 1123659356}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
