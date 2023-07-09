@@ -15,18 +15,18 @@ public class ChestObj : Interactable
 
     void Start() {
         UIscript = GameObject.FindGameObjectWithTag("HUD").GetComponent<ChestUI>();
-        Debug.Log(UIscript);
+        // Debug.Log(UIscript);
         UI = GameObject.FindGameObjectWithTag("HUD").transform.GetChild(2).gameObject;
     }
 
     public override void OnInteract() {
-        Debug.Log("hi");
+        // Debug.Log("hi");
         if (!chestFilled) {
             openChest();
             chestOpened = true;
             UIscript.setChestRef(this);
         } else {
-            Debug.Log("Chest Full!");
+            // Debug.Log("Chest Full!");
             // display msg saying its full 
         }
     }
@@ -44,7 +44,7 @@ public class ChestObj : Interactable
     }
 
     public void closeChest() {
-        Debug.Log("closed!");
+        // Debug.Log("closed!");
         UI.SetActive(false);
         chestOpened = false;
         UIscript.updateItems();
