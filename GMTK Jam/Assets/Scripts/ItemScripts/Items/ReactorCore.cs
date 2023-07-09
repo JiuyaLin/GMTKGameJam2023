@@ -8,13 +8,14 @@ public class ReactorCore : Item
     public Sprite sprite = null;
     [TextArea(15,20)]
     public string description;
+    
 
     public override void OnMeleeHit(GameObject enemy) {
-        
+        PlayerStats.hp += 3 - ItemList.itemList.Count;
     }
 
     public override void OnRangeHit(GameObject enemy) {
-
+        PlayerStats.hp += ItemList.itemList.Count - 3;
     }
 
     public override void OnMeleeUse(GameObject attack) {
