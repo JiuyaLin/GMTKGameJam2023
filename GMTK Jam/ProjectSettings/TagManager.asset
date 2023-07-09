@@ -8,6 +8,8 @@ TagManager:
   - Chest
   - ChestUI
   - Enemy
+  - HUD
+  - GameHandler
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 884513355
     locked: 0
