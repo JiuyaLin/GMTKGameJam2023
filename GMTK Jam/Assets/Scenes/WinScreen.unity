@@ -270,7 +270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit Game
+  m_text: finish work
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11911f0bb4a08b1469b898af9f9dd0e3, type: 2}
   m_sharedMaterial: {fileID: 8512239362702348008, guid: 11911f0bb4a08b1469b898af9f9dd0e3, type: 2}
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Press Space to Retry -'
+  m_text: '- Press Space to Restock Again -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 35153c2112bced24e8b65e6426397991, type: 2}
   m_sharedMaterial: {fileID: -3466200873062894312, guid: 35153c2112bced24e8b65e6426397991, type: 2}
@@ -1088,6 +1088,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4436940739754098579, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2007196708}
+    - targetCorrespondingSourceObject: {fileID: 4436940739754098579, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2007196710}
   m_SourcePrefab: {fileID: 100100000, guid: 8905a0825e690ac4abd6cdedd82565bf, type: 3}
 --- !u!1 &2007196707 stripped
 GameObject:
@@ -1101,11 +1104,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007196707}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68841ac993672e3459affe5ce29d847e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2007196710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007196707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7effb913f0851874280077c9b1c4a4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startKey: 32
+  sceneName: Level1
+  pauseMenuUI: {fileID: 0}
 --- !u!114 &190967050512902799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,7 +1144,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Better luck \nnext time"
+  m_text: 'Dungeon
+
+    Completed!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11911f0bb4a08b1469b898af9f9dd0e3, type: 2}
   m_sharedMaterial: {fileID: 8512239362702348008, guid: 11911f0bb4a08b1469b898af9f9dd0e3, type: 2}
