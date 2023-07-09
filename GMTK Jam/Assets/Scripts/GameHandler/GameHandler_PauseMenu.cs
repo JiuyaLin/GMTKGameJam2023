@@ -79,7 +79,7 @@ public class GameHandler_PauseMenu : MonoBehaviour
 
     public void CloseCredits()
     {
-        pauseMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(true);
         creditsMenuUI.SetActive(false);
         CreditisOpen = false;
     }
