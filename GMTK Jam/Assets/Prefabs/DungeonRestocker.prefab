@@ -143,7 +143,7 @@ Transform:
   - {fileID: 7097941976053910192}
   - {fileID: 4464328682871376713}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!114 &4733925102784919572
 MonoBehaviour:
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 2505855712407950452}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
