@@ -32,8 +32,8 @@ public class HasItems : MonoBehaviour
         }
     }
 
-    static float timer = 0;
-    static float duration = 0;
+    public static float timer = 0;
+    public static float duration = 0;
     public static void dropGold(float waitTime) {
         timer = Time.time;
         duration = waitTime;

@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5261610016018486253
 MonoBehaviour:
@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Shield of Heros
   sprite: {fileID: 21300000, guid: 8045023e14528ea44a698099b391aad1, type: 3}
-  description: Heal all by using your heroic Melee Hits (even your enemies)! Ranged
-    attacks inflict damage to you but have higher damage. (+5 Healing on Melee, +5
-    Range but -3 Healing)
+  description: 'Heal all by using your heroic Melee Hits (even your enemies)! Ranged
+    attacks inflict damage to you but have higher damage. (Melee: +5 Healing on hit
+    and -5 damage, Range: -3 Healing on use and +5 damage)'
