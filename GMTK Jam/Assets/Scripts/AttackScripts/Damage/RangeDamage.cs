@@ -42,7 +42,7 @@ public class RangeDamage : MonoBehaviour
         }
 
         if (totalDamage > 0) {
-            DamagePopup.Create(collision.transform.position + Vector3.up, damage, .5, isPlayer);
+            DamagePopup.Create(collision.transform.position + Vector3.up, damage, 1f, isPlayer);
         }
 
         if (canBounce) {

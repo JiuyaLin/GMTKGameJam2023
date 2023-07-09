@@ -5,7 +5,7 @@ using TMPro;
 
 public class DamagePopup : MonoBehaviour
 {
-    public static void Create(Vector3 position, int damage, double timeIn, bool isPlayer) {
+    public static void Create(Vector3 position, int damage, float timeIn, bool isPlayer) {
         Transform popUp = GameAssets.i.enemyPopup;
         if (!isPlayer) popUp = GameAssets.i.playerPopup;
 
@@ -15,25 +15,35 @@ public class DamagePopup : MonoBehaviour
     }
 
     private TextMeshPro textMesh;
-    private float startTime;
-    private double time = -1;
+    private float disappearTimer;
+    private Color textColor;
+    private Camera trackedCamera;
 
     private void Awake()
     {
-        startTime = Time.time;
         textMesh = transform.GetComponent<TextMeshPro>();
+        trackedCamera = FindAnyObjectByType<Camera>();
     }
 
-    public void Setup(int damage, double timeIn) {
+    public void Setup(int damage, float timeIn) {
         textMesh.SetText(damage.ToString());
-        startTime = Time.time;
-        time = timeIn;
+        disappearTimer = timeIn;
     }
 
-    void Update()
+    private void Update()
     {
-        if (Time.time - startTime > time && time != -1) {
-            Destroy(gameObject);
+        disappearTimer -= Time.deltaTime;
+        if (disappearTimer < 0) {
+            float disappearSpeed = 1f;
+            textColor.a -= disappearSpeed * Time.deltaTime;
+            textMesh.color = textColor;
+            if (textColor.a < 0) {
+                Destroy(gameObject);
+            }
         }
+
+        float moveYSpeed = 3f;
+        transform.position += new Vector3(0, moveYSpeed) * Time.deltaTime;
+        transform.rotation = trackedCamera.transform.rotation;
     }
 }
