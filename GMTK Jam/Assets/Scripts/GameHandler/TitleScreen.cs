@@ -31,6 +31,12 @@ public class TitleScreen : MonoBehaviour
         }
     }
 
+    public void GoToScene(string sceneName)
+    {
+        Debug.Log("Go to scene " + sceneName);
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void quitGame()
     {
 #if UNITY_EDITOR

@@ -138,7 +138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109138523397055919, guid: 7470ac3253995b44f935e15833d5c535, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.24
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4109138523397055919, guid: 7470ac3253995b44f935e15833d5c535, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8273,6 +8273,18 @@ PrefabInstance:
     - target: {fileID: 3699529243526532572, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 648356968}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6160485435758362809, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
       propertyPath: m_Pivot.x
@@ -24984,11 +24996,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 50.00003
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 50.00003
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25004,27 +25016,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7102486
+      value: 0.707106
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.70391107
+      value: 0.707106
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0074022654
+      value: 0.0010614395
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0011393549
+      value: -0.0010614395
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 89.138
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -53.68
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: 1776438583934364293, guid: ca8839b45bb924d21ba149484dd127b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -37512,7 +37524,7 @@ PrefabInstance:
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 4762110783929888331, guid: 349c365df899e2941bad0b0b3362a51e, type: 3}
+      objectReference: {fileID: 5210063841858594623, guid: c0fa20756e2635d44b6e165fb76bfbfb, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[3]'
       value: 
@@ -37520,7 +37532,7 @@ PrefabInstance:
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 5210063841858594623, guid: c0fa20756e2635d44b6e165fb76bfbfb, type: 3}
+      objectReference: {fileID: 1679069031001910037, guid: 725e698a16e9767499c2266be20fed68, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[5]'
       value: 
