@@ -141,7 +141,7 @@ Transform:
   m_Children:
   - {fileID: 4464328682871376713}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!114 &4733925102784919572
 MonoBehaviour:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 0
   meleeDelay: 0.25
-  rangeDelay: 0.5
+  rangeDelay: 0.25
   meleeRange: 1
   rangedOffset: 0.5
   meleePrefab: {fileID: 5101371494351837819, guid: 588f9663c8aac40debd48da975d9dd25, type: 3}

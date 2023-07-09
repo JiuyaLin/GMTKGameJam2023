@@ -5,8 +5,10 @@ using UnityEngine;
 public class GoldCoins : Item
 {
     public string itemName = "Gold Coins";
+    [TextArea(15,20)]
+    public string description = "";
     public Sprite sprite = null;
-
+    
 
     public float waitTime = 100;
     float timer = 0;
@@ -50,6 +52,9 @@ public class GoldCoins : Item
     }
     public override Sprite GetSprite() {
         return sprite;
+    }
+    public override string GetDescription() {
+        return description;
     }
 
     void Update() {

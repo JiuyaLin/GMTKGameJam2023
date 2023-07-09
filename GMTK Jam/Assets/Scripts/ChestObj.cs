@@ -16,7 +16,7 @@ public class ChestObj : Interactable
     void Start() {
         UIscript = GameObject.FindGameObjectWithTag("HUD").GetComponent<ChestUI>();
         Debug.Log(UIscript);
-        UI = GameObject.FindGameObjectWithTag("HUD").transform.GetChild(1).gameObject;
+        UI = GameObject.FindGameObjectWithTag("HUD").transform.GetChild(2).gameObject;
     }
 
     public override void OnInteract() {

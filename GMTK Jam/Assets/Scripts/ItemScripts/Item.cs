@@ -31,4 +31,6 @@ public abstract class Item : MonoBehaviour
     public abstract string GetName();
 
     public abstract Sprite GetSprite();
+
+    public abstract string GetDescription();
 }
