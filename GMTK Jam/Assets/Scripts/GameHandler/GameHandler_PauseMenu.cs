@@ -21,7 +21,7 @@ public class GameHandler_PauseMenu : MonoBehaviour
     void Awake()
     {
         SetLevel(volumeLevel);
-        GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+        GameObject sliderTemp = GameObject.Find("PauseMenuSlider");
         if (sliderTemp != null)
         {
             sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
@@ -72,19 +72,21 @@ public class GameHandler_PauseMenu : MonoBehaviour
 
     public void OpenCredits()
     {
+        pauseMenuUI.SetActive(false);
         creditsMenuUI.SetActive(true);
         CreditisOpen = true;
     }
 
     public void CloseCredits()
     {
+        pauseMenuUI.SetActive(false);
         creditsMenuUI.SetActive(false);
         CreditisOpen = false;
     }
 
     public void SetLevel(float sliderValue)
     {
-        mixer.SetFloat("Master", Mathf.Log10(sliderValue) * 20);
+        mixer.SetFloat("AudioVolume", Mathf.Log10(sliderValue) * 20);
         volumeLevel = sliderValue;
     }
 }

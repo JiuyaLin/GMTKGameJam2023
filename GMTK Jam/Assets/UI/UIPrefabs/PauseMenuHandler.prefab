@@ -47,4 +47,4 @@ MonoBehaviour:
   pauseKey: 27
   pauseMenuUI: {fileID: 0}
   creditsMenuUI: {fileID: 0}
-  mixer: {fileID: 24100000, guid: ff6ec33efaabe76489859b6b352e9d8b, type: 2}
+  mixer: {fileID: 24100000, guid: 423813d55e0ad7a4789667bed07db7f4, type: 2}
