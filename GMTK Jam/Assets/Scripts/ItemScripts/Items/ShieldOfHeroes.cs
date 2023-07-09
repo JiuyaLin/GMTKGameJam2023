@@ -28,7 +28,7 @@ public class ShieldOfHeroes : Item
     }
 
     public override void OnRangeUse(GameObject attack) {
-        PlayerStats.hp -= 5;
+        PlayerStats.hp -= 3;
     }
 
     public override void OnGain() {
