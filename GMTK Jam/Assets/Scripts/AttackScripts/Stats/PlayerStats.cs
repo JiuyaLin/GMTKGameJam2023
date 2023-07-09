@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public static class PlayerStats
 {
     public static int hp, maxHp, speed, meleeDamage, rangeDamage;
     public static int baseHp, baseMaxHp, baseSpeed, baseMeleeDamage, baseRangeDamage;
+
     static PlayerStats()
     {
         baseHp = 3;
