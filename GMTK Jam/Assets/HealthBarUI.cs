@@ -7,6 +7,8 @@ public class HealthBarUI : MonoBehaviour
 {
     public Image healthFill;
     private float prevHP;
+    public float amount;
+    public float prevAmount;
 
     void Update()
     {
@@ -18,7 +20,12 @@ public class HealthBarUI : MonoBehaviour
     }
 
     private void updateUI() {
-        float amount = (PlayerStats.hp/PlayerStats.maxHp);
-        healthFill.fillAmount = amount;
+        prevAmount = amount;
+        amount = ((float)PlayerStats.hp/(float)PlayerStats.maxHp);
+
+        LeanTween.value(gameObject, prevAmount, amount, 0.3f).setOnUpdate((float val)=> {
+            healthFill.fillAmount = val;
+        }).setEase(LeanTweenType.easeInOutQuint);
+
     }
 }

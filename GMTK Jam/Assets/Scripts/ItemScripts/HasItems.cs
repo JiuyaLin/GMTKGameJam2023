@@ -19,7 +19,5 @@ public class HasItems : MonoBehaviour
         droppedReactorCore = false;
         droppedLockpick = true;
         droppedWingedShoes = true;
-    }
-
-    
+    }   
 }
