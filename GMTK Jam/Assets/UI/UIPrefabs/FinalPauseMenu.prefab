@@ -960,14 +960,14 @@ MonoBehaviour:
   m_FillRect: {fileID: 8511372762889361546}
   m_HandleRect: {fileID: 7898347902477186968}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4152379215306888126, guid: 866f6db4c65fd074bb36c5d09f3667df, type: 3}
         m_TargetAssemblyTypeName: GameHandler_PauseMenu, Assembly-CSharp
         m_MethodName: SetLevel
         m_Mode: 4
