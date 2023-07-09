@@ -9,7 +9,7 @@ public class StaffOfVillainy : Item
     public string description;
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
-        PlayerStats.hp -= 5;
+        
     }
 
     public override void OnRangeHit(GameObject enemy) {
@@ -22,7 +22,7 @@ public class StaffOfVillainy : Item
     }
 
     public override void OnMeleeUse(GameObject attack) {
-        
+        PlayerStats.hp -= 3;
     }
 
     public override void OnRangeUse(GameObject attack) {
