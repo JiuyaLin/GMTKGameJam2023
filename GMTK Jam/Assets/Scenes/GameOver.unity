@@ -873,7 +873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 818191712215381615, guid: ff32f457481dd224a84fd0a8271cd582, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 428.00006
+      value: 429
       objectReference: {fileID: 0}
     - target: {fileID: 818191712215381615, guid: ff32f457481dd224a84fd0a8271cd582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -902,6 +902,10 @@ PrefabInstance:
     - target: {fileID: 6080764046070513136, guid: ff32f457481dd224a84fd0a8271cd582, type: 3}
       propertyPath: m_Name
       value: CreditsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080764046070513136, guid: ff32f457481dd224a84fd0a8271cd582, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
