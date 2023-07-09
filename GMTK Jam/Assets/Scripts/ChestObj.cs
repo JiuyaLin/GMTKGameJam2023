@@ -9,6 +9,7 @@ public class ChestObj : Interactable
     ChestUI UIscript;
     GameObject UI;
     public List<Transform> activates = new List<Transform>();
+    private Animator anim;
 
     bool chestOpened;
     public bool chestFilled;
@@ -17,6 +18,7 @@ public class ChestObj : Interactable
         UIscript = GameObject.FindGameObjectWithTag("HUD").GetComponent<ChestUI>();
         // Debug.Log(UIscript);
         UI = GameObject.FindGameObjectWithTag("HUD").transform.GetChild(2).gameObject;
+        anim = transform.GetChild(1).GetComponent<Animator>();
     }
 
     public override void OnInteract() {
@@ -45,6 +47,8 @@ public class ChestObj : Interactable
 
     public void closeChest() {
         // Debug.Log("closed!");
+        anim.SetFloat("Speed", 1.0f);
+        transform.GetChild(1).GetComponent<Animator>().Play("Chest");
         UI.SetActive(false);
         chestOpened = false;
         UIscript.updateItems();
