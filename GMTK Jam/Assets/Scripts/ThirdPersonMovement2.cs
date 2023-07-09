@@ -17,7 +17,7 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
     public override void Start()
     {
         base.Start();
-        automaticallyUpdateFacingDirection = true;
+        automaticallyUpdateFacingDirection = false;
     }
 
     // Update is called once per frame
