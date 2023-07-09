@@ -143,7 +143,7 @@ Transform:
   - {fileID: 7097941976053910192}
   - {fileID: 4464328682871376713}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!114 &4733925102784919572
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackedCamera: {fileID: 0}
   animator: {fileID: 0}
-  footHeight: 0.5
+  footHeight: 1.2
   wallCheckDistance: 0.4
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   rollSpeed: 10
   rollCooldown: 1
   interactableRange: 1.5
-  movementSpeed: 5
+  movementSpeed: 12
 --- !u!114 &1690321284533887805
 MonoBehaviour:
   m_ObjectHideFlags: 0
