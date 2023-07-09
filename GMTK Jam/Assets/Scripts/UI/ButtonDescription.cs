@@ -21,7 +21,7 @@ public class ButtonDescription : MonoBehaviour
 
     }
     public void openDisplay(int itemIndex) {
-        
+        if (itemIndex >= ItemList.itemList.Count) return;
         descriptionBox.SetActive(true);
         // Vector2 mousePosition = Input.mousePosition;
         // Vector2 pos;
