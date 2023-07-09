@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChestObj : Interactable
 {
     ChestUI UIscript;
     GameObject UI;
+    public List<Transform> activates = new List<Transform>();
 
     bool chestOpened;
     public bool chestFilled;
@@ -47,5 +50,22 @@ public class ChestObj : Interactable
         chestOpened = false;
         UIscript.updateItems();
         Time.timeScale = 1f;
+        foreach (Transform transformToActivate in activates)
+        {
+            if (chestFilled)
+            {
+                foreach (SignalActivatable activatable in transformToActivate.GetComponentsInChildren<SignalActivatable>())
+                {
+                    activatable.OnSignalActivate();
+                }
+            }
+            else
+            {
+                foreach (SignalDeactivatable deActivatable in transformToActivate.GetComponentsInChildren<SignalDeactivatable>())
+                {
+                    deActivatable.OnSignalDeactivate();
+                }
+            }
+        }
     }
 }
