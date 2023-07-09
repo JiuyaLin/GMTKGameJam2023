@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPopup: {fileID: 5915446205961358284, guid: d62c96995f3c7d14d8431f54e1e72396, type: 3}
   playerPopup: {fileID: 2912863311801507392, guid: 12c5d7a40e966284ea40e0d270eeaed5, type: 3}
+  healingPlayer: {fileID: 2912863311801507392, guid: 295b0a3b9ed8a22458914bbce1880b78, type: 3}
+  healingEnemy: {fileID: 2912863311801507392, guid: b2f46b16c9a924e44aa4c41d276a502a, type: 3}
+  nothingPopup: {fileID: 2912863311801507392, guid: 3c99928bd207d684b975cdeb9b9dbc52, type: 3}

@@ -6,8 +6,24 @@ using TMPro;
 public class DamagePopup : MonoBehaviour
 {
     public static void Create(Vector3 position, int damage, float timeIn, bool isPlayer) {
-        Transform popUp = GameAssets.i.enemyPopup;
-        if (!isPlayer) popUp = GameAssets.i.playerPopup;
+        Transform popUp;
+        if (damage == 0) {
+            popUp = GameAssets.i.nothingPopup;
+        } else if (!isPlayer) {
+            if (damage > 0) {
+                popUp = GameAssets.i.playerPopup;
+            } else {
+                popUp = GameAssets.i.healingPlayer;
+                damage = -damage;
+            }
+        } else {
+            if (damage > 0) {
+                popUp = GameAssets.i.enemyPopup;
+            } else {
+                popUp = GameAssets.i.healingEnemy;
+                damage = -damage;
+            }
+        }
 
         Transform damageT = Instantiate(popUp, position, Quaternion.identity);
         DamagePopup damagePopup = damageT.GetComponent<DamagePopup>();

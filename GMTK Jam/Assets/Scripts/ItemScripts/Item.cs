@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
-    public virtual float Weight => 0f;
+    public virtual float Weight => .5f;
 
     public abstract void OnMeleeHit(GameObject enemy);
 

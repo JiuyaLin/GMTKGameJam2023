@@ -32,20 +32,34 @@ public class RangeDamage : MonoBehaviour
         int totalDamage = damage;
         if (isPlayer) {
             if (collision.tag != "Enemy") return;
+
+            GameObject enemy = collision.gameObject;
+            int playerHeal = 0;
             foreach (Item item in ItemList.itemList) {
-                item.OnRangeHit(collision.gameObject);
+                item.OnRangeHit(enemy);
+                
+                if (item.GetName().Contains("Staff")) {
+                    totalDamage -= 5;
+                    playerHeal += 5;
+                }
             }
             totalDamage += PlayerStats.rangeDamage;
-            totalDamage = totalDamage > 0 ? totalDamage : 0;
-            collision.gameObject.GetComponent<Stats>().hp -= totalDamage;
+            if (playerHeal > 0) {
+                DamagePopup.Create(collision.transform.position + Vector3.up, -playerHeal, 1f, false);
+            }
+            
+            Stats enemyStats = enemy.GetComponent<Stats>();
+            enemyStats.hp -= totalDamage;
+            if (enemyStats.hp > enemyStats.maxHp) {
+                if (totalDamage > 0) totalDamage -= enemyStats.hp - enemyStats.maxHp;
+                enemyStats.hp = enemyStats.maxHp;
+            }
         } else {
             if (collision.tag != "Player") return;
             PlayerStats.hp -= totalDamage;
         }
 
-        if (totalDamage > 0) {
-            DamagePopup.Create(collision.transform.position + Vector3.up, totalDamage, 1f, isPlayer);
-        }
+        DamagePopup.Create(collision.transform.position + Vector3.up, totalDamage, 1f, isPlayer);
 
         if (canBounce) {
             lifetime *= 2;

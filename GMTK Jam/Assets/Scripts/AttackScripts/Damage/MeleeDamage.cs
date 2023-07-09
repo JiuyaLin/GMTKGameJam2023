@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeleeDamage : MonoBehaviour
 {
-    public int damage = 1;
+    public int damage = 0;
     public bool isPlayer = false;
 
     // Update is called once per frame
@@ -13,19 +13,38 @@ public class MeleeDamage : MonoBehaviour
         
         if (isPlayer){
             if (collision.tag != "Enemy") return;
+
+            GameObject enemy = collision.gameObject;
+            int playerHeal = 0;
             foreach (Item item in ItemList.itemList) {
-                item.OnMeleeHit(collision.gameObject);
+                item.OnMeleeHit(enemy);
+                
+                if (item.GetName().Contains("Shield")) {
+                    totalDamage -= 5;
+                    playerHeal += 5;
+                }
             }
             totalDamage += PlayerStats.meleeDamage;
-            totalDamage = totalDamage > 0 ? totalDamage : 0;
-            collision.gameObject.GetComponent<Stats>().hp -= totalDamage;
+            // Debug.Log("Player Heal: " + playerHeal.ToString());
+            if (playerHeal > 0) {
+                if (PlayerStats.hp > PlayerStats.maxHp) {
+                    playerHeal -= PlayerStats.hp - PlayerStats.maxHp;
+                    PlayerStats.hp = PlayerStats.maxHp;
+                }
+                DamagePopup.Create(transform.position + Vector3.up, -playerHeal, 1f, false);
+            }
+            
+            Stats enemyStats = enemy.GetComponent<Stats>();
+            enemyStats.hp -= totalDamage;
+            if (enemyStats.hp > enemyStats.maxHp) {
+                if (totalDamage > 0) totalDamage -= enemyStats.hp - enemyStats.maxHp;
+                enemyStats.hp = enemyStats.maxHp;
+            }
         } else {
             if (collision.tag != "Player") return;
             PlayerStats.hp -= totalDamage;
         }
 
-        if (totalDamage > 0) {
-            DamagePopup.Create(collision.transform.position + Vector3.up, totalDamage, 1f, isPlayer);
-        }
+        DamagePopup.Create(collision.transform.position + Vector3.up, totalDamage, 1f, isPlayer);
     }
 }

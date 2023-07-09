@@ -15,4 +15,7 @@ public class GameAssets : MonoBehaviour
 
     public Transform enemyPopup;
     public Transform playerPopup;
+    public Transform healingPlayer;
+    public Transform healingEnemy;
+    public Transform nothingPopup;
 }

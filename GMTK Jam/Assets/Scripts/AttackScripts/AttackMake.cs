@@ -42,9 +42,17 @@ public class AttackMake : MonoBehaviour
             transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * meleeRange,
             Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
 
-        foreach (Item item in ItemList.itemList)
+        int damage = 0;
+        foreach (Item item in ItemList.itemList) {
             item.OnMeleeUse(meleeAttack);
-        
+            if (item.GetName().Contains("Staff")) {
+                damage += 3;
+            }
+        }
+        if (damage > 0) {
+            DamagePopup.Create(gameObject.transform.position + Vector3.up, damage, 1f, false);
+        }
+            
         return true;
     }
 
@@ -56,9 +64,17 @@ public class AttackMake : MonoBehaviour
             transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * rangedOffset,
             Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
 
-        foreach (Item item in ItemList.itemList)
+        int damage = 0;
+        foreach (Item item in ItemList.itemList) {
             item.OnRangeUse(rangeAttack);
-        
+            if (item.GetName().Contains("Shield")) {
+                damage += 3;
+            }
+        }
+        if (damage > 0) {
+            DamagePopup.Create(gameObject.transform.position + Vector3.up, damage, 1f, false);
+        }
+            
         return true;
     }
 
