@@ -63,7 +63,7 @@ public class AttackMake : MonoBehaviour
     }
 
     public bool MeleeAttackEnemy(int damage) {
-        if (Time.time - meleeTime < meleeDelay || meleePrefab == null) return false;
+        if (Time.time - meleeTime < meleeDelay || meleePrefab == null || PlayerStats.isImmune) return false;
 
         meleeTime = Time.time;
         GameObject meleeAttack = Instantiate(meleePrefab,
@@ -76,7 +76,7 @@ public class AttackMake : MonoBehaviour
     }
 
     public bool RangedAttackEnemey(int damage) {
-        if (Time.time - rangeTime < rangeDelay || rangePrefab == null) return false;
+        if (Time.time - rangeTime < rangeDelay || rangePrefab == null || PlayerStats.isImmune) return false;
 
         (FindAnyObjectByType(typeof(AudioSource)) as AudioSource).clip = (FindAnyObjectByType(typeof(SoundHolder)) as SoundHolder).enemyRanged;
         (FindAnyObjectByType(typeof(AudioSource)) as AudioSource).Play();

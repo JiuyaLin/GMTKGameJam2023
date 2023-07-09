@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ThirdPersonMovement2 : GroundedPaperSprite
 {
-    public float rollTime = 0.5f;
+    public float rollTime = 1f;
     public float rollSpeed = 6f;
-    public float rollCooldown = 1.0f;
+    public float rollCooldown = 2f;
     public float interactableRange = 1.5f;
     public float movementSpeed = 3f;
 
@@ -31,7 +31,7 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
         }
 
         requestedMovement = Quaternion.Euler(0, trackedCamera.transform.eulerAngles.y, 0) * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized * movementSpeed * Time.deltaTime;
-        if (Input.GetButtonDown("Roll") && rollColldownTracker <= 0) {
+        if (!HasItems.droppedWingedShoes && Input.GetButtonDown("Roll") && rollColldownTracker <= 0) {
             rollTimeTracker = rollTime;
             rollColldownTracker = rollCooldown;
             rollDirection = requestedMovement.sqrMagnitude != 0 ? requestedMovement.normalized : facingDirection.normalized;
@@ -40,6 +40,9 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
         if (rollTimeTracker > 0) {
             rollTimeTracker -= Time.deltaTime;
             requestedMovement = rollDirection * rollSpeed * Time.deltaTime;
+            PlayerStats.isImmune = true;
+        } else {
+            PlayerStats.isImmune = false;
         }
 
         if (rollColldownTracker > 0) {
