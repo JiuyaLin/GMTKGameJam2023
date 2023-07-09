@@ -30,14 +30,19 @@ public class RangeDamage : MonoBehaviour
             item.OnRangeHit(collision.gameObject);
         }
 
+        int totalDamage = damage;
         if (isPlayer) {
             if (collision.tag != "Enemy") return;
-            int totalDamage = PlayerStats.rangeDamage + damage;
+            totalDamage += PlayerStats.rangeDamage;
             totalDamage = totalDamage > 0 ? totalDamage : 0;
             collision.gameObject.GetComponent<Stats>().hp -= totalDamage;
         } else {
             if (collision.tag != "Player") return;
-            PlayerStats.hp -= damage;
+            PlayerStats.hp -= totalDamage;
+        }
+
+        if (totalDamage > 0) {
+            DamagePopup.Create(collision.transform.position + Vector3.up, damage, .5, isPlayer);
         }
 
         if (canBounce) {
