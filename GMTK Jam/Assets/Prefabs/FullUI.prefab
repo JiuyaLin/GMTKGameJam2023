@@ -2070,6 +2070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthFill: {fileID: 2405720019041794280}
   amount: 1
+  prevAmount: 0
 --- !u!1 &3669956824806580899
 GameObject:
   m_ObjectHideFlags: 0
