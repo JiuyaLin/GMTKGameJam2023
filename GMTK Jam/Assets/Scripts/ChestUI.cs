@@ -32,7 +32,7 @@ public class ChestUI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        selectUI = transform.GetChild(1).gameObject;
+        selectUI = transform.GetChild(2).gameObject;
 
         itemselect1 = selectUI.transform.GetChild(0).gameObject;
         itemselect2 = selectUI.transform.GetChild(1).gameObject;
@@ -40,7 +40,7 @@ public class ChestUI : MonoBehaviour
         itemselect4 = selectUI.transform.GetChild(3).gameObject;
         itemselect5 = selectUI.transform.GetChild(4).gameObject;
 
-        invUI = transform.GetChild(0).gameObject;
+        invUI = transform.GetChild(1).gameObject;
 
         item1 = invUI.transform.GetChild(0).gameObject;
         item2 = invUI.transform.GetChild(1).gameObject;
