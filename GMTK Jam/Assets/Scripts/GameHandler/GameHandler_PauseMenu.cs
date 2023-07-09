@@ -4,52 +4,48 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
+
 public class GameHandler_PauseMenu : MonoBehaviour
 {
-
-    public KeyCode pauseKey = KeyCode.Escape;
     public static bool GameisPaused = false;
-    public static bool CreditisOpen = false;
+    public static float volumeLevel = 1.0f;
+
 
     public GameObject pauseMenuUI;
     public GameObject creditsMenuUI;
     public AudioMixer mixer;
-    public static float volumeLevel = 1.0f;
     private Slider sliderVolumeCtrl;
-    
+   
+
 
     void Awake()
     {
         SetLevel(volumeLevel);
         GameObject sliderTemp = GameObject.Find("PauseMenuSlider");
-        if (sliderTemp != null)
-        {
+        if (sliderTemp != null) {
             sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
             sliderVolumeCtrl.value = volumeLevel;
         }
     }
 
+
     void Start()
     {
-        pauseMenuUI.SetActive(false);
-        creditsMenuUI.SetActive(false);
-        GameisPaused = false;
+        Resume();
     }
+
 
     void Update()
     {
-        if (Input.GetKeyDown(pauseKey))
-        {
-            if (GameisPaused)
-            {
+        if (Input.GetButtonDown("Cancel")) {
+            if (GameisPaused) {
                 Resume();
-            }
-            else
-            {
+            } else {
                 Pause();
             }
         }
     }
+
 
     void Pause()
     {
@@ -59,30 +55,29 @@ public class GameHandler_PauseMenu : MonoBehaviour
         GameisPaused = true;
     }
 
+
     public void Resume()
     {
-        if (CreditisOpen)
-        {
-            CloseCredits();
-        }
+        creditsMenuUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
     }
 
+
     public void OpenCredits()
     {
         pauseMenuUI.SetActive(false);
         creditsMenuUI.SetActive(true);
-        CreditisOpen = true;
     }
+
 
     public void CloseCredits()
     {
         pauseMenuUI.SetActive(true);
         creditsMenuUI.SetActive(false);
-        CreditisOpen = false;
     }
+
 
     public void SetLevel(float sliderValue)
     {
@@ -90,4 +85,3 @@ public class GameHandler_PauseMenu : MonoBehaviour
         volumeLevel = sliderValue;
     }
 }
-
