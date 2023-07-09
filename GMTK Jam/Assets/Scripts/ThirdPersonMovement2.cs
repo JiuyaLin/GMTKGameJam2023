@@ -72,11 +72,19 @@ public class ThirdPersonMovement2 : GroundedPaperSprite
         }
 
         if (Input.GetButtonDown("Melee") && rollTimeTracker <= 0) {
-            GetComponent<AttackMake>().MeleeAttack();
+            if (GetComponent<AttackMake>().MeleeAttack())
+            {
+                GetComponent<AudioSource>().clip = (FindAnyObjectByType(typeof(SoundHolder)) as SoundHolder).playerMelee;
+                GetComponent<AudioSource>().Play();
+            }
         }
 
         if (Input.GetButtonDown("Ranged") && rollTimeTracker <= 0) {
-            GetComponent<AttackMake>().RangedAttack();
+            if (GetComponent<AttackMake>().RangedAttack())
+            {
+                GetComponent<AudioSource>().clip = (FindAnyObjectByType(typeof(SoundHolder)) as SoundHolder).playerRanged;
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
 }

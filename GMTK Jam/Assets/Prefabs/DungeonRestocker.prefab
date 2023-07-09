@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 4733925102784919572}
   - component: {fileID: 1690321284533887805}
   - component: {fileID: 8523789428578583599}
+  - component: {fileID: 4075804954649065582}
   m_Layer: 0
   m_Name: DungeonRestocker
   m_TagString: Player
@@ -156,27 +157,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackedCamera: {fileID: 0}
   animator: {fileID: 0}
-  savedOffset: {x: 0, y: 0, z: 0}
   footHeight: 0.5
   wallCheckDistance: 0.4
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  onGround: 0
-  trackedGround: {fileID: 0}
   groundOffset: {x: 0, y: 0, z: 0}
   requestedMovement: {x: 0, y: 0, z: 0}
-  movingPlatformCompensation: {x: 0, y: 0, z: 0}
   facingDirection: {x: 1, y: 0, z: 0}
-  animationName: 
   rollTime: 0.5
   rollSpeed: 10
   rollCooldown: 1
   interactableRange: 1.5
   movementSpeed: 5
-  rollTimeTracker: 0
-  rollColldownTracker: 0
-  rollDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &1690321284533887805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +186,6 @@ MonoBehaviour:
   rangedOffset: 0.5
   meleePrefab: {fileID: 5101371494351837819, guid: 588f9663c8aac40debd48da975d9dd25, type: 3}
   rangePrefab: {fileID: 8816711437541448863, guid: 04f4e8b752a5f9c41abf45d8b3da1ffa, type: 3}
-  player: {fileID: 4733925102784919572}
 --- !u!136 &8523789428578583599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -220,3 +209,99 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &4075804954649065582
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010128601199047728}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
