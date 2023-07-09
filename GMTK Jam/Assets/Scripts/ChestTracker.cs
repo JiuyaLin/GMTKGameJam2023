@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class ChestTracker : MonoBehaviour
 {
     public int totalNumberOfChests = 4;
-    public string nextScene = "Credits";
     int numChestsFilled;
 
     GameObject player;
@@ -23,10 +22,10 @@ public class ChestTracker : MonoBehaviour
 
     public void ChestFilled() {
         numChestsFilled++;
-        Debug.Log("woo!");
+        // Debug.Log("woo!");
         if (totalNumberOfChests <= numChestsFilled) {
-            Debug.Log("Onward");
-            SceneManager.LoadScene(nextScene);
+            // Debug.Log("Onward");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
             
     }
