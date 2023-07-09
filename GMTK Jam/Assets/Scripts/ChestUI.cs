@@ -111,8 +111,8 @@ public class ChestUI : MonoBehaviour
         // update item placement 
         for (int i = 0; i < ItemList.itemList.Count; i++) {
             string itemName = ItemList.itemList[i].GetName();
-            Debug.Log(i);
-            Debug.Log(itemName);
+            // Debug.Log(i);
+            // Debug.Log(itemName);
             itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = ItemList.itemList[i].GetSprite();
             // if (itemname == "Basher Sword") { 
             //     itemObjList[i].transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("2D/InventoryIcons/BusterSword");
@@ -152,14 +152,14 @@ public class ChestUI : MonoBehaviour
 
     public void selectItem(int i)
     {
-        Debug.Log(i + "!");
+        // Debug.Log(i + "!");
         ItemList.RemoveItem(i);
         //gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
         
         // adds to gamehandler counter
         gameHandler.GetComponent<ChestTracker>().ChestFilled();
 
-        Debug.Log(chestref);
+        // Debug.Log(chestref);
 
         chestref.chestFilled = true;
         chestref.closeChest();
