@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openChest: {fileID: 8300000, guid: c60168a655b624ce084b7961886d234a, type: 3}
+  enemyMelee: {fileID: 8300000, guid: c1f07cf2217f2cf4db3fb057982e9c88, type: 3}
   enemyRanged: {fileID: 8300000, guid: b02b122b16b9440d38108cade3a88308, type: 3}
   playerMelee: {fileID: 8300000, guid: 5d6716cffdd344f108229bd570942704, type: 3}
   playerRanged: {fileID: 8300000, guid: 67885143feff1457096e7887578b1572, type: 3}
@@ -107,7 +108,7 @@ AudioSource:
   m_GameObject: {fileID: 7550709309877641596}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 423813d55e0ad7a4789667bed07db7f4, type: 2}
   m_audioClip: {fileID: 8300000, guid: eb3d26d55afef4c97b26b7eb79f66535, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

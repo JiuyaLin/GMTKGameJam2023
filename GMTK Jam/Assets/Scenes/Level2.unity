@@ -11830,15 +11830,15 @@ PrefabInstance:
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 4762110783929888331, guid: 349c365df899e2941bad0b0b3362a51e, type: 3}
+      objectReference: {fileID: 6144658460099017646, guid: 94fe505f90fefb44e9390a4c57b08cb9, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[3]'
       value: 
-      objectReference: {fileID: 1235359692699216508, guid: 4be0d8d259897724b9e63ef844e5850b, type: 3}
+      objectReference: {fileID: 8192382065132923484, guid: 93c3acd3507d8844389a42cc40e8d9e6, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 5210063841858594623, guid: c0fa20756e2635d44b6e165fb76bfbfb, type: 3}
+      objectReference: {fileID: 1235359692699216508, guid: 4be0d8d259897724b9e63ef844e5850b, type: 3}
     - target: {fileID: 7430736201055529486, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: 'levelItemPrefabs.Array.data[5]'
       value: 
@@ -11972,6 +11972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openChest: {fileID: 8300000, guid: c60168a655b624ce084b7961886d234a, type: 3}
+  enemyMelee: {fileID: 0}
   enemyRanged: {fileID: 8300000, guid: b02b122b16b9440d38108cade3a88308, type: 3}
   playerMelee: {fileID: 8300000, guid: 5d6716cffdd344f108229bd570942704, type: 3}
   playerRanged: {fileID: 8300000, guid: 67885143feff1457096e7887578b1572, type: 3}
@@ -35795,6 +35796,18 @@ PrefabInstance:
     - target: {fileID: 3699529243526532572, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1072472269}
+    - target: {fileID: 5028275957121485714, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6160485435758362809, guid: 8ad0303d965962b428a169207a8ee7f7, type: 3}
       propertyPath: m_Pivot.x

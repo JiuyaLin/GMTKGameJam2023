@@ -32,10 +32,13 @@ public class StaffOfVillainy : Item
     public override void OnGain() {
         base.OnGain();
         PlayerStats.meleeDamage += 5;
+        PlayerStats.rangeDamage -= 5;
     }
 
     public override void OnDrop() {
         base.OnDrop();
+        PlayerStats.rangeDamage -= 5;
+        PlayerStats.meleeDamage += 5;
     }
 
     public override void OnHurt() {

@@ -20,7 +20,6 @@ public class MeleeDamage : MonoBehaviour
                 item.OnMeleeHit(enemy);
                 
                 if (item.GetName().Contains("Shield")) {
-                    totalDamage -= 5;
                     playerHeal += 5;
                 }
             }

@@ -39,7 +39,6 @@ public class RangeDamage : MonoBehaviour
                 item.OnRangeHit(enemy);
                 
                 if (item.GetName().Contains("Staff")) {
-                    totalDamage -= 5;
                     playerHeal += 5;
                 }
             }

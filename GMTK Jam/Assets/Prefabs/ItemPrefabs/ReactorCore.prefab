@@ -47,4 +47,4 @@ MonoBehaviour:
   itemName: Reactor Core
   sprite: {fileID: 21300000, guid: 571cd2831e425ac45be540e6c419f010, type: 3}
   description: Reawakens the slumbering critters of the dungeon. Causes more enemies
-    to appear
+    to appear when put away!
