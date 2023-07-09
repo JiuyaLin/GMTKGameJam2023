@@ -40,6 +40,7 @@ public class GoldCoins : Item
     {
         base.OnDrop();
         timer = Time.time;
+        HasItems.dropGold(waitTime);
         dropped = true;
         
     }
@@ -57,13 +58,13 @@ public class GoldCoins : Item
         return description;
     }
 
-    void Update() {
-        if (!dropped) return;
-        if (Time.time - timer > waitTime) {
-            PlayerStats.hp = 0;
-            dropped = false;
-        }
-    }
+    // void Update() {
+    //     if (!dropped) return;
+    //     if (Time.time - timer > waitTime) {
+    //         PlayerStats.hp = 0;
+    //         dropped = false;
+    //     }
+    // }
     
     
     
