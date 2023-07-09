@@ -6,7 +6,7 @@ public class BasherSword : Item
 {
     public string itemName = "Basher Sword";
     [TextArea(15,20)]
-    public string description = "Your melee attacks do much more damage! Your ranged attacks, however, do less. (+5 Melee, -5 Range)";
+    public string description;
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
 

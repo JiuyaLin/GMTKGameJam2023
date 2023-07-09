@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ShieldOfHeroes : Item
 {
-
     public string itemName = "Shield of Heroes";
-    [TextArea(15,20)]
-    public string description = "Heal all by using your heroic Melee Hits (even your enemies)! Ranged attacks inflict damage to you but have higher damage. (+5 Healing on Melee, +5 Range but -5 Healing)";
     public Sprite sprite = null;
-    // Start is called before the first frame update
+
+    [TextArea(15,20)]
+    public string description;
+    
     public override void OnMeleeHit(GameObject enemy) {
         PlayerStats.hp += 5;
         Stats enemyStats = enemy.GetComponent<Stats>();

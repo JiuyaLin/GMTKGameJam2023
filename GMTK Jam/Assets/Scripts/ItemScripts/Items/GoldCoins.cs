@@ -5,15 +5,15 @@ using UnityEngine;
 public class GoldCoins : Item
 {
     public string itemName = "Gold Coins";
-    [TextArea(15,20)]
-    public string description = "Players have caught wind of your restocking. You are now placed on a time limit to finish restocking the dungeon. (100 seconds to clear level or death!)";
     public Sprite sprite = null;
-    
-
     public float waitTime = 100;
-    float timer = 0;
-    bool dropped = false; 
-
+    [TextArea(15,20)]
+    public string description;
+    
+    private float timer = 0;
+    private bool dropped = false;
+    
+    
     public override void OnMeleeHit(GameObject enemy) {
 
     }

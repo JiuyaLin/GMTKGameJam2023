@@ -5,9 +5,10 @@ using UnityEngine;
 public class ReactorCore : Item
 {
     public string itemName = "Reactor Core";
-    [TextArea(15,20)]
-    public string description = "Reawakens the slumbering critters of the dungeon. Causes more enemies to appear";
     public Sprite sprite = null;
+    [TextArea(15,20)]
+    public string description;
+
     public override void OnMeleeHit(GameObject enemy) {
         
     }

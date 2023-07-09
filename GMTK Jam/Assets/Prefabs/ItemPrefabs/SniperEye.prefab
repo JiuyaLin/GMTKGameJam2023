@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Sniper Eye
+  description: Your range attacks do much more damage! Your melee attacks, however,
+    do less. (+5 Range, -5 Melee)
   sprite: {fileID: 21300000, guid: aeaf3e586991a7047a1316887fe69ff5, type: 3}
