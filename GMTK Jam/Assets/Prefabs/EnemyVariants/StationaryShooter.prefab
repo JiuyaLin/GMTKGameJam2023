@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3120984327584977935, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3120984327584977935, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3647623808866222586, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: speed
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3647623808866222586, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: damage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4227297506694277634, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_Controller
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5173903759737237596, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_Name
-      value: Blue
+      value: StationaryShooter
       objectReference: {fileID: 0}
     - target: {fileID: 7418115487194857349, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_Sprite
@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323192023935252086, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: followPlayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

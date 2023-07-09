@@ -23,13 +23,7 @@ public class EnemyMovement : GroundedPaperSprite
         rb3D = GetComponent<Rigidbody>();
         scaleX = gameObject.transform.localScale.x;
 
-        if ((GameObject.FindGameObjectWithTag("Player") != null) && (followPlayer == true)) {
-            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-            
-        } else {
-            target = transform;
-        }
-
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         stats = this.GetComponent<Stats>();
     }
 
@@ -37,21 +31,22 @@ public class EnemyMovement : GroundedPaperSprite
     {
         checkIfDead();
         if (!isDead) {
-            float DistToPlayer = Vector3.Distance(transform.position, target.position);
+            float DistToPlayer = target != null ? Vector3.Distance(transform.position, target.position) : 0f;
 
-            if ((target != null) && (DistToPlayer <= attackRange)) {
+            if ((DistToPlayer <= attackRange) && followPlayer) {
                 requestedMovement = (target.position - transform.position).normalized * stats.speed * Time.deltaTime;
-
                 animator.SetBool("IsWalking", true);
+            } else {
+                requestedMovement = Vector3.zero;
+                animator.SetBool("IsWalking", false);
+            }
+
+            if (DistToPlayer <= attackRange) {
                 if (isMelee) {
                     attack.MeleeAttackEnemy(stats.damage);
                 } else {
                     attack.RangedAttackEnemey(stats.damage);
                 }
-
-            } else {
-                requestedMovement = Vector3.zero;
-                animator.SetBool("IsWalking", false);
             }
         } 
 
