@@ -61,4 +61,28 @@ public class AttackMake : MonoBehaviour
         
         return true;
     }
+
+    public bool MeleeAttackEnemy() {
+        if (Time.time - meleeTime < meleeDelay || meleePrefab == null) return false;
+
+        meleeTime = Time.time;
+        GameObject meleeAttack = Instantiate(meleePrefab,
+            transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * meleeRange,
+            Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
+
+        meleeAttack.GetComponentInChildren<MeleeDamage>().isPlayer = false;
+        return true;
+    }
+
+    public bool RangedAttackEnemey() {
+        if (Time.time - rangeTime < rangeDelay || rangePrefab == null) return false;
+
+        rangeTime = Time.time;
+        GameObject rangeAttack = Instantiate(rangePrefab,
+            transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * rangedOffset,
+            Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
+
+        rangeAttack.GetComponentInChildren<RangeDamage>().isPlayer = false;
+        return true;
+    }
 }

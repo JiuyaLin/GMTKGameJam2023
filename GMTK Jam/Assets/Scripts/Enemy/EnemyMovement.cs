@@ -50,9 +50,9 @@ public class EnemyMovement : GroundedPaperSprite
 
                 animator.SetBool("IsWalking", true);
                 if (isMelee) {
-                    attack.MeleeAttack();
+                    attack.MeleeAttackEnemy();
                 } else {
-                    attack.RangedAttack();
+                    attack.RangedAttackEnemey();
                 }
                 //flip enemy to face player direction. Wrong direction? Swap the * -1.
                 //if (target.position.x > gameObject.transform.position.x)
