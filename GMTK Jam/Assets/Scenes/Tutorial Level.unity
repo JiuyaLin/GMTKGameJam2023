@@ -17601,6 +17601,10 @@ PrefabInstance:
       propertyPath: totalNumberOfChests
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3028295120210616049, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 423813d55e0ad7a4789667bed07db7f4, type: 2}
     - target: {fileID: 6705606181684238057, guid: c83d4a619d849334f86a5bb05505ab18, type: 3}
       propertyPath: m_RootOrder
       value: 5
