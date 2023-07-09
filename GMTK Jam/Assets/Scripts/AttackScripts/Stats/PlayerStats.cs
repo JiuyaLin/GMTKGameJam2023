@@ -7,6 +7,7 @@ public static class PlayerStats
 {
     public static int hp, maxHp, speed, meleeDamage, rangeDamage;
     public static int baseHp, baseMaxHp, baseSpeed, baseMeleeDamage, baseRangeDamage;
+    public static bool isImmune;
 
     static PlayerStats()
     {
@@ -17,7 +18,6 @@ public static class PlayerStats
         baseRangeDamage = 5;
         
         resetStats();
-        
     }
 
     public static void resetStats() {
