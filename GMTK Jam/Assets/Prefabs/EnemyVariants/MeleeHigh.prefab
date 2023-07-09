@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 747784528294391860, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747784528294391860, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: speed
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: damage
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5178343659540847550, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_Color.b
@@ -99,6 +99,18 @@ PrefabInstance:
     - target: {fileID: 7065392733264092668, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: rangeDelay
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065392733264092668, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: meleePrefab
+      value: 
+      objectReference: {fileID: 5101371494351837819, guid: 813253c0a7fa7714da48a7f0fa805de9, type: 3}
+    - target: {fileID: 7065392733264092668, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: rangePrefab
+      value: 
+      objectReference: {fileID: 8816711437541448863, guid: e02277054ea1d564495ad3391b6b65b0, type: 3}
+    - target: {fileID: 7065392733264092668, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: rangedOffset
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413552439765537895, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_Name
