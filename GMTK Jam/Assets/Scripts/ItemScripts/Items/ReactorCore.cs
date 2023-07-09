@@ -6,7 +6,7 @@ public class ReactorCore : Item
 {
     public string itemName = "Reactor Core";
     [TextArea(15,20)]
-    public string description = "";
+    public string description = "Reawakens the slumbering critters of the dungeon. Causes more enemies to appear";
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
         

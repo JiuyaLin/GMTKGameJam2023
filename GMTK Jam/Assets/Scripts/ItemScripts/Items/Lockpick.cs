@@ -6,7 +6,7 @@ public class Lockpick : Item
 {
     public string itemName = "Lockpick";
     [TextArea(15,20)]
-    public string description = "";
+    public string description = "This item does nothing. Uh-huh";
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
 
