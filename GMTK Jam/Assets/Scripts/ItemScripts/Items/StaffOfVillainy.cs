@@ -5,6 +5,8 @@ using UnityEngine;
 public class StaffOfVillainy : Item
 {
     public string itemName = "Staff of Villainy";
+    [TextArea(15,20)]
+    public string description = "";
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
         PlayerStats.hp -= 1;
@@ -40,5 +42,8 @@ public class StaffOfVillainy : Item
     }
     public override Sprite GetSprite() {
         return sprite;
+    }
+    public override string GetDescription() {
+        return description;
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class BasherSword : Item
 {
     public string itemName = "Basher Sword";
+    [TextArea(15,20)]
+    public string description = "";
     public Sprite sprite = null;
     public override void OnMeleeHit(GameObject enemy) {
 
@@ -43,5 +45,8 @@ public class BasherSword : Item
     }
     public override Sprite GetSprite() {
         return sprite;
+    }
+    public override string GetDescription() {
+        return description;
     }
 }

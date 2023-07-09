@@ -5,6 +5,8 @@ using UnityEngine;
 public class WingedShoes : Item
 {
     public string itemName = "Winged Shoes";
+    [TextArea(15,20)]
+    public string description = "";
     public Sprite sprite = null;
     // Start is called before the first frame update
     public override void OnMeleeHit(GameObject enemy) {
@@ -42,5 +44,9 @@ public class WingedShoes : Item
     }
     public override Sprite GetSprite() {
         return sprite;
+    }
+
+    public override string GetDescription() {
+        return description;
     }
 }

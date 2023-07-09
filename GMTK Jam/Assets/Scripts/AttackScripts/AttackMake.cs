@@ -77,6 +77,8 @@ public class AttackMake : MonoBehaviour
     public bool RangedAttackEnemey() {
         if (Time.time - rangeTime < rangeDelay || rangePrefab == null) return false;
 
+        (FindAnyObjectByType(typeof(AudioSource)) as AudioSource).clip = (FindAnyObjectByType(typeof(SoundHolder)) as SoundHolder).enemyRanged;
+        (FindAnyObjectByType(typeof(AudioSource)) as AudioSource).Play();
         rangeTime = Time.time;
         GameObject rangeAttack = Instantiate(rangePrefab,
             transform.position + GetComponent<GroundedPaperSprite>().facingDirection.normalized * rangedOffset,
