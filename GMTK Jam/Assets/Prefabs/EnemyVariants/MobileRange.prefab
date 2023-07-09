@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2311957856463723778, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: damage
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2891644402938361594, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_Controller
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6144644794359032996, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_Name
-      value: Bluepurple-Mobile Range Enemy
+      value: MobileRange
       objectReference: {fileID: 0}
     - target: {fileID: 6992582657109224078, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: attackRange

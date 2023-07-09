@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 192618999907587772, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_Name
-      value: Purple-Mobile Melee High Damage
+      value: MeleeLow
       objectReference: {fileID: 0}
     - target: {fileID: 451268289085710119, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: meleeDelay
@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646842548279781146, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: damage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9208549882604915938, guid: be74bd08edae5fa479aa4eea7675722f, type: 3}
       propertyPath: m_Controller
