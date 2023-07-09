@@ -52,6 +52,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: hp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: maxHp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419102428715558337, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5178343659540847550, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -74,7 +90,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5957901293178638925, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: attackRange
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065392733264092668, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: meleeDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065392733264092668, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
+      propertyPath: rangeDelay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7413552439765537895, guid: 11956f9dd6f4c63419562ed3712fe2b4, type: 3}
       propertyPath: m_Name

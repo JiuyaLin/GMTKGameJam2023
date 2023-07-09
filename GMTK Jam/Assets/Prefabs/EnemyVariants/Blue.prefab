@@ -54,20 +54,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3647623808866222586, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: hp
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3647623808866222586, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: maxHp
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3647623808866222586, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: speed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3647623808866222586, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4227297506694277634, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 69b4a94cefa4941fda4d7079a5dd3fe6, type: 2}
+    - target: {fileID: 4837444227385506247, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: meleeDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5173903759737237596, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_Name
       value: Blue
@@ -95,6 +103,10 @@ PrefabInstance:
     - target: {fileID: 8323192023935252086, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: isMelee
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323192023935252086, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: attackRange
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8323192023935252086, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: followPlayer

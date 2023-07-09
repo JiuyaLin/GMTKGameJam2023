@@ -62,7 +62,7 @@ public class AttackMake : MonoBehaviour
         return true;
     }
 
-    public bool MeleeAttackEnemy() {
+    public bool MeleeAttackEnemy(int damage) {
         if (Time.time - meleeTime < meleeDelay || meleePrefab == null) return false;
 
         meleeTime = Time.time;
@@ -71,10 +71,11 @@ public class AttackMake : MonoBehaviour
             Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
 
         meleeAttack.GetComponentInChildren<MeleeDamage>().isPlayer = false;
+        meleeAttack.GetComponentInChildren<MeleeDamage>().damage = damage;
         return true;
     }
 
-    public bool RangedAttackEnemey() {
+    public bool RangedAttackEnemey(int damage) {
         if (Time.time - rangeTime < rangeDelay || rangePrefab == null) return false;
 
         (FindAnyObjectByType(typeof(AudioSource)) as AudioSource).clip = (FindAnyObjectByType(typeof(SoundHolder)) as SoundHolder).enemyRanged;
@@ -85,6 +86,7 @@ public class AttackMake : MonoBehaviour
             Quaternion.LookRotation(GetComponent<GroundedPaperSprite>().facingDirection), transform);
 
         rangeAttack.GetComponentInChildren<RangeDamage>().isPlayer = false;
+        rangeAttack.GetComponentInChildren<RangeDamage>().damage = damage;
         return true;
     }
 }
