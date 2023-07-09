@@ -80,6 +80,18 @@ PrefabInstance:
       propertyPath: rangeDelay
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4837444227385506247, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: meleePrefab
+      value: 
+      objectReference: {fileID: 5101371494351837819, guid: 813253c0a7fa7714da48a7f0fa805de9, type: 3}
+    - target: {fileID: 4837444227385506247, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: rangePrefab
+      value: 
+      objectReference: {fileID: 8816711437541448863, guid: e02277054ea1d564495ad3391b6b65b0, type: 3}
+    - target: {fileID: 4837444227385506247, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
+      propertyPath: rangedOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5173903759737237596, guid: 4a54cd1db347d614eb9fcc29a8d169ba, type: 3}
       propertyPath: m_Name
       value: StationaryShooter

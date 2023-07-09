@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 21b31dd10c2424353921bf8644d99be6, type: 2}
     - target: {fileID: 4162655748453075191, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4162655748453075191, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -75,6 +75,18 @@ PrefabInstance:
     - target: {fileID: 5884306998611715391, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: meleeDelay
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884306998611715391, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
+      propertyPath: meleePrefab
+      value: 
+      objectReference: {fileID: 5101371494351837819, guid: 813253c0a7fa7714da48a7f0fa805de9, type: 3}
+    - target: {fileID: 5884306998611715391, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
+      propertyPath: rangePrefab
+      value: 
+      objectReference: {fileID: 8816711437541448863, guid: e02277054ea1d564495ad3391b6b65b0, type: 3}
+    - target: {fileID: 5884306998611715391, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
+      propertyPath: rangedOffset
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6144644794359032996, guid: 7eb71bec064137341bfe52009c2dadb4, type: 3}
       propertyPath: m_Name
